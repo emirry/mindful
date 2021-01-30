@@ -1,7 +1,5 @@
 # mindful
-Ada Capstone
-
-## About mindfull
+> About mindfull
 
 ## Trello Link
 - [mindfull trello link](https://trello.com/b/D9sopo2g/ada-capstone)
