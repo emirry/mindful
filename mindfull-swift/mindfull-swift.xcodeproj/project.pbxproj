@@ -77,12 +77,13 @@
 		8A01259425C65248009928EA /* mindfull-swift */ = {
 			isa = PBXGroup;
 			children = (
+				8A0125A325C65249009928EA /* Info.plist */,
+				8A01259B25C65249009928EA /* Assets.xcassets */,
 				8A01259525C65248009928EA /* AppDelegate.swift */,
 				8A01259725C65248009928EA /* SceneDelegate.swift */,
-				8A01259925C65248009928EA /* ContentView.swift */,
-				8A01259B25C65249009928EA /* Assets.xcassets */,
-				8A0125A025C65249009928EA /* LaunchScreen.storyboard */,
-				8A0125A325C65249009928EA /* Info.plist */,
+				8ABEA2B125C7B212006CA1EF /* Constants.swift */,
+				8A0125C325C66A2E009928EA /* Views */,
+				8A0125BC25C667B3009928EA /* Storyboard */,
 				8A01259D25C65249009928EA /* Preview Content */,
 			);
 			path = "mindfull-swift";
@@ -107,8 +108,10 @@
 		8A0125C325C66A2E009928EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8A0125CC25C686A0009928EA /* SearchForm.swift */,
+				8AAA336025C7595C00E92762 /* ReusableViews */,
+				8A0125CC25C686A0009928EA /* SearchFormView.swift */,
 				8A01259925C65248009928EA /* ContentView.swift */,
+				8AAA336825C76D7300E92762 /* PostList.swift */,
 				8A0125D125C74C9B009928EA /* ReuseableViews */,
 			);
 			path = Views;
@@ -205,14 +208,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		329F3BD33FE55FEA0AAD70DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D371D39A53784CF02F218EB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindfull-swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A01258E25C65248009928EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A01259625C65248009928EA /* AppDelegate.swift in Sources */,
+				8AAA336925C76D7300E92762 /* PostList.swift in Sources */,
+				8A0125CD25C686A0009928EA /* SearchFormView.swift in Sources */,
 				8A01259825C65248009928EA /* SceneDelegate.swift in Sources */,
 				8A01259A25C65248009928EA /* ContentView.swift in Sources */,
+				8ABEA2B225C7B212006CA1EF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
