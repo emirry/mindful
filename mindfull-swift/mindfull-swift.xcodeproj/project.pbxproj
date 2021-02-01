@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A28A91819EDC8F59E3F9E38 /* Pods_mindfull_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF3005C3DE543C2FF14DCAB /* Pods_mindfull_swift.framework */; };
 		8A01259625C65248009928EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01259525C65248009928EA /* AppDelegate.swift */; };
 		8A01259825C65248009928EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01259725C65248009928EA /* SceneDelegate.swift */; };
 		8A01259A25C65248009928EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01259925C65248009928EA /* ContentView.swift */; };
 		8A01259C25C65249009928EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A01259B25C65249009928EA /* Assets.xcassets */; };
 		8A01259F25C65249009928EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A01259E25C65249009928EA /* Preview Assets.xcassets */; };
 		8A0125A225C65249009928EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0125A025C65249009928EA /* LaunchScreen.storyboard */; };
-		8A0125CD25C686A0009928EA /* SearchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0125CC25C686A0009928EA /* SearchForm.swift */; };
-		A29136474DC78AED1943BBD4 /* Pods_mindfull_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239F60386ECD72523318176 /* Pods_mindfull_swift.framework */; };
+		8A0125CD25C686A0009928EA /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0125CC25C686A0009928EA /* SearchFormView.swift */; };
+		8AAA336925C76D7300E92762 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA336825C76D7300E92762 /* PostList.swift */; };
+		8ABEA2B225C7B212006CA1EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEA2B125C7B212006CA1EF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		46463F93AECC8D4C510B9615 /* Pods-mindfull-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-swift.release.xcconfig"; path = "Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift.release.xcconfig"; sourceTree = "<group>"; };
-		6239F60386ECD72523318176 /* Pods_mindfull_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindfull_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DF3005C3DE543C2FF14DCAB /* Pods_mindfull_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindfull_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		895D27DBC249F4D87548F7ED /* Pods-mindfull-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-swift.debug.xcconfig"; path = "Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		8A01259225C65248009928EA /* mindfull-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindfull-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A01259525C65248009928EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A01259725C65248009928EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +30,10 @@
 		8A01259E25C65249009928EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A0125A125C65249009928EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0125A325C65249009928EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A0125CC25C686A0009928EA /* SearchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForm.swift; sourceTree = "<group>"; };
-		D08AC5ADC7767C6BD8E8F9C7 /* Pods-mindfull-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-swift.debug.xcconfig"; path = "Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0125CC25C686A0009928EA /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
+		8AAA336825C76D7300E92762 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		8ABEA2B125C7B212006CA1EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F376054294FC0CC28DC64F5D /* Pods-mindfull-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-swift.release.xcconfig"; path = "Target Support Files/Pods-mindfull-swift/Pods-mindfull-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A28A91819EDC8F59E3F9E38 /* Pods_mindfull_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66EAB87468900FD936ED51EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DF3005C3DE543C2FF14DCAB /* Pods_mindfull_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A01258925C65248009928EA = {
 			isa = PBXGroup;
 			children = (
 				8A01259425C65248009928EA /* mindfull-swift */,
 				8A01259325C65248009928EA /* Products */,
+				F5EF79A406BAF45C491187B1 /* Pods */,
+				66EAB87468900FD936ED51EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +128,16 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		F5EF79A406BAF45C491187B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				895D27DBC249F4D87548F7ED /* Pods-mindfull-swift.debug.xcconfig */,
+				F376054294FC0CC28DC64F5D /* Pods-mindfull-swift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A0125A625C65249009928EA /* Build configuration list for PBXNativeTarget "mindfull-swift" */;
 			buildPhases = (
+				D371D39A53784CF02F218EB0 /* [CP] Check Pods Manifest.lock */,
 				8A01258E25C65248009928EA /* Sources */,
 				8A01258F25C65248009928EA /* Frameworks */,
 				8A01259025C65248009928EA /* Resources */,
+				329F3BD33FE55FEA0AAD70DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +348,7 @@
 		};
 		8A0125A725C65249009928EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895D27DBC249F4D87548F7ED /* Pods-mindfull-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +370,7 @@
 		};
 		8A0125A825C65249009928EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F376054294FC0CC28DC64F5D /* Pods-mindfull-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
