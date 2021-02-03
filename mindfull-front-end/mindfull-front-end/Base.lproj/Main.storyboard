@@ -22,9 +22,17 @@
                                     <constraint firstAttribute="height" constant="44" id="wiL-QL-d0Z"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Edit" style="plain" id="7Ma-vw-eOD"/>
+                                    <barButtonItem title="Edit" style="plain" id="7Ma-vw-eOD">
+                                        <connections>
+                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="caZ-D9-crq"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bBD-ni-YAc"/>
-                                    <barButtonItem title="Add Food" id="tja-M2-1pV"/>
+                                    <barButtonItem title="Add Food" id="tja-M2-1pV">
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="jMP-cF-8Ya"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-tX-PCZ">
@@ -53,6 +61,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addBarButton" destination="tja-M2-1pV" id="ONt-IG-LtP"/>
+                        <outlet property="addEditButton" destination="Nuw-Bz-GH9" id="PKV-yN-RSP"/>
                         <outlet property="tableView" destination="GxR-tX-PCZ" id="cbb-qT-9QH"/>
                     </connections>
                 </viewController>

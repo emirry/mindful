@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addEditButton: UIToolbar!
+    @IBOutlet weak var addBarButton: UIBarButtonItem!
     
     var foodProps: [FoodData] = []
     
@@ -27,7 +29,13 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
