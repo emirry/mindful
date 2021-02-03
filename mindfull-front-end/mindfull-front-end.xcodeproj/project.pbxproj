@@ -42,7 +42,6 @@
 		8ACB2FFF25CB5DE800D1E680 = {
 			isa = PBXGroup;
 			children = (
-				8ACB302025CB5E6900D1E680 /* FoodProps.swift */,
 				8ACB300A25CB5DE800D1E680 /* mindfull-front-end */,
 				8ACB300925CB5DE800D1E680 /* Products */,
 			);
@@ -63,6 +62,7 @@
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
 				8ACB300F25CB5DE800D1E680 /* ViewController.swift */,
 				8ACB301125CB5DE800D1E680 /* Main.storyboard */,
+				8ACB302025CB5E6900D1E680 /* FoodProps.swift */,
 				8ACB301425CB5DE900D1E680 /* Assets.xcassets */,
 				8ACB301625CB5DE900D1E680 /* LaunchScreen.storyboard */,
 				8ACB301925CB5DE900D1E680 /* Info.plist */,
