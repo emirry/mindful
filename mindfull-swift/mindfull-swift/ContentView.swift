@@ -7,25 +7,53 @@
 
 import SwiftUI
 
+//struct EnergyObj: Decodable {
+//    var label: String
+//    var quantity: Int
+//    var unit: String
+//}
+//struct NutrientsObj: Decodable {
+//    var ENERC_KCAL: EnergyObj
+//}
+//
+//struct ParsedArray: Decodable, Identifiable {
+//    let id: String
+//    var nutrients: NutrientsObj
+//    
+//    private enum CodingKeys: String, CodingKey {
+//        case id = "foodId"
+//        case nutrients = "nutrients"
+//    }
+//}
+//
+//struct Ingredients: Decodable {
+//    var text: String
+//    var measure: String
+//    var parsed: [ParsedArray]
+//}
+//
+//
+//struct Response: Decodable {
+//    var ingredients: [Ingredients]
+//}
 
-struct Response: Codable {
-    var ingredients: [Ingredients]
-}
 
-struct Ingredients: Codable {
-    var text: String
-}
 
 struct ContentView: View {
-    @State private var ingredients = [Ingredients]()
+    @State private var ingredientsObj = [Ingredients]()
+//    @ObservedObject var fetchData =
+//    @State var searchString = String()
 
 
     var body: some View {
-        List(ingredients, id: \.text) { item in
+        List(ingredientsObj, id: \.text) { response in
             VStack(alignment: .leading) {
-                Text(item.text)
+                Text(response.text)
+//                Spacer()
+//                Text(response.measure)
+//                Spacer()
+//                Text(response.parsed[0].nutrients.ENERC_KCAL.label)
                     .font(.headline)
-//                Text(item.collectionName)
             }
         }
         .onAppear(perform: loadData)
@@ -33,7 +61,8 @@ struct ContentView: View {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://api.edamam.com/api/nutrition-data?app_id=bd6a05e8&app_key=a2e67c21cf15d4af86bea5f0b20836c5&ingr=1%20cup%20cookedrice") else {
+        //guard is saying that this is not an emtpy string, if it is, print "invalid URL"
+        guard let url = URL(string: "https://api.mocki.io/v1/8aff7ed9") else {
             print("Invalid URL")
             return
         }
@@ -43,9 +72,11 @@ struct ContentView: View {
             if let data = data {
                 if let decodedResponse = try? JSONDecoder().decode(Response.self, from: data) {
                     // we have good data – go back to the main thread
+                    print(decodedResponse)
                     DispatchQueue.main.async {
                         // update our UI
-                        self.ingredients = decodedResponse.ingredients
+                        self.ingredientsObj = decodedResponse.ingredients
+//
                     }
 
                     // everything is good, so we can exit
@@ -54,7 +85,7 @@ struct ContentView: View {
             }
 
             // if we're still here it means there was a problem
-            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            print("Fetch failed: \(error)")
         }.resume()
     }
 }
