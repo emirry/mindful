@@ -14,7 +14,7 @@
 ////
 ////struct Result: Codable {
 ////    var id: Int
-////    var first_name: String
+////    var first_name: String/Users/emilynagai/Desktop/Ada-Capstone/mindfull/mindfull-swift/mindfull-swift/Supporting Views/ReuseableViews
 ////}
 //
 //struct PostList: View {

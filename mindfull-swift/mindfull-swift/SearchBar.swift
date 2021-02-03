@@ -17,21 +17,10 @@ struct SearchForm: View {
                 .foregroundColor(Color("searchFontColor"))
         }
     }
-    
 }
 
-struct Post: Codable, Identifiable {
-    var id = UUID()
-    let email: String
-    var first_name: String
-    var body: String
-}
-
-//class Api {
 
 
-
-//}
 
 struct SearchFrom_Previews: PreviewProvider {
     static var previews: some View {
