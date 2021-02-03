@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8793385108E884F90082ED /* Pods_mindfull_front_end.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CA94D7593F074EF124E58 /* Pods_mindfull_front_end.framework */; };
 		8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */; };
 		8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */; };
 		8ACB301025CB5DE800D1E680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300F25CB5DE800D1E680 /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0022D8765E7D3AC6B1AAF23A /* Pods-mindfull-front-end.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-front-end.release.xcconfig"; path = "Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end.release.xcconfig"; sourceTree = "<group>"; };
+		3F9CA94D7593F074EF124E58 /* Pods_mindfull_front_end.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindfull_front_end.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACB300825CB5DE800D1E680 /* mindfull-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindfull-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		8ACB301725CB5DE900D1E680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ACB301925CB5DE900D1E680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACB302025CB5E6900D1E680 /* FoodProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProps.swift; sourceTree = "<group>"; };
+		D150C0A73FACC8871061AB3F /* Pods-mindfull-front-end.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-front-end.debug.xcconfig"; path = "Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8793385108E884F90082ED /* Pods_mindfull_front_end.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25E4282EEB3A83474B005567 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CA94D7593F074EF124E58 /* Pods_mindfull_front_end.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8ACB2FFF25CB5DE800D1E680 = {
 			isa = PBXGroup;
 			children = (
 				8ACB300A25CB5DE800D1E680 /* mindfull-front-end */,
 				8ACB300925CB5DE800D1E680 /* Products */,
+				9DBE7463212C580E3870DFF7 /* Pods */,
+				25E4282EEB3A83474B005567 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,16 @@
 			path = "mindfull-front-end";
 			sourceTree = "<group>";
 		};
+		9DBE7463212C580E3870DFF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D150C0A73FACC8871061AB3F /* Pods-mindfull-front-end.debug.xcconfig */,
+				0022D8765E7D3AC6B1AAF23A /* Pods-mindfull-front-end.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ACB301C25CB5DE900D1E680 /* Build configuration list for PBXNativeTarget "mindfull-front-end" */;
 			buildPhases = (
+				B0DC9D8880ACD210312C910B /* [CP] Check Pods Manifest.lock */,
 				8ACB300425CB5DE800D1E680 /* Sources */,
 				8ACB300525CB5DE800D1E680 /* Frameworks */,
 				8ACB300625CB5DE800D1E680 /* Resources */,
+				618084F178458A7C79579773 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		618084F178458A7C79579773 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0DC9D8880ACD210312C910B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindfull-front-end-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8ACB300425CB5DE800D1E680 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		8ACB301D25CB5DE900D1E680 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D150C0A73FACC8871061AB3F /* Pods-mindfull-front-end.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +376,7 @@
 		};
 		8ACB301E25CB5DE900D1E680 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0022D8765E7D3AC6B1AAF23A /* Pods-mindfull-front-end.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

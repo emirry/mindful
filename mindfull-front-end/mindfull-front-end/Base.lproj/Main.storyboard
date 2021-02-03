@@ -8,41 +8,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Food List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nuw-Bz-GH9">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="wiL-QL-d0Z"/>
+                                    <constraint firstAttribute="height" constant="44" id="lEF-Tl-Rwe"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Edit" style="plain" id="7Ma-vw-eOD">
+                                    <barButtonItem title="Edit" style="plain" id="GHl-nH-efN">
                                         <connections>
-                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="caZ-D9-crq"/>
+                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="zPQ-PF-cN7"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bBD-ni-YAc"/>
-                                    <barButtonItem title="Add Food" id="tja-M2-1pV">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h8n-fX-XNd"/>
+                                    <barButtonItem title="Add Food" id="vkV-Fs-pbX">
                                         <connections>
-                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="jMP-cF-8Ya"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="t02-VJ-c1j"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-tX-PCZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-i9-sG2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Do5-65-amz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="uuD-V4-lIC">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Do5-65-amz" id="1YL-pw-RXi">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uuD-V4-lIC" id="9th-0x-PZR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -53,22 +53,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Nuw-Bz-GH9" firstAttribute="top" secondItem="GxR-tX-PCZ" secondAttribute="bottom" id="Fm8-3e-PHS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GxR-tX-PCZ" secondAttribute="trailing" id="Pa6-tY-Fzb"/>
-                            <constraint firstItem="GxR-tX-PCZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rg7-AH-3Ck"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nuw-Bz-GH9" secondAttribute="bottom" id="uhi-2S-NUg"/>
-                            <constraint firstItem="GxR-tX-PCZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vyX-7U-0M6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="GPe-Ak-hKA"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wxu-Di-aKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg8-Te-nzK" secondAttribute="bottom" id="dj3-9a-b2W"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fdh-lg-aUE"/>
+                            <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="h9T-rs-7WB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addBarButton" destination="tja-M2-1pV" id="ONt-IG-LtP"/>
-                        <outlet property="addEditButton" destination="Nuw-Bz-GH9" id="PKV-yN-RSP"/>
-                        <outlet property="tableView" destination="GxR-tX-PCZ" id="cbb-qT-9QH"/>
+                        <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
+                        <outlet property="addEditButton" destination="xg8-Te-nzK" id="OYj-Hj-7ac"/>
+                        <outlet property="tableView" destination="XVQ-i9-sG2" id="QSB-lW-UzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="17.39130434782609" y="93.75"/>
         </scene>
     </scenes>
     <resources>
