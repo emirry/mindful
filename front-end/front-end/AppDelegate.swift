@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  front-end
+//  mindfull
 //
 //  Created by Emily Nagai on 2/3/21.
 //
