@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  mindfull
+//  mindfull-front-end
 //
 //  Created by Emily Nagai on 2/3/21.
 //
