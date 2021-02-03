@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FoodListViewController.swift
 //  mindfull-front-end
 //
 //  Created by Emily Nagai on 2/3/21.
@@ -7,18 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FoodListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
-    @IBOutlet weak var addBarButton: UIBarButtonItem!
+    @IBOutlet weak var addBarbutton: UIBarButtonItem!
     
     var foodProps: [FoodData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.navigationController?.navigationBar.isHidden = false
+
         var foodProp = FoodData(calories: 205)
         foodProps.append(foodProp)
         foodProp = FoodData(calories: 300)
@@ -30,15 +31,28 @@ class ViewController: UIViewController {
         tableView.delegate = self
     }
     
+
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
     }
     
+
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+            sender.title = "Edit"
+            addBarbutton.isEnabled = true
+        } else {
+            tableView.setEditing(true, animated: true)
+            sender.title = "Done"
+            addBarbutton.isEnabled = false
+        }
     }
+    
+
     
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodProps.count
     }
