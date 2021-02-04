@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import Keys
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+//    private let keys = MindfullFrontEndKeys()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         let keys = MindfullFrontEndKeys()
+
         return true
     }
 
