@@ -7,9 +7,52 @@
 
 import Foundation
 
-struct FoodData: Decodable {
+class FoodData: Decodable {
+    let name: String
     let calories: Int
+    
+    init(name: String, calories: Int) {
+        self.name = name
+        self.calories = calories
+    }
+    
+    func getData() {
+        let urlString = "https://api.mocki.io/v1/8aff7ed9"
+        
+        print("URL: \(urlString)")
+        
+        //Creating a URL
+        guard let url = URL(string: urlString) else {
+            print("Error: Could not create a URL from \(urlString)")
+            return
+          }
+        
+        //Create session
+        let session = URLSession.shared
+        
+        //get data wth .dataTask method
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            //deal with the data
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print("\(json)")
+            } catch {
+                print("JSON Error: \(error.localizedDescription)")
+            }
+        }
+        
+        task.resume()
+    }
 }
+
+//struct FatInfo: Decodable {
+//    let label: String
+//    let quantity: Int
+//    let unit: String
+//}
 
 //struct NutrientsObj: Decodable {
 //    let kcal: CalorieInfo
