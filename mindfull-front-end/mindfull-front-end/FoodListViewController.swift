@@ -74,7 +74,8 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(foodProps[indexPath.row].calories)")
+        cell.textLabel?.text = String("\(foodProps[indexPath.row].name)")
+        cell.detailTextLabel?.text = "Calories:\(foodProps[indexPath.row].calories)"
         return cell
     }
     
