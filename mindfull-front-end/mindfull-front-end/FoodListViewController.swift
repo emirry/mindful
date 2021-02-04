@@ -14,25 +14,40 @@ class FoodListViewController: UIViewController {
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
     
     var foodProps: [FoodData] = []
+    var selectedFoodIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = false
 
-        var foodProp = FoodData(calories: 205)
-        foodProps.append(foodProp)
-        foodProp = FoodData(calories: 300)
-        foodProps.append(foodProp)
-        foodProp = FoodData(calories: 540)
-        foodProps.append(foodProp)
+//        var foodProp = FoodData(name: "1 cup cooked rice", calories: 350)
+//        foodProps.append(foodProp)
+//        foodProp = FoodData(name: "4oz. baked salmon", calories: 300)
+//        foodProps.append(foodProp)
+//        foodProp = FoodData(name: "8oz. cup coffee", calories: 540)
+//        foodProps.append(foodProp)
         
         tableView.dataSource = self
         tableView.delegate = self
     }
     
+    //TO SAVE DATA in UserDefaults
+    //funch saveFood() {
+    //  let encoder = JSONEncoder()
+    //  if let encoded = try? encoder.encode(foodProps) {
+    //      UserDefaults.standard.set(encoded, forKey: "foodProps")
+    //} else {
+    //  print("Couldn't save food")
+    //}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        selectedFoodIndex = tableView.indexPathForSelectedRow!.row
+    }
+    
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        //connect search bar page here?
     }
     
 
