@@ -26,7 +26,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nbi-80-Zz9"/>
                                     <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="gCb-SY-GrZ"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="K60-Zb-ScD"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -132,11 +132,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-i9-sG2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Eig-F0-tkd" detailTextLabel="2ol-xE-Ejl" style="IBUITableViewCellStyleSubtitle" id="uuD-V4-lIC">
@@ -162,11 +162,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="y1Y-Fo-WI1" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="3hW-3q-dXB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
-                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lEF-Tl-Rwe"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="nGK-JO-YDz"/>
@@ -189,13 +192,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xg8-Te-nzK" firstAttribute="leading" secondItem="XVQ-i9-sG2" secondAttribute="leading" id="5Lv-W3-JRi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg8-Te-nzK" secondAttribute="bottom" id="6Pg-UM-Lee"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="GPe-Ak-hKA"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lbb-u7-tRA"/>
                             <constraint firstItem="XVQ-i9-sG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wxu-Di-aKx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg8-Te-nzK" secondAttribute="bottom" id="dj3-9a-b2W"/>
                             <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fdh-lg-aUE"/>
                             <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="h9T-rs-7WB"/>
                             <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="pK5-1d-oFd"/>
+                            <constraint firstItem="xg8-Te-nzK" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="zAh-Qm-gv6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -205,6 +211,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="y1Y-Fo-WI1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="17.39130434782609" y="93.75"/>
         </scene>
