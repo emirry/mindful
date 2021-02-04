@@ -15,6 +15,8 @@
 		8ACB301525CB5DE900D1E680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB301425CB5DE900D1E680 /* Assets.xcassets */; };
 		8ACB301825CB5DE900D1E680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACB301625CB5DE900D1E680 /* LaunchScreen.storyboard */; };
 		8ACB302125CB5E6900D1E680 /* FoodProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB302025CB5E6900D1E680 /* FoodProps.swift */; };
+		8ACB303225CB8C2F00D1E680 /* FoodDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB303125CB8C2F00D1E680 /* FoodDetail.swift */; };
+		8ACB303C25CBBA6100D1E680 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB303B25CBBA6100D1E680 /* FoodDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8ACB301725CB5DE900D1E680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ACB301925CB5DE900D1E680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACB302025CB5E6900D1E680 /* FoodProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProps.swift; sourceTree = "<group>"; };
+		8ACB303125CB8C2F00D1E680 /* FoodDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetail.swift; sourceTree = "<group>"; };
+		8ACB303B25CBBA6100D1E680 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		D150C0A73FACC8871061AB3F /* Pods-mindfull-front-end.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-front-end.debug.xcconfig"; path = "Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +79,11 @@
 			children = (
 				8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */,
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
+				8ACB302025CB5E6900D1E680 /* FoodProps.swift */,
+				8ACB303B25CBBA6100D1E680 /* FoodDetailViewController.swift */,
+				8ACB303125CB8C2F00D1E680 /* FoodDetail.swift */,
 				8ACB300F25CB5DE800D1E680 /* FoodListViewController.swift */,
 				8ACB301125CB5DE800D1E680 /* Main.storyboard */,
-				8ACB302025CB5E6900D1E680 /* FoodProps.swift */,
 				8ACB301425CB5DE900D1E680 /* Assets.xcassets */,
 				8ACB301625CB5DE900D1E680 /* LaunchScreen.storyboard */,
 				8ACB301925CB5DE900D1E680 /* Info.plist */,
@@ -210,6 +216,8 @@
 			files = (
 				8ACB301025CB5DE800D1E680 /* FoodListViewController.swift in Sources */,
 				8ACB302125CB5E6900D1E680 /* FoodProps.swift in Sources */,
+				8ACB303225CB8C2F00D1E680 /* FoodDetail.swift in Sources */,
+				8ACB303C25CBBA6100D1E680 /* FoodDetailViewController.swift in Sources */,
 				8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */,
 				8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */,
 			);
