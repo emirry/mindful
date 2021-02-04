@@ -1,13 +1,32 @@
-////
-////  PostList.swift
-////  mindfull-swift
-////
-////  Created by Emily Nagai on 1/31/21.
-////
 //
-//import Foundation
-//import SwiftUI
+//  PostList.swift
+//  mindfull-swift
 //
+//  Created by Emily Nagai on 1/31/21.
+
+
+import Foundation
+import SwiftUI
+
+struct FoodItemRow: View {
+    var foodProps: Response
+
+    var body: some View {
+        HStack {
+            Text(foodProps.text)
+            Text(foodProps.measure)
+
+            Spacer()
+        }
+    }
+}
+
+struct FoodItemRow_Previews: PreviewProvider {
+    static var previews: some View {
+        FoodItemRow(foodProps: landmarks[1])
+    }
+}
+
 ////struct Response: Codable {
 ////    var results: [Result]
 ////}
