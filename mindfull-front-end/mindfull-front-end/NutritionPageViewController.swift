@@ -1,5 +1,5 @@
 //
-//  JournalPageViewController.swift
+//  NutritionPageViewController.swift
 //  mindfull-front-end
 //
 //  Created by Emily Nagai on 2/4/21.
@@ -20,14 +20,39 @@ class NutritionPageViewController: UIPageViewController {
         self.delegate = self
         self.dataSource = self
         
-        setViewControllers([createFoodDetailViewController(forPage: 0)], direction: .forward, animated: false, completion: nil)
+        setViewControllers([createNutritionDetailViewController(forPage: 0)], direction: .forward, animated: false, completion: nil)
         
+    }
+    
+    func loadFoodItems() {
+        guard let foodItemsEncoded = UserDefaults.standard.value(forKey: "foodProps")
+            as? Data else {
+            
+            print("Warning!")
+            //TODO: get current food for the first element in foodProps
+
+            foodProps.append(FoodData(name: "Apple", calories: 90))
+            return
+        }
+        let decoder = JSONDecoder()
+        if let foodProps = try? decoder.decode(Array.self, from: foodItemsEncoded) as
+            [FoodData] {
+            self.foodProps = foodProps
+        } else {
+            print("Error: Couldn't decode data read from UserDefaults")
+        }
+        
+        if foodProps.isEmpty {
+            //TODO: get current food for the first element in foodProps
+            foodProps.append(FoodData(name: "Apple", calories: 90))
+
+        }
     }
     
     //creating an instance of food item?
     //own function
-    func createFoodDetailViewController(forPage page: Int) -> NutritionDetailViewController {
-        let detailViewController = storyboard!.instantiateViewController(identifier: "FoodDetailViewController") as! NutritionDetailViewController
+    func createNutritionDetailViewController(forPage page: Int) -> NutritionDetailViewController {
+        let detailViewController = storyboard!.instantiateViewController(identifier: "NutritionDetailViewController") as! NutritionDetailViewController
         detailViewController.nutritionPageIndex = page
         return detailViewController
     }
@@ -35,14 +60,14 @@ class NutritionPageViewController: UIPageViewController {
 }
 
 //This code goes with delegate and datasource
-extension JournalPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+extension NutritionPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     //iOS methods:
     //on current page, if it's the first page, cannot move to the page before. if there is a page, swipe to previous page
     //viewController is what's getting passed in
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
             if let currentViewController = viewController as? NutritionDetailViewController {
                 if currentViewController.nutritionPageIndex > 0 {
-                    return createFoodDetailViewController(forPage: currentViewController.nutritionPageIndex - 1)
+                    return createNutritionDetailViewController(forPage: currentViewController.nutritionPageIndex - 1)
                 }
             }
             return nil
@@ -53,7 +78,7 @@ extension JournalPageViewController: UIPageViewControllerDelegate, UIPageViewCon
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
             if let currentViewController = viewController as? NutritionDetailViewController {
                 if currentViewController.nutritionPageIndex < foodProps.count - 1 {
-                    return createFoodDetailViewController(forPage: currentViewController.nutritionPageIndex + 1)
+                    return createNutritionDetailViewController(forPage: currentViewController.nutritionPageIndex + 1)
                 }
             }
             return nil

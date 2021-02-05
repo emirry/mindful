@@ -21,28 +21,31 @@ class FoodListViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = false
 
-//        var foodProp = FoodData(name: "1 cup cooked rice", calories: 350)
-//        foodProps.append(foodProp)
-//        foodProp = FoodData(name: "4oz. baked salmon", calories: 300)
-//        foodProps.append(foodProp)
-//        foodProp = FoodData(name: "8oz. cup coffee", calories: 540)
-//        foodProps.append(foodProp)
+        //hardcoded data
+        var foodProp = FoodData(name: "1 cup cooked rice", calories: 350)
+        foodProps.append(foodProp)
+        foodProp = FoodData(name: "4oz. baked salmon", calories: 300)
+        foodProps.append(foodProp)
+        foodProp = FoodData(name: "8oz. cup coffee", calories: 540)
+        foodProps.append(foodProp)
         
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-    //TO SAVE DATA in UserDefaults
-    //funch saveFood() {
-    //  let encoder = JSONEncoder()
-    //  if let encoded = try? encoder.encode(foodProps) {
-    //      UserDefaults.standard.set(encoded, forKey: "foodProps")
-    //} else {
-    //  print("Couldn't save food")
-    //}
+//    TO SAVE DATA in UserDefaults
+//    func saveFoodItems() {
+//      let encoder = JSONEncoder()
+//      if let encoded = try? encoder.encode(foodProps) {
+//          UserDefaults.standard.set(encoded, forKey: "foodProps")
+//      } else {
+//        print("Erro: Saving encoded didn't work")
+//      }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedFoodIndex = tableView.indexPathForSelectedRow!.row
+//        saveFoodItems()
     }
     
 
