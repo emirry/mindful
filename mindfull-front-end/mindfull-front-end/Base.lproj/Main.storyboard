@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="-400.00000000000006" y="65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Food Search Bar View Controller-->
         <scene sceneID="w1p-JA-mwg">
             <objects>
-                <viewController id="fqs-H6-zhk" sceneMemberID="viewController">
+                <viewController id="fqs-H6-zhk" customClass="FoodSearchBarViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dT-pb-j47">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -410,6 +410,9 @@
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="cUB-tg-IXj" secondAttribute="bottom" id="owX-wz-3kF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="jRt-2A-evs" id="v9v-5d-VOY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
