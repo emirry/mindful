@@ -16,21 +16,47 @@ class FoodDetail: FoodData {
     
     struct IngredientInfo: Codable {
         var text: String
-//        var parsed: CalorieInfo
+        var parsed: [CalorieInfo]
+
+//        private enum CodingKeys: String, CodingKey {
+//            case ingredient = "text"
+//            case ingredientArray = "parsed"
+//        }
     }
-//
-//    struct CalorieInfo {
-//        var nutrients: NutrientInfo
-//    }
-//
-//    struct NutrientInfo: Codable {
-//        var FAT: FatInfo
-//        var CHOCDF: CarbInfo
-//        var PROCNT: ProteinInfo
-//    }
-    
+
+    struct CalorieInfo: Codable {
+        var nutrients: NutrientInfo
+    }
+
+    struct NutrientInfo: Codable {
+        var FAT: FatInfo
+        var CHOCDF: CarbInfo
+        var PROCNT: ProteinInfo
+    }
+
+    struct FatInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
+    struct CarbInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
+    struct ProteinInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
     //declaring class properties of type Result
-    var text = ""
+    var name = ""
+    var fatLabel = ""
+    var carbLabel = ""
+    var proteinLabel = ""
     
     func getData(completed: @escaping () -> ()) {
         //change to actual api url once I can parse through the JSON data successfully

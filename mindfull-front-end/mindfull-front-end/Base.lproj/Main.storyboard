@@ -128,13 +128,13 @@
                         <outlet property="calorieInfo" destination="B56-2O-l9x" id="Gh2-9f-buI"/>
                         <outlet property="carbInfo" destination="c0L-zN-guV" id="Jun-k8-MBU"/>
                         <outlet property="fatInfo" destination="Soo-Ad-04e" id="NdB-G2-jkI"/>
-                        <outlet property="nutritionTitle" destination="nNZ-4d-602" id="Y1i-0I-fd2"/>
+                        <outlet property="nutritionTitle" destination="nNZ-4d-602" id="a7p-GB-UUa"/>
                         <outlet property="proteinInfo" destination="Llu-So-THv" id="Ku5-Jz-qw3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175" y="75"/>
+            <point key="canvasLocation" x="-1175.3623188405797" y="75"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="tEf-YN-zcX">

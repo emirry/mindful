@@ -8,11 +8,11 @@
 import Foundation
 
 class FoodData: Decodable {
-    let name: String
+    let text: String
     let calories: Int
     
-    init(name: String, calories: Int) {
-        self.name = name
+    init(text: String, calories: Int) {
+        self.text = text
         self.calories = calories
     }
     
