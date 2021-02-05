@@ -34,17 +34,18 @@ class NutritionDetailViewController: UIViewController {
 //        print("foodProp: \(String(describing: foodProp))")
         
         //Need to edit this later once i can scroll to different nutrition info entries
-        foodDetail = FoodDetail(name: "Update", calories: 0)
+        foodDetail = FoodDetail(text: "alga", calories: 0)
     
-        
         //calling data here
         foodDetail.getData {
             DispatchQueue.main.async {
+    
                 //Change later with data
-                self.nutritionTitle.text = self.foodDetail.text
-                self.calorieInfo.text = "\(self.foodDetail.calories)"
-                self.carbInfo.text = ""
-                self.fatInfo.text = ""
+                self.nutritionTitle.text = self.foodDetail.name
+//                self.calorieInfo.text = "\(self.foodDetail.calories)"
+//                self.fatInfo.text = self.foodDetail.fatLabel
+//                self.carbInfo.text = self.foodDetail.carbLabel
+//                self.proteinInfo.text = self.foodDetail.proteinLabel
             }
         }
     }
