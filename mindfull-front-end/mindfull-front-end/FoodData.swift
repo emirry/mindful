@@ -17,6 +17,7 @@ class FoodData: Decodable {
     }
     
     func getData() {
+        //change to actual api url once I can parse through the JSON data successfully
         let urlString = "https://api.mocki.io/v1/8aff7ed9"
         
         print("URL: \(urlString)")
