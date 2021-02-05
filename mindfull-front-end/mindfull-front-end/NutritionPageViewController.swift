@@ -31,20 +31,22 @@ class NutritionPageViewController: UIPageViewController {
             print("Warning!")
             //TODO: get current food for the first element in foodProps
 
-            foodProps.append(FoodData(name: "Apple", calories: 90))
+            foodProps.append(FoodData(text: "Apple", calories: 90))
             return
         }
         let decoder = JSONDecoder()
         if let foodProps = try? decoder.decode(Array.self, from: foodItemsEncoded) as
             [FoodData] {
             self.foodProps = foodProps
+            print(foodProps)
         } else {
             print("Error: Couldn't decode data read from UserDefaults")
         }
         
         if foodProps.isEmpty {
             //TODO: get current food for the first element in foodProps
-            foodProps.append(FoodData(name: "Apple", calories: 90))
+            foodProps.append(FoodData(text: "Apple", calories: 90))
+            return
 
         }
     }
