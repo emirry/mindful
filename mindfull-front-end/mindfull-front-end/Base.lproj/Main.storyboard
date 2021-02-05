@@ -348,6 +348,67 @@
             </objects>
             <point key="canvasLocation" x="-400.00000000000006" y="65.625"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="w1p-JA-mwg">
+            <objects>
+                <viewController id="fqs-H6-zhk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9dT-pb-j47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXY-f9-Nqa">
+                                <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="m4c-7e-mk7"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="What did you eat today?" id="t5t-cE-lri"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-tg-IXj">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rKW-6q-ZaQ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Back" id="NMV-cg-zr2"/>
+                                </items>
+                            </toolbar>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search ex: 1 small apple" translatesAutoresizingMaskIntoConstraints="NO" id="jRt-2A-evs">
+                                <rect key="frame" x="0.0" y="110" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oVb-HC-gLs"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fp1-PN-Ovj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jRt-2A-evs" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="0T6-ef-Bmm"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="1ao-3g-JaX"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="2EV-1t-bPE"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="top" secondItem="Fp1-PN-Ovj" secondAttribute="top" constant="16" id="7PU-f7-vdX"/>
+                            <constraint firstItem="cUB-tg-IXj" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="7ae-fq-1OP"/>
+                            <constraint firstItem="cUB-tg-IXj" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="TrB-De-Inx"/>
+                            <constraint firstItem="jRt-2A-evs" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="UFu-kO-1cC"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="Vic-ne-mCO"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="bed-tR-8cW"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="e4O-Ji-NYC"/>
+                            <constraint firstItem="jRt-2A-evs" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="fwH-IQ-TlT"/>
+                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="mRF-nr-ZbK"/>
+                            <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="cUB-tg-IXj" secondAttribute="bottom" id="owX-wz-3kF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="733"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="S6H-v7-jtz"/>
