@@ -53,10 +53,10 @@ class FoodListViewController: UIViewController {
 //      }
 //    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        selectedFoodIndex = tableView.indexPathForSelectedRow!.row
-//        saveFoodItems()
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        selectedFoodIndex = tableView.indexPathForSelectedRow!.row
+////        saveFoodItems()
+//    }
     
     //Seacrch bar. This makes the search bar appear
     override func viewWillAppear(_ animated: Bool) {
