@@ -391,6 +391,10 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-nX-2EA">
+                                <rect key="frame" x="0.0" y="154" width="414" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fp1-PN-Ovj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -400,12 +404,16 @@
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="2EV-1t-bPE"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="top" secondItem="Fp1-PN-Ovj" secondAttribute="top" constant="16" id="7PU-f7-vdX"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="7ae-fq-1OP"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="jRt-2A-evs" secondAttribute="bottom" id="7fo-8k-S3b"/>
+                            <constraint firstItem="cUB-tg-IXj" firstAttribute="top" secondItem="Jlf-nX-2EA" secondAttribute="bottom" id="9EF-JQ-gjI"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="TrB-De-Inx"/>
                             <constraint firstItem="jRt-2A-evs" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="UFu-kO-1cC"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="Vic-ne-mCO"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="bed-tR-8cW"/>
+                            <constraint firstItem="Fp1-PN-Ovj" firstAttribute="trailing" secondItem="Jlf-nX-2EA" secondAttribute="trailing" id="e1T-qJ-MkV"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="e4O-Ji-NYC"/>
                             <constraint firstItem="jRt-2A-evs" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="fwH-IQ-TlT"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="lLe-gJ-yZT"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="mRF-nr-ZbK"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="cUB-tg-IXj" secondAttribute="bottom" id="owX-wz-3kF"/>
                         </constraints>
