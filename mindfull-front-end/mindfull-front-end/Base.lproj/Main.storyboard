@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d9l-1o-nBQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqs-H6-zhk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="430" y="66"/>
         </scene>
-        <!--Food Detail View Controller-->
+        <!--Journal Detail View Controller-->
         <scene sceneID="tEf-YN-zcX">
             <objects>
-                <viewController storyboardIdentifier="FoodDetailViewController" id="AZL-nB-pSC" customClass="FoodDetailViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JournalDetailViewController" id="AZL-nB-pSC" customClass="JournalDetailViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7p-PY-ZRH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +244,12 @@
                             <constraint firstItem="JHo-M6-7Fy" firstAttribute="leading" secondItem="5VB-Pc-stJ" secondAttribute="leading" id="uJM-bg-fdK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstFoodItem" destination="Upa-jM-OQb" id="trJ-SJ-hGW"/>
+                        <outlet property="fourthFoodItem" destination="fed-W3-0Sp" id="VpY-lm-Gf0"/>
+                        <outlet property="secondFoodItem" destination="BWQ-9L-3zr" id="XZP-35-2RJ"/>
+                        <outlet property="thirdFoodItem" destination="PgL-Hm-LiN" id="FK8-uj-5CF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEs-X2-an2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,7 +317,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Ne-iuB">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="44"/>
                                 <items>
                                     <navigationItem title="What did you eat today?" id="yeH-28-W0u"/>
                                 </items>
