@@ -71,37 +71,9 @@ class FoodDetail: FoodData {
         
         //get data wth .dataTask method
         let task = session.dataTask(with: url) { (data, response, error) in
-//            let jsonDecoder = JSONDecoder()
-//            if let error = error {
-//                print(error)
-//                completed()
-//                return
-//            }
-//            guard let data = data else {
-//                print("data was nil")
-//                completed()
-//                return
-//            }
-//            do {
-//                print("IS THIS WORKING?")
-//                let resultStruct = try jsonDecoder.decode(Result.self, from: data)
-//                print("\(resultStruct.ingredients[0].text)")
-//                self.name = resultStruct.ingredients[0].text
-//                print(self.text)
-//                print("\(resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label)")
-//                print("\(resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label)")
-//                print("\(resultStruct.ingredients[0].parsed[0].nutrients.FAT.label)")
-//                completed()
-//
-//            } catch {
-//                print(error)
-//                completed()
-//            }
-//        }
-//        task.resume()
-        /////////////////////////////////////////
+            let jsonDecoder = JSONDecoder()
             if let error = error {
-                print("Error: \(error.localizedDescription)")
+                print(error)
                 completed()
                 return
             }
@@ -110,35 +82,23 @@ class FoodDetail: FoodData {
                 completed()
                 return
             }
-            //deal with the data
             do {
-//                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                let result = try JSONDecoder().decode(Result.self, from: data)
-                self.name = result.ingredients[0].text
-                                print("\(result.ingredients[0].text)")
-
-//                self.fatLabel = result.ingredients[0].parsed[0].nutrients.FAT.label
-//                self.carbLabel = result.ingredients[0].parsed[0].nutrients.CHOCDF.label
-//                self.proteinLabel = result.ingredients[0].parsed[0].nutrients.PROCNT.label
+                print("IS THIS WORKING?")
+                let resultStruct = try jsonDecoder.decode(Result.self, from: data)
+                print("\(resultStruct.ingredients[0].text)")
+                self.name = resultStruct.ingredients[0].text
+                print(self.text)
+                print("\(resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label)")
+                print("\(resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label)")
+                print("\(resultStruct.ingredients[0].parsed[0].nutrients.FAT.label)")
                 completed()
 
-//            }
-//            catch {
-//                print("JSON Error: \(error.localizedDescription)")
-            } catch DecodingError.keyNotFound(let key, let context) {
-                Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
-            } catch DecodingError.valueNotFound(let type, let context) {
-                Swift.print("could not find type \(type) in JSON: \(context.debugDescription)")
-            } catch DecodingError.typeMismatch(let type, let context) {
-                Swift.print("type mismatch for type \(type) in JSON: \(context.debugDescription)")
-            } catch DecodingError.dataCorrupted(let context) {
-                Swift.print("data found to be corrupted in JSON: \(context.debugDescription)")
-            } catch let error as NSError {
-                NSLog("Error in read(from:ofType:) domain= \(error.domain), description= \(error.localizedDescription)")
+            } catch {
+                print(error)
+                completed()
             }
-            completed()
         }
-
         task.resume()
     }
 }
+
