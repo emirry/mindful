@@ -125,11 +125,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calorieInfo" destination="B56-2O-l9x" id="Gh2-9f-buI"/>
-                        <outlet property="carbInfo" destination="c0L-zN-guV" id="Jun-k8-MBU"/>
-                        <outlet property="fatInfo" destination="Soo-Ad-04e" id="NdB-G2-jkI"/>
-                        <outlet property="nutritionTitle" destination="nNZ-4d-602" id="a7p-GB-UUa"/>
-                        <outlet property="proteinInfo" destination="Llu-So-THv" id="Ku5-Jz-qw3"/>
+                        <outlet property="caloriesLabel" destination="B56-2O-l9x" id="Bik-AB-aMl"/>
+                        <outlet property="carbsLabel" destination="c0L-zN-guV" id="wK6-DF-hnH"/>
+                        <outlet property="fatLabel" destination="Soo-Ad-04e" id="Eoa-Jt-ABc"/>
+                        <outlet property="nutritionLabel" destination="nNZ-4d-602" id="mr5-eB-TrW"/>
+                        <outlet property="proteinLabel" destination="Llu-So-THv" id="JKY-fT-pya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
