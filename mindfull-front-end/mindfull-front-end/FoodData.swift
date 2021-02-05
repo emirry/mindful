@@ -16,37 +16,7 @@ class FoodData: Decodable {
         self.calories = calories
     }
     
-    func getData() {
-        //change to actual api url once I can parse through the JSON data successfully
-        let urlString = "https://api.mocki.io/v1/8aff7ed9"
-        
-        print("URL: \(urlString)")
-        
-        //Creating a URL
-        guard let url = URL(string: urlString) else {
-            print("Error: Could not create a URL from \(urlString)")
-            return
-          }
-        
-        //Create session
-        let session = URLSession.shared
-        
-        //get data wth .dataTask method
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            //deal with the data
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                print("\(json)")
-            } catch {
-                print("JSON Error: \(error.localizedDescription)")
-            }
-        }
-        
-        task.resume()
-    }
+    
 }
 
 //struct FatInfo: Decodable {
