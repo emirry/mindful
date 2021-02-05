@@ -420,6 +420,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="jRt-2A-evs" id="v9v-5d-VOY"/>
+                        <outlet property="searchResultsTable" destination="Jlf-nX-2EA" id="HRT-3F-Gjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
