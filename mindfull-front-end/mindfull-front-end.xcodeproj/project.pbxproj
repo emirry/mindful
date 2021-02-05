@@ -221,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACB301025CB5DE800D1E680 /* FoodListViewController.swift in Sources */,
-				8ACB302125CB5E6900D1E680 /* FoodProps.swift in Sources */,
-				8ACB303225CB8C2F00D1E680 /* FoodDetail.swift in Sources */,
+				8ACB302125CB5E6900D1E680 /* FoodData.swift in Sources */,
+				8ACB304D25CC886800D1E680 /* NutritionPageViewController.swift in Sources */,
+				8ACB304025CBF18900D1E680 /* FoodDetail.swift in Sources */,
+				8ACB305025CC976600D1E680 /* NutritionDetailViewController.swift in Sources */,
 				8ACB303C25CBBA6100D1E680 /* FoodDetailViewController.swift in Sources */,
 				8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */,
 				8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  FoodData.swift
 //  mindfull-front-end
 //
 //  Created by Emily Nagai on 2/3/21.
