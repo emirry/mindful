@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175.3623188405797" y="75"/>
+            <point key="canvasLocation" x="430" y="66"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="tEf-YN-zcX">
@@ -152,7 +152,11 @@
                                 <items>
                                     <barButtonItem title="Goal" id="gj9-vq-Iam"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nbi-80-Zz9"/>
-                                    <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG"/>
+                                    <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="S6H-v7-jtz"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHo-M6-7Fy">
@@ -240,16 +244,10 @@
                             <constraint firstItem="JHo-M6-7Fy" firstAttribute="leading" secondItem="5VB-Pc-stJ" secondAttribute="leading" id="uJM-bg-fdK"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="firstFoodItem" destination="Upa-jM-OQb" id="UKO-1G-bN1"/>
-                        <outlet property="fourthFoodItem" destination="fed-W3-0Sp" id="UjC-pB-Uor"/>
-                        <outlet property="secondFoodItem" destination="BWQ-9L-3zr" id="eo8-OX-MMe"/>
-                        <outlet property="thirdFoodItem" destination="PgL-Hm-LiN" id="bPk-r1-cI4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEs-X2-an2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2017" y="94"/>
+            <point key="canvasLocation" x="-1278" y="66"/>
         </scene>
         <!--Food List View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -307,7 +305,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="h8n-fX-XNd"/>
                                     <barButtonItem title="Add Food" id="vkV-Fs-pbX">
                                         <connections>
-                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="t02-VJ-c1j"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="GaD-Pr-5DD"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -330,16 +328,18 @@
                     </view>
                     <connections>
                         <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
-                        <outlet property="addEditButton" destination="xg8-Te-nzK" id="OYj-Hj-7ac"/>
                         <outlet property="tableView" destination="XVQ-i9-sG2" id="QSB-lW-UzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="y1Y-Fo-WI1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="66"/>
+            <point key="canvasLocation" x="-399" y="66"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="S6H-v7-jtz"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
