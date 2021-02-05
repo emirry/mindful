@@ -16,15 +16,6 @@ class FoodListViewController: UIViewController {
     var foodProps: [FoodData] = []
     var selectedFoodIndex = 0
     
-    //Search bar
-    private lazy var foodSearchBar: UISearchBar = {
-        let searchBar = UISearchBar(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: 44.0))
-        searchBar.placeholder = "Search ex: 1 cup cooked rice"
-//        FoodDetail.getData()
-        
-        return searchBar
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,7 +31,7 @@ class FoodListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableHeaderView = foodSearchBar
+//        tableView.tableHeaderView = foodSearchBar
     }
     
 //    TO SAVE DATA in UserDefaults
@@ -57,14 +48,6 @@ class FoodListViewController: UIViewController {
 //        selectedFoodIndex = tableView.indexPathForSelectedRow!.row
 ////        saveFoodItems()
 //    }
-    
-    //Seacrch bar. This makes the search bar appear
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        var contentOffSet = self.tableView.contentOffset
-        contentOffSet.y = contentOffSet.y + (self.tableView.tableHeaderView?.frame ?? CGRect()).height
-        self.tableView.contentOffset = contentOffSet
-    }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)

@@ -28,6 +28,7 @@ class FoodSearchBarViewController: UIViewController {
         searchResultsTable.dataSource = self
         filteredData = resultsArr
     }
+    
 }
 
 extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {

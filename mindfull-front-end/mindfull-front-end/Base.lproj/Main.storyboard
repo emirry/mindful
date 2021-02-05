@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d9l-1o-nBQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -260,11 +260,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-i9-sG2">
-                                <rect key="frame" x="0.0" y="139" width="414" height="679"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Eig-F0-tkd" detailTextLabel="2ol-xE-Ejl" style="IBUITableViewCellStyleSubtitle" id="uuD-V4-lIC">
@@ -297,7 +297,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lEF-Tl-Rwe"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="nGK-JO-YDz"/>
@@ -318,7 +318,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Ne-iuB">
-                                <rect key="frame" x="0.0" y="64" width="0.0" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="What did you eat today?" id="yeH-28-W0u"/>
                                 </items>
@@ -344,6 +344,7 @@
                             <constraint firstItem="xg8-Te-nzK" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="zAh-Qm-gv6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bdL-zY-TT7"/>
                     <connections>
                         <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
                         <outlet property="addEditButton" destination="xg8-Te-nzK" id="ldI-bT-Rbs"/>
@@ -373,12 +374,16 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-tg-IXj">
-                                <rect key="frame" x="0.0" y="872" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="rKW-6q-ZaQ"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Back" id="NMV-cg-zr2"/>
+                                    <barButtonItem title="Back" id="NMV-cg-zr2">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="coverVertical" id="YjM-dJ-aoS"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search ex: 1 small apple" translatesAutoresizingMaskIntoConstraints="NO" id="jRt-2A-evs">
@@ -403,6 +408,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TgT-H0-ohk" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="3Jt-8f-434"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -416,7 +424,6 @@
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="top" secondItem="Fp1-PN-Ovj" secondAttribute="top" constant="16" id="7PU-f7-vdX"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="7ae-fq-1OP"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="jRt-2A-evs" secondAttribute="bottom" id="7fo-8k-S3b"/>
-                            <constraint firstItem="cUB-tg-IXj" firstAttribute="top" secondItem="Jlf-nX-2EA" secondAttribute="bottom" id="9EF-JQ-gjI"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="TrB-De-Inx"/>
                             <constraint firstItem="jRt-2A-evs" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="UFu-kO-1cC"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="Vic-ne-mCO"/>
@@ -426,6 +433,7 @@
                             <constraint firstItem="jRt-2A-evs" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="fwH-IQ-TlT"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="lLe-gJ-yZT"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="mRF-nr-ZbK"/>
+                            <constraint firstItem="cUB-tg-IXj" firstAttribute="top" secondItem="Jlf-nX-2EA" secondAttribute="bottom" id="oSw-qM-E9e"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="cUB-tg-IXj" secondAttribute="bottom" id="owX-wz-3kF"/>
                         </constraints>
                     </view>
@@ -435,12 +443,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TgT-H0-ohk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-400" y="846"/>
+            <point key="canvasLocation" x="-713" y="948"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S6H-v7-jtz"/>
+        <segue reference="YjM-dJ-aoS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
