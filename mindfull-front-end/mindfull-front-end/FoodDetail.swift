@@ -83,16 +83,14 @@ class FoodDetail: FoodData {
                 return
             }
             do {
-                print("IS THIS WORKING?")
                 let resultStruct = try jsonDecoder.decode(Result.self, from: data)
-                print("\(resultStruct.ingredients[0].text)")
                 self.name = resultStruct.ingredients[0].text
-                print(self.text)
-                print("\(resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label)")
-                print("\(resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label)")
-                print("\(resultStruct.ingredients[0].parsed[0].nutrients.FAT.label)")
-                completed()
+                self.calories = resultStruct.calories
+                self.proteinLabel = resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label
+                self.carbLabel = resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label
+                self.fatLabel = resultStruct.ingredients[0].parsed[0].nutrients.FAT.label
 
+                completed()
             } catch {
                 print(error)
                 completed()

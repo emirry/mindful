@@ -9,7 +9,7 @@ import Foundation
 
 class FoodData: Decodable {
     let text: String
-    let calories: Int
+    var calories: Int
     
     init(text: String, calories: Int) {
         self.text = text

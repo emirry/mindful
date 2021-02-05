@@ -42,10 +42,10 @@ class NutritionDetailViewController: UIViewController {
     
                 //Change later with data
                 self.nutritionTitle.text = self.foodDetail.name
-//                self.calorieInfo.text = "\(self.foodDetail.calories)"
-//                self.fatInfo.text = self.foodDetail.fatLabel
-//                self.carbInfo.text = self.foodDetail.carbLabel
-//                self.proteinInfo.text = self.foodDetail.proteinLabel
+                self.calorieInfo.text = "\(self.foodDetail.calories)"
+                self.fatInfo.text = self.foodDetail.fatLabel
+                self.carbInfo.text = self.foodDetail.carbLabel
+                self.proteinInfo.text = self.foodDetail.proteinLabel
             }
         }
     }
