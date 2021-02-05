@@ -22,11 +22,11 @@ class FoodListViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
 
         //hardcoded data
-        var foodProp = FoodData(name: "1 cup cooked rice", calories: 350)
+        var foodProp = FoodData(text: "1 cup cooked rice", calories: 350)
         foodProps.append(foodProp)
-        foodProp = FoodData(name: "4oz. baked salmon", calories: 300)
+        foodProp = FoodData(text: "4oz. baked salmon", calories: 300)
         foodProps.append(foodProp)
-        foodProp = FoodData(name: "8oz. cup coffee", calories: 540)
+        foodProp = FoodData(text: "8oz. cup coffee", calories: 540)
         foodProps.append(foodProp)
         
         tableView.dataSource = self
@@ -77,7 +77,7 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(foodProps[indexPath.row].name)")
+        cell.textLabel?.text = String("\(foodProps[indexPath.row].text)")
         cell.detailTextLabel?.text = "Calories:\(foodProps[indexPath.row].calories)"
         return cell
     }
