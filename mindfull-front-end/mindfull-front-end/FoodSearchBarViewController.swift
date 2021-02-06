@@ -6,47 +6,108 @@
 //
 
 import UIKit
+import Keys
+
+private let key = MindfullFrontEndKeys()
 
 class FoodSearchBarViewController: UIViewController {
     
-//    @State var isSearch = false
-//    @State var searchText = ""
+    struct Result: Codable {
+        var calories: Int
+        var ingredients: [IngredientInfo]
+    }
     
-    var resultsArr = ["taco", "Pizza", "Fries"]
-    var filteredData: [String]!
-//    var isSearch : Bool = false
+    struct IngredientInfo: Codable {
+        var text: String
+        var parsed: [CalorieInfo]
+    }
+
+    struct CalorieInfo: Codable {
+        var nutrients: NutrientInfo
+    }
+
+    struct NutrientInfo: Codable {
+        var FAT: FatInfo
+        var CHOCDF: CarbInfo
+        var PROCNT: ProteinInfo
+    }
+
+    struct FatInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
+    struct CarbInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
+    struct ProteinInfo: Codable {
+        var label: String
+        var quantity: Double
+        var unit: String
+    }
+
+    var searchTimeout: Timer?
+    var calories = 0
+    var name = ""
+    var fatLabel = ""
+    var carbLabel = ""
+    var proteinLabel = ""
+    var isSearching = false
+    var resultsArr: [Result] = []
+//    var filteredData: [String]!
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchResultsTable: UITableView!
-    //TODO: link back button
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         searchBar.delegate = self
         searchResultsTable.delegate = self
         searchResultsTable.dataSource = self
-        filteredData = resultsArr
+    }
+    
+    //review. make sure api call gets canceled when leaving this view
+    override func viewWillDisappear(_ animated: Bool) {
+        cancelSearchTimeout()
+        super.viewWillDisappear(animated)
+    }
+    
+    func cancelSearchTimeout() {
+        if let existingTimeout = self.searchTimeout {
+         existingTimeout.invalidate()
+         self.searchTimeout = nil
+         }
     }
     
 }
 
+
 extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     //TableViewDataSource
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultsCell", for: indexPath)
-        cell.textLabel?.text = filteredData[indexPath.row]
-        return cell
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData.count
+        return resultsArr.count
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultsCell", for: indexPath)
+        
+//        cell.textLabel?.text = filteredData[indexPath.row]
+        let searchResults = resultsArr[indexPath.row]
+        cell.textLabel?.text = "Name: \(searchResults.ingredients[0].text)"
+        cell.detailTextLabel?.text = "Calories: \(searchResults.calories)"
+        return cell
+    }
+    
     
 //    func configureCell(cell: UITableViewCell, forRowAtIndexPath: IndexPath) {
 //        //REVIEW
@@ -58,8 +119,6 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
 //    }
     
     //SearchBarDelegate
-    
-    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         isSearching = false
     }
@@ -82,54 +141,15 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "\(searchText)"]) {
-            print(searchText)
-        }
-//            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.reload(_:)), object: searchBar)
-//            self.perform(#selector(self.reload(_:)), with: searchBar, afterDelay: 2.0)
-//            self.searchResultsTable.reloadData()
+        cancelSearchTimeout()
         
-        
-//        let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchBar.searchTextField)
-//        publisher.map {
-//            ($0.object as! UISearchTextField).text
-//        }
-//        .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
-//        .sink { (searchText) in
-//            self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "\(searchText)"]) {
-//
-//            }
-
+        self.searchTimeout = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.performDeferedSearch), userInfo: nil, repeats: false)
     }
     
-//    @objc func reload(_ searchBar: UISearchBar) {
-//        guard let query = searchBar.text, query.trimmingCharacters(in: .whitespaces) != "" else {
-//            print("Nothing to search")
-//            return
-//        }
-//        print(query)
-//    }
-
-//        filteredData = searchText.isEmpty ? resultsArr : resultsArr.filter { (item: String) -> Bool in
-//            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-//        }
-//        searchResultsTable.reloadData()
-//
-//    }
-    
-//    fileprivate func setupSearchBarListeners() {
-//        let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchBar.searchTextField)
-//        publisher.map {
-//            ($0.object as! UISearchTextField).text
-//        }
-//        .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
-//        .sink { (searchText) in
-//            self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "\(searchText)"]) {
-//
-//            }
-//        }
-//
-//    }
+    @objc func performDeferedSearch() {
+        self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : self.searchBar.text!]) {
+        }
+    }
     
     //API CALL
     fileprivate func getData(_ url: String, parameters: [String: String], completed: @escaping () -> ()) {
@@ -163,21 +183,24 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
             do {
                 let resultStruct = try jsonDecoder.decode(Result.self, from: data)
                 self.name = resultStruct.ingredients[0].text
-                print("\(resultStruct.ingredients[0].text)")
-                self.calories = resultStruct.calories
-                self.proteinLabel = resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label
-                self.carbLabel = resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label
-                self.fatLabel = resultStruct.ingredients[0].parsed[0].nutrients.FAT.label
+//                print("\(resultStruct.ingredients[0].text)")
+//                self.calories = resultStruct.calories
+//                self.proteinLabel = resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label
+//                self.carbLabel = resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label
+//                self.fatLabel = resultStruct.ingredients[0].parsed[0].nutrients.FAT.label
+                self.resultsArr.append(resultStruct)
+                
+                DispatchQueue.main.async {
+                    self.searchResultsTable.reloadData()
+                }
+                
                 completed()
-            } catch {
+            }
+            catch {
                 print("\(error.localizedDescription)")
                 completed()
             }
         }
         task.resume()
-            
-    
     }
-
-
 }
