@@ -13,7 +13,7 @@ class FoodListViewController: UIViewController {
     @IBOutlet weak var addEditButton: UIToolbar!
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
     
-    var foodProps: [FoodData] = []
+    var food: [FoodDetail] = []
     var selectedFoodIndex = 0
     
     override func viewDidLoad() {
@@ -22,12 +22,12 @@ class FoodListViewController: UIViewController {
 //        self.navigationController?.navigationBar.isHidden = true
 
         //hardcoded data
-        var foodProp = FoodData(text: "1 cup cooked rice", calories: 350)
-        foodProps.append(foodProp)
-        foodProp = FoodData(text: "4oz. baked salmon", calories: 300)
-        foodProps.append(foodProp)
-        foodProp = FoodData(text: "8oz. cup coffee", calories: 540)
-        foodProps.append(foodProp)
+//        var foodProp = FoodDetail(text: "1 cup cooked rice", calories: 350)
+//        food.append(foodProp)
+//        food = FoodDetail(text: "4oz. baked salmon", calories: 300)
+//        food.append(foodProp)
+//        foodProp = FoodDetail(text: "8oz. cup coffee", calories: 540)
+//        food.append(foodProp)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -71,28 +71,28 @@ class FoodListViewController: UIViewController {
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodProps.count
+        return food.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(foodProps[indexPath.row].text)")
-        cell.detailTextLabel?.text = "Calories:\(foodProps[indexPath.row].calories)"
+        cell.textLabel?.text = String("\(food[indexPath.row].name)")
+        cell.detailTextLabel?.text = "Calories:\(food[indexPath.row].calories)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            foodProps.remove(at: indexPath.row)
+            food.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             //saveData()
         }
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = foodProps[sourceIndexPath.row]
-        foodProps.remove(at: sourceIndexPath.row)
-        foodProps.insert(itemToMove, at: destinationIndexPath.row)
+        let itemToMove = food[sourceIndexPath.row]
+        food.remove(at: sourceIndexPath.row)
+        food.insert(itemToMove, at: destinationIndexPath.row)
         //saveData()
     }
 

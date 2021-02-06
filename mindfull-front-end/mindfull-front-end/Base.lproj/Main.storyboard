@@ -418,34 +418,34 @@
                         <viewLayoutGuide key="safeArea" id="Fp1-PN-Ovj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jRt-2A-evs" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="0T6-ef-Bmm"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="1ao-3g-JaX"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="2EV-1t-bPE"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="top" secondItem="Fp1-PN-Ovj" secondAttribute="top" constant="16" id="7PU-f7-vdX"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="7ae-fq-1OP"/>
-                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="jRt-2A-evs" secondAttribute="bottom" id="7fo-8k-S3b"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="J3i-58-uJ7"/>
+                            <constraint firstItem="cUB-tg-IXj" firstAttribute="top" secondItem="Jlf-nX-2EA" secondAttribute="bottom" id="Ton-sh-8c0"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="TrB-De-Inx"/>
-                            <constraint firstItem="jRt-2A-evs" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="UFu-kO-1cC"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="Vic-ne-mCO"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="bed-tR-8cW"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="trailing" secondItem="Jlf-nX-2EA" secondAttribute="trailing" id="e1T-qJ-MkV"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="e4O-Ji-NYC"/>
-                            <constraint firstItem="jRt-2A-evs" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="fwH-IQ-TlT"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="erk-ie-DDD"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="lLe-gJ-yZT"/>
                             <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="mRF-nr-ZbK"/>
                             <constraint firstItem="cUB-tg-IXj" firstAttribute="top" secondItem="Jlf-nX-2EA" secondAttribute="bottom" id="oSw-qM-E9e"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="cUB-tg-IXj" secondAttribute="bottom" id="owX-wz-3kF"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="sZU-xC-5w7"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="jRt-2A-evs" id="v9v-5d-VOY"/>
+                        <outlet property="searchBar" destination="QiU-2X-UlJ" id="DDn-c8-6VI"/>
                         <outlet property="searchResultsTable" destination="Jlf-nX-2EA" id="HRT-3F-Gjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TgT-H0-ohk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="769"/>
+            <point key="canvasLocation" x="-725" y="769"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

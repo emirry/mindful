@@ -10,9 +10,8 @@ import Keys
 
 private let key = MindfullFrontEndKeys()
 
-class FoodDetail: FoodData {
-    
-    
+class FoodDetail {
+        
     struct Result: Codable {
         var calories: Int
         var ingredients: [IngredientInfo]
@@ -51,8 +50,10 @@ class FoodDetail: FoodData {
         var unit: String
     }
 
+
     //declaring class properties of type Result
     //TODO: name will become the search query
+    var calories = 0
     var name = ""
     var fatLabel = ""
     var carbLabel = ""
@@ -104,14 +105,12 @@ class FoodDetail: FoodData {
                 self.proteinLabel = resultStruct.ingredients[0].parsed[0].nutrients.PROCNT.label
                 self.carbLabel = resultStruct.ingredients[0].parsed[0].nutrients.CHOCDF.label
                 self.fatLabel = resultStruct.ingredients[0].parsed[0].nutrients.FAT.label
-
                 completed()
             } catch {
                 print("\(error.localizedDescription)")
                 completed()
             }
         }
-        print("It didn't work")
         task.resume()
                 
     
