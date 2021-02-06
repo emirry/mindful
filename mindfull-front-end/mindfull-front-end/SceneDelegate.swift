@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import Keys
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    private static let key = MindfullFrontEndKeys()
+//    private static let key = MindfullFrontEndKeys()
     
     var window: UIWindow?
 

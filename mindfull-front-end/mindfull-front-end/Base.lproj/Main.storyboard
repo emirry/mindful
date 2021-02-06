@@ -445,7 +445,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TgT-H0-ohk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="948"/>
+            <point key="canvasLocation" x="-738" y="769"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

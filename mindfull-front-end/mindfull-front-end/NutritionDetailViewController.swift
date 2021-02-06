@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Keys
+
+private let key = MindfullFrontEndKeys()
 
 class NutritionDetailViewController: UIViewController {
 
@@ -37,7 +40,7 @@ class NutritionDetailViewController: UIViewController {
            foodDetail = FoodDetail(text: "alga", calories: 0)
    
            //calling data here
-           foodDetail.getData {
+        foodDetail.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "1 cup cooked rice"]) {
                DispatchQueue.main.async {
    
                    //Change later with data

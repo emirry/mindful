@@ -56,9 +56,9 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
 //            cell.textLabel?.text = foodProps[forRowAtIndexPath.row]
 //        }
 //    }
-    
     //SearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
         //API call?
 //        if searchText.characters.count == 0 {
 //            isSearch = false
@@ -69,7 +69,6 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         filteredData = searchText.isEmpty ? resultsArr : resultsArr.filter { (item: String) -> Bool in
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
-        
         searchResultsTable.reloadData()
 
     }
