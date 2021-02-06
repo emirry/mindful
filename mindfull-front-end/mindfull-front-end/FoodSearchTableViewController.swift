@@ -7,7 +7,15 @@
 
 import UIKit
 
+import Keys
+
+private let key = MindfullFrontEndKeys()
+
 class FoodSearchTableViewController: UITableViewController {
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var sink: Any?
 
     override func viewDidLoad() {
         super.viewDidLoad()

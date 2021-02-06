@@ -11,7 +11,7 @@ class NutritionPageViewController: UIPageViewController {
     
     //Array to hold each food item info
     //initializing empty foodProps array
-    var foodProps: [FoodData] = []
+    var food: [FoodDetail] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,32 +24,32 @@ class NutritionPageViewController: UIPageViewController {
         
     }
     
-    func loadFoodItems() {
-        guard let foodItemsEncoded = UserDefaults.standard.value(forKey: "foodProps")
-            as? Data else {
-            
-            print("Warning!")
-            //TODO: get current food for the first element in foodProps
-
-            foodProps.append(FoodData(text: "Apple", calories: 90))
-            return
-        }
-        let decoder = JSONDecoder()
-        if let foodProps = try? decoder.decode(Array.self, from: foodItemsEncoded) as
-            [FoodData] {
-            self.foodProps = foodProps
-            print(foodProps)
-        } else {
-            print("Error: Couldn't decode data read from UserDefaults")
-        }
-        
-        if foodProps.isEmpty {
-            //TODO: get current food for the first element in foodProps
-            foodProps.append(FoodData(text: "Apple", calories: 90))
-            return
-
-        }
-    }
+//    func loadFoodItems() {
+//        guard let foodItemsEncoded = UserDefaults.standard.value(forKey: "food")
+//            as? Data else {
+//
+//            print("Warning!")
+//            //TODO: get current food for the first element in foodProps
+//
+//            food.append(FoodDetail())
+//            return
+//        }
+//        let decoder = JSONDecoder()
+//        if let food = try? decoder.decode(Array.self, from: foodItemsEncoded) as
+//            [FoodDetail] {
+//            self.food = food
+//            print(food)
+//        } else {
+//            print("Error: Couldn't decode data read from UserDefaults")
+//        }
+//
+//        if food.isEmpty {
+//            //TODO: get current food for the first element in foodProps
+//            food.append(FoodDetail())
+//            return
+//
+//        }
+//    }
     
     //creating an instance of food item?
     //own function
@@ -79,7 +79,7 @@ extension NutritionPageViewController: UIPageViewControllerDelegate, UIPageViewC
     //on the current page, if it's less than the last journal entry, go to the next page or reach the end
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
             if let currentViewController = viewController as? NutritionDetailViewController {
-                if currentViewController.nutritionPageIndex < foodProps.count - 1 {
+                if currentViewController.nutritionPageIndex < food.count - 1 {
                     return createNutritionDetailViewController(forPage: currentViewController.nutritionPageIndex + 1)
                 }
             }

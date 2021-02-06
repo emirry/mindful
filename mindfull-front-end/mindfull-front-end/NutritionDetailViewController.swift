@@ -19,7 +19,7 @@ class NutritionDetailViewController: UIViewController {
     @IBOutlet weak var fatLabel: UILabel!
     
         //variable to hold food data
-        var foodDetail: FoodDetail!
+        var foodData: FoodDetail!
     
         //nutrition pages
         var nutritionPageIndex = 0
@@ -37,18 +37,18 @@ class NutritionDetailViewController: UIViewController {
 //           print("foodProp: \(String(describing: foodProp))")
    
            //Need to edit this later once i can scroll to different nutrition info entries
-           foodDetail = FoodDetail(text: "alga", calories: 0)
+        foodData = FoodDetail()
    
            //calling data here
-        foodDetail.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "1 cup cooked rice"]) {
+        foodData.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "1 cup cooked rice"]) {
                DispatchQueue.main.async {
    
                    //Change later with data
-                   self.nutritionLabel.text = self.foodDetail.name
-                   self.caloriesLabel.text = "\(self.foodDetail.calories)"
-                   self.fatLabel.text = self.foodDetail.fatLabel
-                   self.carbsLabel.text = self.foodDetail.carbLabel
-                   self.proteinLabel.text = self.foodDetail.proteinLabel
+                   self.nutritionLabel.text = self.foodData.name
+                   self.caloriesLabel.text = "\(self.foodData.calories)"
+                   self.fatLabel.text = self.foodData.fatLabel
+                   self.carbsLabel.text = self.foodData.carbLabel
+                   self.proteinLabel.text = self.foodData.proteinLabel
                }
            }
        }
@@ -57,7 +57,7 @@ class NutritionDetailViewController: UIViewController {
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let foodToSearch = segue.destination as! FoodListViewController
            let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as! NutritionPageViewController
-           foodToSearch.foodProps = nutritionPageViewController.foodProps
+           foodToSearch.food = nutritionPageViewController.food
        }
    
        @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
@@ -66,7 +66,7 @@ class NutritionDetailViewController: UIViewController {
    
            let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as! NutritionPageViewController
    
-           nutritionPageViewController.foodProps = source.foodProps
+           nutritionPageViewController.food = source.food
            nutritionPageViewController.setViewControllers([nutritionPageViewController.createNutritionDetailViewController(forPage: nutritionPageIndex)], direction: .forward, animated: false, completion: nil)
        }
    
