@@ -1,4 +1,4 @@
-secrets.py
+secrets_file.py
 
 # Django #
 *.log

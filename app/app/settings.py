@@ -11,18 +11,27 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from secrets import *
+from secrets_file import *
+# from dotenv import load_dotenv
+# import os
+
+# load_dotenv(verbose=True)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# SECRET_KEY = os.getenv("SECRET_KEY")
+# DEBUG = os.getenv("DEBUG")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 
 
 # Application definition
+
+# DATABASES = os.getenv("DATABASES")
+# AUTH_PASSWORD_VALIDATORS = os.getenv("AUTH_PASSWORD_VALIDATORS")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -31,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #own
+    'food_journal',
 ]
 
 MIDDLEWARE = [
@@ -82,3 +94,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# def printenvironment():
+#     print(f'The client id is: test.')
+
+# if __name__ == "__main__":
+#     printenvironment()
