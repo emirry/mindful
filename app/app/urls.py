@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers, serializers, viewsets
 
+
+#Routers to provide an easy way of automatically determinging URL conf
+# router = routers.DefaultRouter()
+# router.register('users', UserViewSet)
+
+#Wire API by using automatic URL routing
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('', router.urls),
+    # path('food-journal-api/', 'rest_framework.urls', 'rest_framework')
 ]
