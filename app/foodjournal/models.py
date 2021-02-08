@@ -1,17 +1,26 @@
 from django.db import models
 
+class User(models.Model):
+    user_name = models.CharField(max_length=50, blank=False, null=False) 
+
+    def get_absolute_url(self):
+        return reverse('user-detail-view', args=[str(self.id)])
+
 class FoodJournal(models.Model):
     date = models.DateField(auto_now=True, blank=False, null=False)
-    food_log_item = models.ForeignKey('FoodLogItem', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # food_log_item = models.ForeignKey('FoodLogItem', on_delete=models.CASCADE)
     #how will I store nutrition meters?
 
     def get_absolute_url(self):
         '''
         Returns the url to access a particular instance of FoodJournal.
         '''
-        return reverse('food-journal-detail-view', args=[str(self.id)])
+        return reverse('food-journal-entry-detail-view', args=[str(self.id)])
+
     
 class FoodLogItem(models.Model):
+    food_journal_entry = models.ForeignKey(FoodJournal, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, blank=False, null=False)
     calories = models.IntegerField(blank=False, null=False)
     fat = models.FloatField()
@@ -19,4 +28,4 @@ class FoodLogItem(models.Model):
     carbs = models.FloatField()
 
     def get_absolute_url(self):
-        return reverse('food-log-item-detail-view', args=[str(self.id)])
+        return reverse('food-item-detail-view', args=[str(self.id)])
