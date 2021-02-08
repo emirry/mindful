@@ -12,8 +12,8 @@ urlpatterns = [
     # path('admin/', admin.site.urls),    
     path('foodjournal/', views.food_journal_entry_list),
     path('foodjournal/<int:pk>/', views.food_journal_entry_detail),
-    path('food-item/', views.food_log_item_list),
-    path('food-item/<int:pk>', views.food_log_item_detail),
+    path('food/', views.food_log_item_list),
+    path('food/<int:pk>', views.food_log_item_detail),
     path('user/', views.user_list),
     path('user/<int:pk>', views.user_detail),
 ]

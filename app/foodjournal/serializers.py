@@ -17,4 +17,5 @@ class FoodLogItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodLogItem
         fields = ['food_journal_entry','name', 'calories', 'fat', 'carbs', 'protein']
+        depth = 1
 
