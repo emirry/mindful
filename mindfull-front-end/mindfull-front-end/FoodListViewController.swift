@@ -8,27 +8,30 @@
 import UIKit
 
 class FoodListViewController: UIViewController {
-
+    var foods: [BackendData] = []
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
     
-    var food: [FoodDetail] = []
-    var selectedFoodIndex = 0
+    var newFoodData: FoodSearchBarViewController!
+    var food: [BackendData] = []
+//    var selectedFoodIndex = 0
+    var selectedSavedFoodIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        self.navigationController?.navigationBar.isHidden = true
 
-        //hardcoded data
-//        var foodProp = FoodDetail(text: "1 cup cooked rice", calories: 350)
-//        food.append(foodProp)
-//        food = FoodDetail(text: "4oz. baked salmon", calories: 300)
-//        food.append(foodProp)
-//        foodProp = FoodDetail(text: "8oz. cup coffee", calories: 540)
-//        food.append(foodProp)
-        
+//        hardcoded data
+//        var food = BackendData(name: "Test", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
+//        foods.append(food)
+//        food = BackendData(name: "Test2", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
+//        foods.append(food)
+//        food = BackendData(name: "Test", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
+//        foods.append(food)
+
         tableView.dataSource = self
         tableView.delegate = self
 //        tableView.tableHeaderView = foodSearchBar
@@ -44,10 +47,10 @@ class FoodListViewController: UIViewController {
 //      }
 //    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        selectedFoodIndex = tableView.indexPathForSelectedRow!.row
-////        saveFoodItems()
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
+//        saveFoodItems()
+    }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)
@@ -71,30 +74,48 @@ class FoodListViewController: UIViewController {
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food.count
+        return foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(food[indexPath.row].name)")
-        cell.detailTextLabel?.text = "Calories:\(food[indexPath.row].calories)"
+        cell.textLabel?.text = String("\(foods[indexPath.row].name)")
+        cell.detailTextLabel?.text = "Calories:\(foods[indexPath.row].calories)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            food.remove(at: indexPath.row)
+            foods.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             //saveData()
         }
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = food[sourceIndexPath.row]
-        food.remove(at: sourceIndexPath.row)
-        food.insert(itemToMove, at: destinationIndexPath.row)
+        let itemToMove = foods[sourceIndexPath.row]
+        foods.remove(at: sourceIndexPath.row)
+        foods.insert(itemToMove, at: destinationIndexPath.row)
         //saveData()
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let foodToSearch = segue.destination as!
+//            FoodSearchBarViewController
+//        let foodPageViewController = UIApplication.shared.windows.first!.rootViewController as! FoodPageViewController
+//        foodToSearch.resultsArr = foodPageViewController.savedFood
+//
+//    }
+//
+//   @IBAction func unwindFromFoodSearchBarViewController(segue: UIStoryboardSegue) {
+//       let source = segue.source as! FoodSearchBarViewController
+//        savedFoodIndex = source.selectedFoodIndex
+//
+//       let foodListViewController = UIApplication.shared.windows.first!.rootViewController as! FoodListViewController
+//
+//    foodPageViewController.savedFood = source.savedFood
+//    foodPageViewController.setViewControllers([foodListViewController.createFoodListViewController(forPage: savedFoodIndex)], direction: .forward, animated: false, completion: nil)
+//   }
 
 }
 

@@ -7,13 +7,23 @@
 
 import UIKit
 
+//PARSING SAVED DATA
+
 protocol DatabaseApiDelegate {
     func itemsDownloaded(foods: [BackendData])
 }
 
 class DatabaseApi: NSObject {
-    
+    var savedFoodArray = [BackendData]()
+
     var delegate: DatabaseApiDelegate?
+//    var food: [BackendData] = []
+    var savedFoodIndex = 0
+    var name = ""
+    var calories = 0
+    var fat = 0.0
+    var carbs = 0.0
+    var protein = 0.0
     
     func getSavedData() {
         //Hit the backend api URL
@@ -34,6 +44,7 @@ class DatabaseApi: NSObject {
 //                    print("data was nil")
 //                    return
 //                }
+    
             })
             task.resume()
 //            let url = url {
@@ -54,14 +65,13 @@ class DatabaseApi: NSObject {
         //parse it out into food info structs
         
         //notify the view controller and pass data back
-    
+
     func parseJson(_ data: Data) {
         //Parse data into food structs
-        var savedFoodArray = [BackendData]()
         
         do {
             let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-//            print(jsonArray)
+            print(jsonArray)
             
             for jsonResult in jsonArray {
                 let jsonDict = jsonResult as! [String:Any]
@@ -73,7 +83,13 @@ class DatabaseApi: NSObject {
                                      protein: jsonDict["protein"]! as! Double)
                 
                 savedFoodArray.append(food)
-//                print(food)
+                
+                self.name = food.name
+                self.calories = food.calories
+                self.fat = food.fat
+                self.carbs = food.carbs
+                self.protein = food.protein
+            
             }
             delegate?.itemsDownloaded(foods: savedFoodArray)
         }
@@ -82,5 +98,7 @@ class DatabaseApi: NSObject {
         }
     
     }
+    
+    //function to s
 
 }

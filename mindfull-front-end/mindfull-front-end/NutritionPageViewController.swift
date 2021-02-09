@@ -9,9 +9,11 @@ import UIKit
 
 class NutritionPageViewController: UIPageViewController {
     
+    let dataBaseApi = DatabaseApi()
     //Array to hold each food item info
-    //initializing empty foodProps array
-    var food: [FoodDetail] = []
+    var food: [BackendData] = []
+//    var nutritionPageIndex = 0
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,16 @@ class NutritionPageViewController: UIPageViewController {
         self.delegate = self
         self.dataSource = self
         
+        loadFoodItems()
         setViewControllers([createNutritionDetailViewController(forPage: 0)], direction: .forward, animated: false, completion: nil)
         
     }
     
-//    func loadFoodItems() {
+    //READ IN SAVED FOOD ITEMS HERE:
+    func loadFoodItems() {
+        dataBaseApi.getSavedData()
+        food = dataBaseApi.savedFoodArray
+        
 //        guard let foodItemsEncoded = UserDefaults.standard.value(forKey: "food")
 //            as? Data else {
 //
@@ -49,7 +56,7 @@ class NutritionPageViewController: UIPageViewController {
 //            return
 //
 //        }
-//    }
+    }
     
     //creating an instance of food item?
     //own function

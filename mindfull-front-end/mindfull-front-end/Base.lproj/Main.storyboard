@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pYz-X1-Du0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d9l-1o-nBQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -15,6 +15,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ku-pJ-Ta3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-400" y="-621"/>
+        </scene>
+        <!--Food Page View Controller-->
+        <scene sceneID="ovy-Yz-wnP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="aea-Lj-ZNT" customClass="FoodPageViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfQ-PI-9ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="-621"/>
         </scene>
         <!--Nutrition Detail View Controller-->
         <scene sceneID="hrk-2x-4dH">
@@ -134,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="66"/>
+            <point key="canvasLocation" x="-357" y="66"/>
         </scene>
         <!--Journal Detail View Controller-->
         <scene sceneID="tEf-YN-zcX">
@@ -152,11 +160,7 @@
                                 <items>
                                     <barButtonItem title="Goal" id="gj9-vq-Iam"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nbi-80-Zz9"/>
-                                    <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="S6H-v7-jtz"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG"/>
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHo-M6-7Fy">
@@ -258,7 +262,7 @@
         <!--Food List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodListViewController" id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +295,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="y1Y-Fo-WI1" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="FbG-Mz-EWV"/>
+                                            <segue destination="y1Y-Fo-WI1" kind="unwind" unwindAction="unwindFromFoodListViewControllerWithSegue:" id="hBg-sv-JdZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -320,7 +324,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Ne-iuB">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="What did you eat today?" id="yeH-28-W0u"/>
+                                    <navigationItem title="Food  Entries" id="yeH-28-W0u"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -354,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="y1Y-Fo-WI1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-400.00000000000006" y="65.625"/>
+            <point key="canvasLocation" x="457" y="66"/>
         </scene>
         <!--Back End Api View Controller-->
         <scene sceneID="LnU-o2-HMo">
@@ -459,7 +463,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TgT-H0-ohk" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="3Jt-8f-434"/>
+                                            <segue destination="TgT-H0-ohk" kind="unwind" unwindAction="unwindFromFoodSearchBarViewControllerWithSegue:" id="FjJ-8P-MEi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -495,11 +499,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TgT-H0-ohk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-725" y="769"/>
+            <point key="canvasLocation" x="-717" y="822"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S6H-v7-jtz"/>
+        <segue reference="rGP-1N-RzR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>

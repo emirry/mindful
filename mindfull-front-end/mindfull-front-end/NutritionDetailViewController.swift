@@ -18,58 +18,70 @@ class NutritionDetailViewController: UIViewController {
     @IBOutlet weak var carbsLabel: UILabel!
     @IBOutlet weak var fatLabel: UILabel!
     
-        //variable to hold food data
-        var foodData: FoodDetail!
+
+    var foodData: DatabaseApi!
+    var food: BackendData!
+    //holds a list of saved food items
+    var foods: [BackendData] = []
     
         //nutrition pages
-        var nutritionPageIndex = 0
+    var nutritionPageIndex = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if food == nil {
+            food = BackendData(name: "current food", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
+            foods.append(food)
+        }
+        
         updateUserInterface()
+        
     }
     
     func updateUserInterface() {
-           let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!
-               NutritionPageViewController
-//           let foodProp = nutritionPageViewController.foodProps[nutritionPageIndex]
-//           print("foodProp: \(String(describing: foodProp))")
+        let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
+//        let food = nutritionPageViewController.food[nutritionPageIndex]
    
            //Need to edit this later once i can scroll to different nutrition info entries
-        foodData = FoodDetail()
+//        foodData = FoodDetail()
+        foodData = DatabaseApi()
    
            //calling data here
-        foodData.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : "1 cup cooked rice"]) {
-               DispatchQueue.main.async {
-   
+        foodData.getSavedData()
+        print(foodData.getSavedData())
+    
+           DispatchQueue.main.async {
+
                    //Change later with data
-                   self.nutritionLabel.text = self.foodData.name
-                   self.caloriesLabel.text = "\(self.foodData.calories)"
-                   self.fatLabel.text = self.foodData.fatLabel
-                   self.carbsLabel.text = self.foodData.carbLabel
-                   self.proteinLabel.text = self.foodData.proteinLabel
-               }
-           }
+                self.nutritionLabel.text = self.foodData.name
+                self.caloriesLabel.text = "\(self.foodData.calories)"
+            print("\(self.foodData.calories)")
+                self.fatLabel.text = "\(self.foodData.fat)"
+                self.carbsLabel.text = "\(self.foodData.carbs)"
+                self.proteinLabel.text = "\(self.foodData.protein)"
+            }
        }
    
        //built in segue function to be able to exit out of *soon to be search page through add button*
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let foodToSearch = segue.destination as! FoodListViewController
-           let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as! NutritionPageViewController
-           foodToSearch.food = nutritionPageViewController.food
+        let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
+        foodToSearch.food = nutritionPageViewController.food
        }
-   
-       @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
+
+       @IBAction func unwindFromFoodListViewController(segue: UIStoryboardSegue) {
            let source = segue.source as! FoodListViewController
-           nutritionPageIndex = source.selectedFoodIndex
-   
-           let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as! NutritionPageViewController
-   
-           nutritionPageViewController.food = source.food
-           nutritionPageViewController.setViewControllers([nutritionPageViewController.createNutritionDetailViewController(forPage: nutritionPageIndex)], direction: .forward, animated: false, completion: nil)
+//           nutritionPageIndex = source.selectedSavedFoodIndex
+        foods = source.foods
+        food = foods[source.selectedSavedFoodIndex]
+        updateUserInterface()
+//
+//            let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
+//
+//            nutritionPageViewController.food = source.food
+//            nutritionPageViewController.setViewControllers([nutritionPageViewController.createNutritionDetailViewController(forPage: nutritionPageIndex)], direction: .forward, animated: false, completion: nil)
        }
-   
    
    }
 

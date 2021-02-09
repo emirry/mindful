@@ -50,6 +50,7 @@ class FoodSearchBarViewController: UIViewController {
         var unit: String
     }
 
+    var backendData: BackendData!
     var searchTimeout: Timer?
     var calories = 0
     var name = ""
@@ -58,6 +59,8 @@ class FoodSearchBarViewController: UIViewController {
     var proteinLabel = ""
     var isSearching = false
     var resultsArr: [Result] = []
+    var selectedFoodIndex = 0
+
 //    var filteredData: [String]!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -82,17 +85,15 @@ class FoodSearchBarViewController: UIViewController {
          existingTimeout.invalidate()
          self.searchTimeout = nil
          }
-    }
-    
+    }    
 }
-
 
 extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     //TableViewDataSource
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsArr.count
@@ -152,7 +153,7 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     //API CALL
-    fileprivate func getData(_ url: String, parameters: [String: String], completed: @escaping () -> ()) {
+     func getData(_ url: String, parameters: [String: String], completed: @escaping () -> ()) {
 
         let urlString = "https://api.edamam.com/api/nutrition-data"
 
@@ -203,4 +204,13 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         }
         task.resume()
     }
+    
+//    //create a saveToDatabase()
+    //create a variable to store new saved food items
+//    func saveToDataBase() {
+//        let newSavedFoodItem = BackendData(name: <#T##String#>, calories: <#T##Int#>, fat: <#T##Double#>, carbs: <#T##Double#>, protein: <#T##Double#>)
+//
+//    }
+
+    
 }

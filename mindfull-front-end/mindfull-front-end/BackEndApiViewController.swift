@@ -28,7 +28,6 @@ class BackEndApiViewController: UIViewController, DatabaseApiDelegate {
     }
     
     func itemsDownloaded(foods: [BackendData]) {
-        print("anything?")
     }
 
     /*
