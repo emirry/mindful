@@ -7,14 +7,29 @@
 
 import UIKit
 
-class BackEndApiViewController: UIViewController {
+class BackEndApiViewController: UIViewController, DatabaseApiDelegate {
+    
+    @IBOutlet weak var apiTableView: UITableView!
+    
+    //initiating DatabaseApi
+    var databaseApi = DatabaseApi()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //initiate calling the items download
+        databaseApi.getSavedData()
+        databaseApi.delegate = self
 
-        // Do any additional setup after loading the view.
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func itemsDownloaded(foods: [BackendData]) {
+        print("anything?")
+    }
 
     /*
     // MARK: - Navigation
