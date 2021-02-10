@@ -30,4 +30,21 @@ class FoodJournalSerializer(serializers.ModelSerializer):
         for food in foods_data:
             FoodLogItem.objects.create(entry=journal, **food)
         return journal 
+    
+    def update(self, instance, validated_data):
+        foods_data = validated_data.pop('journal_items')
+        foods = (instance.journal_items).all()
+        foods = list(foods)
+        instance.date = validated_data.get('date', instance.date)
+        instance.save()
+
+        for food in foods_data:
+            food = foods.pop(0)
+            food.name = food.get('name', food.name)
+            food.calories = food.get('calories', food.calories)
+            food.fat = food.get('fat', food.fat)
+            food.carbs = food.get('carbs', food.carbs)
+            food.protein = food.get('protein', food.protein)
+            food.save()
+        return instance
 

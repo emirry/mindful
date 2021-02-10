@@ -14,7 +14,7 @@ def food_journal_entry_list(request):
     List all journal entries or create a new entry
     """
     if request.method == 'GET':
-        print(FoodJournal.objects.filter(date="2021-02-08"))
+        print(FoodJournal.objects.filter(date=date.today()))
 
         entries = FoodJournal.objects.all()
         serializer = FoodJournalSerializer(entries, many=True)
@@ -76,12 +76,14 @@ def food_log_item_list(request):
         serializer = FoodLogItemSerializer(foods, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        today = "2021-02-08"
-        food_journal_entry = FoodJournal.objects.filter(date=today)
+        # today = "2021-02-08"
+        food_journal_entry = FoodJournal.objects.filter(date=date.today())
         # print("LOOK HERE:", food_journal_entry)
         print("LOOK HERE",food_journal_entry)
-        working = {**request.data,**{"food_journal_entry": food_journal_entry[0].id}}
-        serializer = FoodLogItemSerializer(data=working)
+        # working = {**request.data,**{"food_journal_entry": food_journal_entry[0].id}}
+        # serializer = FoodLogItemSerializer(data=working)
+        serializer = FoodLogItemSerializer(data=request.data)
+
 
         #  serializer = FoodLogItemSerializer(data=request.data)
          #add code to find journal entry date
