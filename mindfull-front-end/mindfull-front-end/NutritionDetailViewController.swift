@@ -17,7 +17,6 @@ class NutritionDetailViewController: UIViewController {
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carbsLabel: UILabel!
     @IBOutlet weak var fatLabel: UILabel!
-    @IBOutlet weak var backButton: UIBarButtonItem!
     
 
 //    var foodData: FoodListViewController!

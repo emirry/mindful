@@ -56,19 +56,7 @@ class FoodListViewController: UIViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "Detail" {
-            selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
-            var nutritionDetailViewController = segue.destination as! NutritionDetailViewController
-            let backendData = savedFoodsArray[selectedSavedFoodIndex]
-            nutritionDetailViewController.backendData = backendData
-        }
-        else if segue.identifier == "Search" {
-            
-        }
 
-    }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)
@@ -121,9 +109,6 @@ class FoodListViewController: UIViewController {
                         print(self.name)
                         print(self.calories)
                         self.savedFoodsArray.append(item)
-//                        self.savedFoodsArray.append(BackendData(food_log_item: FoodInfo(name: item.food_log_item.name, calories: item.food_log_item.calories, fat: item.food_log_item.fat, protein: item.food_log_item.protein, carbs: item.food_log_item.carbs)))
-
-//                    print(self.savedFoodArray)
                     }
                     
                     DispatchQueue.main.async {
@@ -151,7 +136,6 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = savedFoodsArray[indexPath.row].food_log_item.name
         cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].food_log_item.calories)"
-
         return cell
     }
     
@@ -171,23 +155,19 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let foodToSearch = segue.destination as!
-//            FoodSearchBarViewController
-//        let foodPageViewController = UIApplication.shared.windows.first!.rootViewController as! FoodPageViewController
-//        foodToSearch.resultsArr = foodPageViewController.savedFood
-//
-//    }
-//
-//   @IBAction func unwindFromFoodSearchBarViewController(segue: UIStoryboardSegue) {
-//       let source = segue.source as! FoodSearchBarViewController
-//        savedFoodIndex = source.selectedFoodIndex
-//
-//       let foodListViewController = UIApplication.shared.windows.first!.rootViewController as! FoodListViewController
-//
-//    foodPageViewController.savedFood = source.savedFood
-//    foodPageViewController.setViewControllers([foodListViewController.createFoodListViewController(forPage: savedFoodIndex)], direction: .forward, animated: false, completion: nil)
-//   }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Detail" {
+            selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
+            var nutritionDetailViewController = segue.destination as! NutritionDetailViewController
+            let backendData = savedFoodsArray[selectedSavedFoodIndex]
+            nutritionDetailViewController.backendData = backendData
+        }
+        else if segue.identifier == "Search" {
+            
+        }
+
+    }
 
 }
 
