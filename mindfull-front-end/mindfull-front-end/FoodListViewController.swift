@@ -9,15 +9,16 @@ import UIKit
 
 class FoodListViewController: UIViewController {
     var foods: [BackendData] = []
-    
+//    var savedFoods: [DatabaseApi] = []
+    var selectedSavedFoodIndex = 0
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
-    
-    var newFoodData: FoodSearchBarViewController!
-    var food: [BackendData] = []
+//    
+//    var newFoodData: BackendData!
+//    var food: [BackendData] = []
 //    var selectedFoodIndex = 0
-    var selectedSavedFoodIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +35,19 @@ class FoodListViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        getSavedFoodItems()
 //        tableView.tableHeaderView = foodSearchBar
     }
     
-//    TO SAVE DATA in UserDefaults
-//    func saveFoodItems() {
-//      let encoder = JSONEncoder()
-//      if let encoded = try? encoder.encode(foodProps) {
-//          UserDefaults.standard.set(encoded, forKey: "foodProps")
-//      } else {
-//        print("Erro: Saving encoded didn't work")
-//      }
-//    }
+    func getSavedFoodItems() {
+        let savedFoodItems = DatabaseApi()
+        foods = savedFoodItems.savedFoodArray
+        print(foods)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
-//        saveFoodItems()
     }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -74,13 +72,16 @@ class FoodListViewController: UIViewController {
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        getSavedFoodItems()
         return foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(foods[indexPath.row].name)")
-        cell.detailTextLabel?.text = "Calories:\(foods[indexPath.row].calories)"
+//        cell.textLabel?.text = String("\(foods[indexPath.row].name)")
+//        cell.detailTextLabel?.text = "Calories:\(foods[indexPath.row].calories)"
+        getSavedFoodItems()
+
         return cell
     }
     
@@ -88,7 +89,6 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
         if editingStyle == .delete {
             foods.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            //saveData()
         }
     }
     

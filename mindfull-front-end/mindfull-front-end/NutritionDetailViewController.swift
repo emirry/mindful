@@ -30,10 +30,10 @@ class NutritionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if food == nil {
-            food = BackendData(name: "current food", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
-            foods.append(food)
-        }
+//        if food == nil {
+//            food = BackendData(name: "current food", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
+//            foods.append(food)
+//        }
         
         updateUserInterface()
         
@@ -41,7 +41,7 @@ class NutritionDetailViewController: UIViewController {
     
     func updateUserInterface() {
         let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
-//        let food = nutritionPageViewController.food[nutritionPageIndex]
+//        _ = nutritionPageViewController.food[nutritionPageIndex]
    
            //Need to edit this later once i can scroll to different nutrition info entries
 //        foodData = FoodDetail()
@@ -49,14 +49,14 @@ class NutritionDetailViewController: UIViewController {
    
            //calling data here
         foodData.getSavedData()
-        print(foodData.getSavedData())
+//        print(foodData.getSavedData())
     
            DispatchQueue.main.async {
 
                    //Change later with data
                 self.nutritionLabel.text = self.foodData.name
                 self.caloriesLabel.text = "\(self.foodData.calories)"
-            print("\(self.foodData.calories)")
+//            print("\(self.foodData.calories)")
                 self.fatLabel.text = "\(self.foodData.fat)"
                 self.carbsLabel.text = "\(self.foodData.carbs)"
                 self.proteinLabel.text = "\(self.foodData.protein)"
@@ -67,7 +67,7 @@ class NutritionDetailViewController: UIViewController {
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let foodToSearch = segue.destination as! FoodListViewController
         let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
-        foodToSearch.food = nutritionPageViewController.food
+        foodToSearch.foods = nutritionPageViewController.food
        }
 
        @IBAction func unwindFromFoodListViewController(segue: UIStoryboardSegue) {

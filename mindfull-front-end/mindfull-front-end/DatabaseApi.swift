@@ -9,14 +9,14 @@ import UIKit
 
 //PARSING SAVED DATA
 
-protocol DatabaseApiDelegate {
-    func itemsDownloaded(foods: [BackendData])
-}
+//protocol DatabaseApiDelegate {
+//    func itemsDownloaded(foods: [BackendData])
+//}
 
-class DatabaseApi: NSObject {
+class DatabaseApi: UIViewController {
     var savedFoodArray = [BackendData]()
-
-    var delegate: DatabaseApiDelegate?
+//    var delegate: DatabaseApiDelegate?
+    
 //    var food: [BackendData] = []
     var savedFoodIndex = 0
     var name = ""
@@ -27,77 +27,93 @@ class DatabaseApi: NSObject {
     
     func getSavedData() {
         //Hit the backend api URL
-        let apiURL = "http://localhost:8000/food/"
+        let apiURL = "http://127.0.0.1:8000/foodjournal/"
         print(apiURL)
-        
         //download json data
-        if let url = URL(string: apiURL) {
+        guard let url = URL(string: apiURL) else {
+            print("Could not create URL")
+            return
+        }
             //checking that url is no nil
-            let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+//            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                let jsonDecoder = JSONDecoder()
+                print("HELLO")
+
                 if let error = error {
                     print("\(error.localizedDescription)")
                     return
-                } else {
-                    print(self.parseJson(data!))
                 }
-//                guard let data = data else {
-//                    print("data was nil")
-//                    return
+//                else {
+//                    self.parseJson(data!)
 //                }
-    
-            })
-            task.resume()
-//            let url = url {
-//                let session = URLSession(configuration: .default)
-//                let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
-//                    if error == nil {
-//                        //calling parse json function on the data
-//                        self.parseJson(data: data!)
-//                    }
-//                    else {
+                guard let data = data else {
+                    print("data was nil")
+                    return
+                }
+                do {
+                    print("HELLO AGAIN")
+
+                    let result = try jsonDecoder.decode([BackendData].self, from: data)
+                    print(result)
+                    self.savedFoodArray.append(contentsOf: result)
+
+//                    DispatchQueue.main.async {
+//                        self.savedFoodArray.append(result)
 //
-//                    }
-//                })
-//                task.resume()
+                }
+                catch {
+                    print("\(error.localizedDescription)")
+                }
+    
             }
+            task.resume()
+
         }
         
         //parse it out into food info structs
         
         //notify the view controller and pass data back
 
-    func parseJson(_ data: Data) {
-        //Parse data into food structs
-        
-        do {
-            let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-            print(jsonArray)
-            
-            for jsonResult in jsonArray {
-                let jsonDict = jsonResult as! [String:Any]
-                
-                let food = BackendData(name: jsonDict["name"]! as! String,
-                                     calories: jsonDict["calories"]! as! Int,
-                                     fat: jsonDict["fat"]! as! Double,
-                                     carbs: jsonDict["carbs"]! as! Double,
-                                     protein: jsonDict["protein"]! as! Double)
-                
-                savedFoodArray.append(food)
-                
-                self.name = food.name
-                self.calories = food.calories
-                self.fat = food.fat
-                self.carbs = food.carbs
-                self.protein = food.protein
-            
-            }
-            delegate?.itemsDownloaded(foods: savedFoodArray)
-        }
-        catch {
-                print("Error: \(error.localizedDescription)")
-        }
-    
-    }
+//    func parseJson(_ data: Data) {
+//        //Parse data into food structs
+//
+//        do {
+//            let jsonResults = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+////
+////            print(jsonArray)
+//
+////                print(jsonResult)
+//                let food_log_item = FoodInfo(name: jsonResults["name"] as! String,
+//                                             calories: jsonResults["calories"] as! Int,
+//                                             fat: jsonResults["fat"]! as! Double,
+//                                             carbs: jsonResults["carbs"]! as! Double,
+//                                             protein: jsonResults["protein"]! as! Double)
+////                let food = BackendData(food_log_item: food_log_item)
+////                self.savedFoodArray.append(food)
+//
+////                DispatchQueue.main.async {
+////
+////                    self.savedFoodArray.append(food)
+////                    print(food)
+////                }
+//
+////
+////                self.name = food.name
+////                self.calories = food.calories
+////                self.fat = food.fat
+////                self.carbs = food.carbs
+////                self.protein = food.protein
+////                print(savedFoodArray)
+//
+//            }
+//            delegate?.itemsDownloaded(foods: savedFoodArray)
+//        }
+//        catch {
+//                print("Error: \(error.localizedDescription)")
+//        }
+//    print(savedFoodArray)
+//
     
     //function to s
 

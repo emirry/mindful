@@ -7,13 +7,26 @@
 
 import Foundation
 
-    struct BackendData: Codable {
+struct BackendData: Codable {
+    var food_log_item: FoodInfo
+//        var name: String
+//        var calories: Int
+//        var fat: Double
+//        var carbs: Double
+//        var protein: Double
+}
+
+struct FoodInfo: Codable {
         var name: String
         var calories: Int
         var fat: Double
-        var carbs: Double
         var protein: Double
-    }
+        var carbs: Double
+}
+
+
+
+
 //class BackendData {
 //    var name: String
 //    var calories: Int

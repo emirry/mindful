@@ -29,33 +29,9 @@ class NutritionPageViewController: UIPageViewController {
     
     //READ IN SAVED FOOD ITEMS HERE:
     func loadFoodItems() {
-        dataBaseApi.getSavedData()
+//        dataBaseApi.getSavedData()
         food = dataBaseApi.savedFoodArray
         
-//        guard let foodItemsEncoded = UserDefaults.standard.value(forKey: "food")
-//            as? Data else {
-//
-//            print("Warning!")
-//            //TODO: get current food for the first element in foodProps
-//
-//            food.append(FoodDetail())
-//            return
-//        }
-//        let decoder = JSONDecoder()
-//        if let food = try? decoder.decode(Array.self, from: foodItemsEncoded) as
-//            [FoodDetail] {
-//            self.food = food
-//            print(food)
-//        } else {
-//            print("Error: Couldn't decode data read from UserDefaults")
-//        }
-//
-//        if food.isEmpty {
-//            //TODO: get current food for the first element in foodProps
-//            food.append(FoodDetail())
-//            return
-//
-//        }
     }
     
     //creating an instance of food item?

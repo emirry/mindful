@@ -264,11 +264,11 @@
             <objects>
                 <viewController storyboardIdentifier="FoodListViewController" id="BYZ-38-t0r" customClass="FoodListViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-i9-sG2">
-                                <rect key="frame" x="0.0" y="139" width="414" height="679"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Eig-F0-tkd" detailTextLabel="2ol-xE-Ejl" style="IBUITableViewCellStyleSubtitle" id="uuD-V4-lIC">
@@ -301,7 +301,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lEF-Tl-Rwe"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="nGK-JO-YDz"/>
@@ -322,7 +322,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Ne-iuB">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Food  Entries" id="yeH-28-W0u"/>
                                 </items>
@@ -358,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="y1Y-Fo-WI1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="457" y="66"/>
+            <point key="canvasLocation" x="635" y="66"/>
         </scene>
         <!--Back End Api View Controller-->
         <scene sceneID="LnU-o2-HMo">
@@ -394,11 +394,12 @@
                     </view>
                     <connections>
                         <outlet property="apiTableView" destination="9wE-ah-k4L" id="Omk-0p-DIH"/>
+                        <outlet property="foodDataTableView" destination="9wE-ah-k4L" id="3sQ-EN-5aV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zF9-fo-5Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1629" y="751"/>
+            <point key="canvasLocation" x="1475" y="66"/>
         </scene>
         <!--Food Search Bar View Controller-->
         <scene sceneID="w1p-JA-mwg">
@@ -503,7 +504,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rGP-1N-RzR"/>
+        <segue reference="EuO-Yp-hGw"/>
+        <segue reference="YjM-dJ-aoS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
