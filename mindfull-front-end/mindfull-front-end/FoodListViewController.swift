@@ -106,9 +106,13 @@ class FoodListViewController: UIViewController {
                 }
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
+                    for item in result {
+                        print(item.food_log_item.name)
+                        print(item.food_log_item.calories)
+                    }
 //                    print(result)
                     self.savedFoodArray.append(contentsOf: result)
-                    print(self.savedFoodArray)
+//                    print(self.savedFoodArray)
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
