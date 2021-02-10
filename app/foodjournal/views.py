@@ -76,7 +76,6 @@ def food_log_item_list(request):
         serializer = FoodLogItemSerializer(foods, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        # data = JSONParser().parse(request)
         today = "2021-02-08"
         food_journal_entry = FoodJournal.objects.filter(date=today)
         # print("LOOK HERE:", food_journal_entry)
