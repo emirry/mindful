@@ -8,11 +8,10 @@
 import UIKit
 
 class FoodListViewController: UIViewController {
-
-//    var foods = [BackendData] = []
+//    var foods: [BackendData] = []
 //    var foods = [BackendData]()
     
-    var savedFoodArray = [BackendData]()
+    var savedFoodsArray = [BackendData]()
 
 //    var savedFoods: [DatabaseApi] = []
     var selectedSavedFoodIndex = 0
@@ -58,7 +57,17 @@ class FoodListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
+        
+        if segue.identifier == "Detail" {
+            selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
+            var nutritionDetailViewController = segue.destination as! NutritionDetailViewController
+            let backendData = savedFoodsArray[selectedSavedFoodIndex]
+            nutritionDetailViewController.backendData = backendData
+        }
+        else if segue.identifier == "Search" {
+            
+        }
+
     }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -107,16 +116,19 @@ class FoodListViewController: UIViewController {
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
                     for item in result {
-                        print(item.food_log_item.name)
-                        print(item.food_log_item.calories)
-                    }
-//                    print(result)
-                    self.savedFoodArray.append(contentsOf: result)
+                        self.name = item.food_log_item.name
+                        self.calories = item.food_log_item.calories
+                        print(self.name)
+                        print(self.calories)
+                        self.savedFoodsArray.append(item)
+//                        self.savedFoodsArray.append(BackendData(food_log_item: FoodInfo(name: item.food_log_item.name, calories: item.food_log_item.calories, fat: item.food_log_item.fat, protein: item.food_log_item.protein, carbs: item.food_log_item.carbs)))
+
 //                    print(self.savedFoodArray)
+                    }
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
-                }
+                    }
                 }
                 catch {
                     print("\(error.localizedDescription)")
@@ -125,36 +137,38 @@ class FoodListViewController: UIViewController {
 
             }
             task.resume()
-
         }
-    
 }
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedFoodArray.count
+        print(savedFoodsArray)
+
+        return savedFoodsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String("\(savedFoodArray[indexPath.row])")
-//        cell.detailTextLabel?.text = "Calories:\(foods[indexPath.row].calories)"
+        cell.textLabel?.text = savedFoodsArray[indexPath.row].food_log_item.name
+        cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].food_log_item.calories)"
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            savedFoodArray.remove(at: indexPath.row)
+            savedFoodsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            //call delete func?
+            //tableView.reload()
         }
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = savedFoodArray[sourceIndexPath.row]
-        savedFoodArray.remove(at: sourceIndexPath.row)
-        savedFoodArray.insert(itemToMove, at: destinationIndexPath.row)
-        //saveData()
+        let itemToMove = savedFoodsArray[sourceIndexPath.row]
+        savedFoodsArray.remove(at: sourceIndexPath.row)
+        savedFoodsArray.insert(itemToMove, at: destinationIndexPath.row)
+
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

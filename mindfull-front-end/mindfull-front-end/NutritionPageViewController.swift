@@ -30,7 +30,7 @@ class NutritionPageViewController: UIPageViewController {
     //READ IN SAVED FOOD ITEMS HERE:
     func loadFoodItems() {
 //        dataBaseApi.getSavedData()
-        food = FoodListViewController().savedFoodArray
+        food = FoodListViewController().savedFoodsArray
         
     }
     
