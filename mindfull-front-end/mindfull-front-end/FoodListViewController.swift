@@ -8,9 +8,22 @@
 import UIKit
 
 class FoodListViewController: UIViewController {
-    var foods: [BackendData] = []
+
+//    var foods = [BackendData] = []
+//    var foods = [BackendData]()
+    
+    var savedFoodArray = [BackendData]()
+
 //    var savedFoods: [DatabaseApi] = []
     var selectedSavedFoodIndex = 0
+//    var databaseApi = DatabaseApi()
+    
+    var savedFoodIndex = 0
+    var name = ""
+    var calories = 0
+    var fat = 0.0
+    var carbs = 0.0
+    var protein = 0.0
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
@@ -32,19 +45,17 @@ class FoodListViewController: UIViewController {
 //        foods.append(food)
 //        food = BackendData(name: "Test", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
 //        foods.append(food)
-
         tableView.dataSource = self
         tableView.delegate = self
-        getSavedFoodItems()
+        self.getSavedData()
 //        tableView.tableHeaderView = foodSearchBar
     }
-    
-    func getSavedFoodItems() {
-        let savedFoodItems = DatabaseApi()
-        foods = savedFoodItems.savedFoodArray
-        print(foods)
+        
+    func loadSavedData() {
+        self.getSavedData()
+        tableView.reloadData()
+
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedSavedFoodIndex = tableView.indexPathForSelectedRow!.row
@@ -68,34 +79,77 @@ class FoodListViewController: UIViewController {
         }
     }
     
+    func getSavedData() {
+        //Hit the backend api URL
+        let apiURL = "http://127.0.0.1:8000/foodjournal/"
+        print(apiURL)
+        //download json data
+        guard let url = URL(string: apiURL) else {
+            print("Could not create URL")
+            return
+        }
+            //checking that url is no nil
+//            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                let jsonDecoder = JSONDecoder()
+
+                if let error = error {
+                    print("\(error.localizedDescription)")
+                    return
+                }
+//                else {
+//                    self.parseJson(data!)
+//                }
+                guard let data = data else {
+                    print("data was nil")
+                    return
+                }
+                do {
+                    let result = try jsonDecoder.decode([BackendData].self, from: data)
+//                    print(result)
+                    self.savedFoodArray.append(contentsOf: result)
+                    print(self.savedFoodArray)
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                }
+                }
+                catch {
+                    print("\(error.localizedDescription)")
+                }
+//                delegate?.itemsDownloaded(foods: savedFoodArray)
+
+            }
+            task.resume()
+
+        }
+    
 }
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        getSavedFoodItems()
-        return foods.count
+        return savedFoodArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        cell.textLabel?.text = String("\(foods[indexPath.row].name)")
+        cell.textLabel?.text = String("\(savedFoodArray[indexPath.row])")
 //        cell.detailTextLabel?.text = "Calories:\(foods[indexPath.row].calories)"
-        getSavedFoodItems()
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            foods.remove(at: indexPath.row)
+            savedFoodArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = foods[sourceIndexPath.row]
-        foods.remove(at: sourceIndexPath.row)
-        foods.insert(itemToMove, at: destinationIndexPath.row)
+        let itemToMove = savedFoodArray[sourceIndexPath.row]
+        savedFoodArray.remove(at: sourceIndexPath.row)
+        savedFoodArray.insert(itemToMove, at: destinationIndexPath.row)
         //saveData()
     }
     

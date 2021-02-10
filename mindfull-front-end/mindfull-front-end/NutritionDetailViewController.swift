@@ -19,7 +19,7 @@ class NutritionDetailViewController: UIViewController {
     @IBOutlet weak var fatLabel: UILabel!
     
 
-    var foodData: DatabaseApi!
+    var foodData: FoodListViewController!
     var food: BackendData!
     //holds a list of saved food items
     var foods: [BackendData] = []
@@ -45,7 +45,7 @@ class NutritionDetailViewController: UIViewController {
    
            //Need to edit this later once i can scroll to different nutrition info entries
 //        foodData = FoodDetail()
-        foodData = DatabaseApi()
+        foodData = FoodListViewController()
    
            //calling data here
         foodData.getSavedData()
@@ -67,13 +67,13 @@ class NutritionDetailViewController: UIViewController {
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            let foodToSearch = segue.destination as! FoodListViewController
         let nutritionPageViewController = UIApplication.shared.windows.first!.rootViewController as!  NutritionPageViewController
-        foodToSearch.foods = nutritionPageViewController.food
+        foodToSearch.savedFoodArray = nutritionPageViewController.food
        }
 
        @IBAction func unwindFromFoodListViewController(segue: UIStoryboardSegue) {
            let source = segue.source as! FoodListViewController
 //           nutritionPageIndex = source.selectedSavedFoodIndex
-        foods = source.foods
+        foods = source.savedFoodArray
         food = foods[source.selectedSavedFoodIndex]
         updateUserInterface()
 //

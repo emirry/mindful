@@ -9,7 +9,7 @@ import UIKit
 
 class NutritionPageViewController: UIPageViewController {
     
-    let dataBaseApi = DatabaseApi()
+    let foodList = FoodListViewController()
     //Array to hold each food item info
     var food: [BackendData] = []
 //    var nutritionPageIndex = 0
@@ -30,7 +30,7 @@ class NutritionPageViewController: UIPageViewController {
     //READ IN SAVED FOOD ITEMS HERE:
     func loadFoodItems() {
 //        dataBaseApi.getSavedData()
-        food = dataBaseApi.savedFoodArray
+        food = FoodListViewController().savedFoodArray
         
     }
     
