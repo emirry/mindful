@@ -11,7 +11,7 @@ import Keys
 private let key = MindfullFrontEndKeys()
 
 class FoodSearchBarViewController: UIViewController {
-    
+        
     struct Result: Codable {
         var calories: Int
         var ingredients: [IngredientInfo]
@@ -50,6 +50,7 @@ class FoodSearchBarViewController: UIViewController {
         var unit: String
     }
 
+//    var selectedFood = ApiRestActions()
     var backendData: BackendData!
     var searchTimeout: Timer?
     var calories = 0
@@ -60,8 +61,6 @@ class FoodSearchBarViewController: UIViewController {
     var isSearching = false
     var resultsArr: [Result] = []
     var selectedFoodIndex = 0
-
-//    var filteredData: [String]!
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchResultsTable: UITableView!
@@ -102,11 +101,19 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultsCell", for: indexPath)
         
-//        cell.textLabel?.text = filteredData[indexPath.row]
         let searchResults = resultsArr[indexPath.row]
         cell.textLabel?.text = "Name: \(searchResults.ingredients[0].text)"
         cell.detailTextLabel?.text = "Calories: \(searchResults.calories)"
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let foodToSave = FoodDetail(name: resultsArr[0].ingredients[0].text, calories: resultsArr[0].calories, fat: resultsArr[0].ingredients[0].parsed[0].nutrients.FAT.quantity, carbs: resultsArr[0].ingredients[0].parsed[0].nutrients.CHOCDF.quantity, protein: resultsArr[0].ingredients[0].parsed[0].nutrients.PROCNT.quantity)
+        let postRequest = ApiRestActions()
+        postRequest.saveToDatabase(foodToSave)
+        searchResultsTable.reloadData()
+
     }
     
     
@@ -151,6 +158,7 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : self.searchBar.text!]) {
         }
     }
+
     
     //API CALL
      func getData(_ url: String, parameters: [String: String], completed: @escaping () -> ()) {

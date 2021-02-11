@@ -9,6 +9,8 @@ import UIKit
 
 class FoodListViewController: UIViewController {
 
+    var foodSearch: FoodSearchBarViewController?
+//    var apiRestActions = ApiRestActions()
     var savedFoodsArray = [BackendData]()
     var selectedSavedFoodIndex = 0
     var savedFoodIndex = 0
@@ -132,7 +134,11 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
             nutritionDetailViewController.backendData = backendData
         }
         else if segue.identifier == "Search" {
-            
+//            let selectedFood = ApiRestActions()
+//            selectedFood.saveToDatabase()
+////            self.performSegue(withIdentifier: "FoodListViewController", sender: nil)
+//            self.tableView.reloadData()
+
         }
 
     }

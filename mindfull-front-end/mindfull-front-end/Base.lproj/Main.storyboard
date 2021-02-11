@@ -306,7 +306,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-Ne-iuB">
-                                <rect key="frame" x="0.0" y="108" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Food  Entries" id="yeH-28-W0u"/>
                                 </items>
@@ -348,11 +348,11 @@
             <objects>
                 <viewController storyboardIdentifier="Search" id="fqs-H6-zhk" customClass="FoodSearchBarViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dT-pb-j47">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXY-f9-Nqa">
-                                <rect key="frame" x="0.0" y="104" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="16" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="m4c-7e-mk7"/>
                                 </constraints>
@@ -361,7 +361,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-nX-2EA">
-                                <rect key="frame" x="0.0" y="154" width="414" height="664"/>
+                                <rect key="frame" x="0.0" y="66" width="414" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="QiU-2X-UlJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -393,7 +393,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TgT-H0-ohk" kind="unwind" unwindAction="unwindFromFoodSearchBarViewControllerWithSegue:" id="FjJ-8P-MEi"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="1xq-dQ-27q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -424,9 +424,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="TgT-H0-ohk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="854"/>
+            <point key="canvasLocation" x="772" y="827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-Td-TqS">
@@ -447,6 +446,9 @@
             <point key="canvasLocation" x="590" y="66"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1xq-dQ-27q"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
