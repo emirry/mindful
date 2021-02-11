@@ -13,7 +13,7 @@ class FoodJournal(models.Model):
     
    
 class FoodLogItem(models.Model):
-    entry = models.ForeignKey(FoodJournal, on_delete=models.CASCADE, related_name='journal_items')
+    entry = models.ForeignKey(FoodJournal, on_delete=models.CASCADE, related_name='journal_items', blank=True, null=True)
     name = models.CharField(max_length=100, blank=False)
     calories = models.IntegerField(blank=False)
     fat = models.FloatField()
