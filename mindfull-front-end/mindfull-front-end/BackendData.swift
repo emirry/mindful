@@ -8,7 +8,7 @@
 import Foundation
 
 struct BackendData: Codable {
-    var food_log_item: FoodInfo
+    var journal_items: [FoodInfo]
 //        var name: String
 //        var calories: Int
 //        var fat: Double

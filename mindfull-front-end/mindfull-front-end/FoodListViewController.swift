@@ -104,8 +104,8 @@ class FoodListViewController: UIViewController {
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
                     for item in result {
-                        self.name = item.food_log_item.name
-                        self.calories = item.food_log_item.calories
+                        self.name = item.journal_items[0].name
+                        self.calories = item.journal_items[0].calories
                         print(self.name)
                         print(self.calories)
                         self.savedFoodsArray.append(item)
@@ -115,6 +115,16 @@ class FoodListViewController: UIViewController {
                         self.tableView.reloadData()
                     }
                 }
+                catch DecodingError.keyNotFound(let key, let context) {
+                                Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
+                            } catch DecodingError.valueNotFound(let type, let context) {
+                                Swift.print("could not find type \(type) in JSON: \(context.debugDescription)")
+                            } catch DecodingError.typeMismatch(let type, let context) {
+                                Swift.print("type mismatch for type \(type) in JSON: \(context.debugDescription)")
+                            } catch DecodingError.dataCorrupted(let context) {
+                                Swift.print("data found to be corrupted in JSON: \(context.debugDescription)")
+                            } catch let error as NSError {
+                            }
                 catch {
                     print("\(error.localizedDescription)")
                 }
@@ -134,8 +144,8 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = savedFoodsArray[indexPath.row].food_log_item.name
-        cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].food_log_item.calories)"
+        cell.textLabel?.text = savedFoodsArray[indexPath.row].journal_items[0].name
+        cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].journal_items[0].calories)"
         return cell
     }
     
