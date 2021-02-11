@@ -11,6 +11,7 @@
 		8A281F2F25CDCEFE00F9E74B /* NutritionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */; };
 		8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */; };
 		8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D146625D2621400FA67ED /* FoodPageViewController.swift */; };
+		8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C0725D4B69800D52100 /* ApiRestActions.swift */; };
 		8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */; };
 		8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */; };
 		8ACB301025CB5DE800D1E680 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB300F25CB5DE800D1E680 /* FoodListViewController.swift */; };
@@ -31,6 +32,7 @@
 		8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailViewController.swift; sourceTree = "<group>"; };
 		8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchBarViewController.swift; sourceTree = "<group>"; };
 		8A4D146625D2621400FA67ED /* FoodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageViewController.swift; sourceTree = "<group>"; };
+		8AC89C0725D4B69800D52100 /* ApiRestActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestActions.swift; sourceTree = "<group>"; };
 		8ACB300825CB5DE800D1E680 /* mindfull-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindfull-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,9 +94,10 @@
 				8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */,
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
 				8A4D146625D2621400FA67ED /* FoodPageViewController.swift */,
-				8ACB303F25CBF18900D1E680 /* FoodDetail.swift */,
 				8ACB303B25CBBA6100D1E680 /* JournalDetailViewController.swift */,
 				8ACD433B25D1E81700C953B9 /* BackendData.swift */,
+				8ACB303F25CBF18900D1E680 /* FoodDetail.swift */,
+				8AC89C0725D4B69800D52100 /* ApiRestActions.swift */,
 				8ACD434425D1E9FA00C953B9 /* BackEndApiViewController.swift */,
 				8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */,
 				8ACD433825D1E40F00C953B9 /* DatabaseApi.swift */,
@@ -239,6 +242,7 @@
 				8ACB304025CBF18900D1E680 /* FoodDetail.swift in Sources */,
 				8ACB303C25CBBA6100D1E680 /* JournalDetailViewController.swift in Sources */,
 				8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */,
+				8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */,
 				8ACD433925D1E40F00C953B9 /* DatabaseApi.swift in Sources */,
 				8ACD434525D1E9FA00C953B9 /* BackEndApiViewController.swift in Sources */,
 				8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */,
