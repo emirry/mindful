@@ -8,15 +8,9 @@
 import UIKit
 
 class FoodListViewController: UIViewController {
-//    var foods: [BackendData] = []
-//    var foods = [BackendData]()
-    
-    var savedFoodsArray = [BackendData]()
 
-//    var savedFoods: [DatabaseApi] = []
+    var savedFoodsArray = [BackendData]()
     var selectedSavedFoodIndex = 0
-//    var databaseApi = DatabaseApi()
-    
     var savedFoodIndex = 0
     var name = ""
     var calories = 0
@@ -27,36 +21,15 @@ class FoodListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
-//    
-//    var newFoodData: BackendData!
-//    var food: [BackendData] = []
-//    var selectedFoodIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        self.navigationController?.navigationBar.isHidden = true
 
-//        hardcoded data
-//        var food = BackendData(name: "Test", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
-//        foods.append(food)
-//        food = BackendData(name: "Test2", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
-//        foods.append(food)
-//        food = BackendData(name: "Test", calories: 0, fat: 0.0, carbs: 0.0, protein: 0.0)
-//        foods.append(food)
         tableView.dataSource = self
         tableView.delegate = self
         self.getSavedData()
 //        tableView.tableHeaderView = foodSearchBar
     }
-        
-    func loadSavedData() {
-        self.getSavedData()
-        tableView.reloadData()
-
-    }
-    
-
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)
@@ -94,9 +67,6 @@ class FoodListViewController: UIViewController {
                     print("\(error.localizedDescription)")
                     return
                 }
-//                else {
-//                    self.parseJson(data!)
-//                }
                 guard let data = data else {
                     print("data was nil")
                     return
@@ -115,21 +85,9 @@ class FoodListViewController: UIViewController {
                         self.tableView.reloadData()
                     }
                 }
-                catch DecodingError.keyNotFound(let key, let context) {
-                                Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
-                            } catch DecodingError.valueNotFound(let type, let context) {
-                                Swift.print("could not find type \(type) in JSON: \(context.debugDescription)")
-                            } catch DecodingError.typeMismatch(let type, let context) {
-                                Swift.print("type mismatch for type \(type) in JSON: \(context.debugDescription)")
-                            } catch DecodingError.dataCorrupted(let context) {
-                                Swift.print("data found to be corrupted in JSON: \(context.debugDescription)")
-                            } catch let error as NSError {
-                            }
                 catch {
                     print("\(error.localizedDescription)")
                 }
-//                delegate?.itemsDownloaded(foods: savedFoodArray)
-
             }
             task.resume()
         }
