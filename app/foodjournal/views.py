@@ -46,7 +46,7 @@ def food_journal_entry_detail(request, pk):
     try:
         entry = FoodJournal.objects.get(pk=pk)
     except FoodJournal.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response({'message': 'Sorry, that item does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
         serializer = FoodJournalSerializer(entry)
@@ -61,7 +61,7 @@ def food_journal_entry_detail(request, pk):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         entry.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'message': 'Item was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST'])
 def food_log_item_list(request):
@@ -100,7 +100,7 @@ def food_log_item_detail(request, pk):
     try:
         food = FoodLogItem.objects.get(pk=pk)
     except FoodLogItem.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response({'message': 'Sorry, that item does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
         serializer = FoodLogItemSerializer(food)
@@ -114,7 +114,7 @@ def food_log_item_detail(request, pk):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         food.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'message': 'Item was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST'])
 def user_list(request):
@@ -142,7 +142,7 @@ def user_detail(request, pk):
     try:
         user = User.objects.get(pk=pk)
     except FoodLogItem.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response({'message': 'Sorry, that item does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
         serializer = UserSerializer(user)
@@ -156,7 +156,7 @@ def user_detail(request, pk):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         user.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'message': 'Item was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
 
 
 

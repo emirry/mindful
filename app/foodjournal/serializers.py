@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 class FoodLogItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodLogItem
-        fields = ['name', 'calories', 'fat', 'carbs', 'protein', 'entry']
+        fields = ['id', 'name', 'calories', 'fat', 'carbs', 'protein', 'entry']
 
 
 class FoodJournalSerializer(serializers.ModelSerializer):
