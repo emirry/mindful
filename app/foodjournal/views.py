@@ -79,20 +79,27 @@ def food_log_item_list(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         # today = "2021-02-08"
-        food_journal_entry = FoodJournal.objects.filter(date=date.today())
-        # print("LOOK HERE:", food_journal_entry)
-        print("LOOK HERE",food_journal_entry)
+        # food_journal_entry = FoodJournal.objects.filter(date=date.today())
         # working = {**request.data,**{"food_journal_entry": food_journal_entry[0].id}}
         # serializer = FoodLogItemSerializer(data=working)
         serializer = FoodLogItemSerializer(data=request.data)
+        print("HERE!!", serializer)
+        if serializer.is_valid():
+            serializer.save()
+            # return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+            journal_entry = {
+                "date": wanted_date,
+                "food_entries": [request.data]
+            }
+            
+            entry_serializer = FoodJournalSerializer(data=journal_entry)
+            print("AKEJGAJG", entry_serializer)
 
-        #  serializer = FoodLogItemSerializer(data=request.data)
-         #add code to find journal entry date
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            if entry_serializer.is_valid():
+                entry_serializer.save()
+                return Response(entry_serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET', 'PUT', 'DELETE'])
 def food_log_item_detail(request, pk):
