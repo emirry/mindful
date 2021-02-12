@@ -4,8 +4,9 @@ from rest_framework.response import Response
 from foodjournal.models import FoodJournal, FoodLogItem, User
 from foodjournal.serializers import FoodJournalSerializer, FoodLogItemSerializer, UserSerializer
 from datetime import date
+from datetime import datetime
 
-wanted_date = FoodJournal.objects.filter(date=date.today())
+wanted_date = date.today()
 # wanted_date = FoodJournal.objects.filter(date="2021-02-08")
 
 @api_view(['GET', 'POST'])
