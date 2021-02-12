@@ -95,6 +95,7 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("HERE!!!", resultsArr)
         return resultsArr.count
     }
     
@@ -106,6 +107,15 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         cell.detailTextLabel?.text = "Calories: \(searchResults.calories)"
         return cell
     }
+    
+//    func getDate() {
+//        var date = Date()
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyy-MM-dd"
+//        let datePrint = formatter.date(from: "\(date)")
+////        print("DATE", date)
+//        return
+//    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

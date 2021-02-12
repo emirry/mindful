@@ -75,9 +75,10 @@ class FoodListViewController: UIViewController {
                 }
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
+//                    print("ASGJA", result)
                     for item in result {
-                        self.name = item.journal_items[0].name
-                        self.calories = item.journal_items[0].calories
+                        self.name = item.food_entries[0].name
+                        self.calories = item.food_entries[0].calories
                         print(self.name)
                         print(self.calories)
                         self.savedFoodsArray.append(item)
@@ -98,14 +99,13 @@ class FoodListViewController: UIViewController {
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(savedFoodsArray)
-
         return savedFoodsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = savedFoodsArray[indexPath.row].journal_items[0].name
-        cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].journal_items[0].calories)"
+        cell.textLabel?.text = savedFoodsArray[indexPath.row].food_entries[0].name
+        cell.detailTextLabel?.text = "Calories:\(savedFoodsArray[indexPath.row].food_entries[0].calories)"
         return cell
     }
     

@@ -8,14 +8,14 @@
 import Foundation
 
 class ApiRestActions {
-//    
-//    struct ResponseModel: Codable {
-//        var name: String
-//        var calories: Int
-//        var fat: Double
-//        var carbs: Double
-//        var protein: Double
+    
+//    func date() {
+//        let dateFormatter = DateFormatter()
+//        let date = dateFormatter.defaultDate
+//        return
+//
 //    }
+
     
     func saveToDatabase(_ foodToSave: FoodDetail) {
         print("!!!!")
@@ -48,6 +48,7 @@ class ApiRestActions {
             do {
                 let responseModel = try JSONDecoder().decode(FoodDetail.self, from: data)
                 print("Response data:\n \(responseModel)")
+//                print("responseModel date: \(responseModel.date)")
                 print("responseModel name: \(responseModel.name)")
                 print("responseModel calories: \(responseModel.calories)")
                 print("responseModel carbs: \(responseModel.carbs)")

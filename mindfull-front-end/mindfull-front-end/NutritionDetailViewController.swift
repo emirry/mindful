@@ -43,12 +43,12 @@ class NutritionDetailViewController: UIViewController {
         if let foodData = self.backendData {
         
                    //Change later with data
-            self.nutritionLabel.text = foodData.journal_items[0].name
-            self.caloriesLabel.text = "\(foodData.journal_items[0].calories)"
-            print("HERE: \(foodData.journal_items[0].name)")
-            self.fatLabel.text = "\(foodData.journal_items[0].fat)"
-            self.carbsLabel.text = "\(foodData.journal_items[0].carbs)"
-            self.proteinLabel.text = "\(foodData.journal_items[0].protein)"
+            self.nutritionLabel.text = foodData.food_entries[0].name
+            self.caloriesLabel.text = "\(foodData.food_entries[0].calories)"
+            print("HERE: \(foodData.food_entries[0].name)")
+            self.fatLabel.text = "\(foodData.food_entries[0].fat)"
+            self.carbsLabel.text = "\(foodData.food_entries[0].carbs)"
+            self.proteinLabel.text = "\(foodData.food_entries[0].protein)"
         }
        }
    

@@ -16,6 +16,7 @@ class FoodDetail: Codable {
     var protein: Double
     
     init(name: String, calories: Int, fat: Double, carbs: Double, protein: Double) {
+//        self.date = date
         self.name = name
         self.calories = calories
         self.fat = fat
