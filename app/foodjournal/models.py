@@ -7,6 +7,8 @@ class User(models.Model):
     weight = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
     age = models.IntegerField(blank=False)
+    activity_level = models.IntegerField(blank=False)
+
 
     def bmr_calculations(mOrF, user_weight, user_height, user_age):
         #Basal Metabolic Rate
