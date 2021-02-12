@@ -180,10 +180,10 @@
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="V4O-pn-kaA"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYl-jT-HLy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validatation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYl-jT-HLy">
                                         <rect key="frame" x="0.0" y="82.5" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.31366011666656157" blue="0.034148038597786368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current weight in lbs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-lG-xJg">
@@ -245,12 +245,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-HJ-8LZ">
-                                <rect key="frame" x="183" y="661" width="49" height="30"/>
+                                <rect key="frame" x="183" y="682" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="submitPressed:forEvent:" destination="FQa-FO-o5x" eventType="touchUpInside" id="R72-hH-ykV"/>
-                                    <segue destination="Qk1-Yq-EqF" kind="show" id="U93-8o-qTR"/>
+                                    <action selector="submitPressed:" destination="FQa-FO-o5x" eventType="touchUpInside" id="ogw-SN-Cbe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -274,6 +273,7 @@
                         <outlet property="heightTextField" destination="1uv-8r-Umb" id="gEF-BR-vWd"/>
                         <outlet property="maleOrFemaleTextField" destination="agU-CT-lw3" id="H4Q-AF-M9y"/>
                         <outlet property="maleOrFemaleValidation" destination="kYl-jT-HLy" id="fjo-51-rcy"/>
+                        <outlet property="submitButton" destination="8M2-HJ-8LZ" id="BCg-TS-egR"/>
                         <outlet property="weightTextField" destination="4f9-pb-XXj" id="1s6-V3-CxA"/>
                     </connections>
                 </viewController>
@@ -290,7 +290,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for providing us some information. Here's our recommendation based on your input:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-Si-IdA">
-                                <rect key="frame" x="20" y="119" width="374" height="41"/>
+                                <rect key="frame" x="20" y="75" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

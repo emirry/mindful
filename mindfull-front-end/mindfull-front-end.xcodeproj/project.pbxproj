@@ -11,6 +11,7 @@
 		8A281F2F25CDCEFE00F9E74B /* NutritionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */; };
 		8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */; };
 		8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D146625D2621400FA67ED /* FoodPageViewController.swift */; };
+		8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A53AAAE25D73C7400473517 /* UserDetail.swift */; };
 		8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C0725D4B69800D52100 /* ApiRestActions.swift */; };
 		8AC89C2825D65F1C00D52100 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */; };
 		8AC89C2F25D6673F00D52100 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C2E25D6673F00D52100 /* SignInViewController.swift */; };
@@ -34,6 +35,7 @@
 		8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailViewController.swift; sourceTree = "<group>"; };
 		8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchBarViewController.swift; sourceTree = "<group>"; };
 		8A4D146625D2621400FA67ED /* FoodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageViewController.swift; sourceTree = "<group>"; };
+		8A53AAAE25D73C7400473517 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		8AC89C0725D4B69800D52100 /* ApiRestActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestActions.swift; sourceTree = "<group>"; };
 		8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8AC89C2E25D6673F00D52100 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
 				8AC89C2E25D6673F00D52100 /* SignInViewController.swift */,
 				8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */,
+				8A53AAAE25D73C7400473517 /* UserDetail.swift */,
 				8A4D146625D2621400FA67ED /* FoodPageViewController.swift */,
 				8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */,
 				8ACD433B25D1E81700C953B9 /* BackendData.swift */,
@@ -254,6 +257,7 @@
 				8ACD433925D1E40F00C953B9 /* DatabaseApi.swift in Sources */,
 				8ACD434525D1E9FA00C953B9 /* BackEndApiViewController.swift in Sources */,
 				8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */,
+				8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */,
 				8ACD433C25D1E81700C953B9 /* BackendData.swift in Sources */,
 				8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */,
 			);
