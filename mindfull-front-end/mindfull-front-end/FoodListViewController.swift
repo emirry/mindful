@@ -30,7 +30,17 @@ class FoodListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         self.getSavedData()
-//        tableView.tableHeaderView = foodSearchBar
+        getDate()
+    }
+    
+    //Move to Journal
+    func getDate() {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .full
+        formatter.timeZone = TimeZone.current
+        self.title = formatter.string(from: Date())
+        
     }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {

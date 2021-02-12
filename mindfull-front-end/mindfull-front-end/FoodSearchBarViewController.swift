@@ -165,7 +165,7 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         cancelSearchTimeout()
         
-        self.searchTimeout = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.performDeferedSearch), userInfo: nil, repeats: false)
+        self.searchTimeout = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.performDeferedSearch), userInfo: nil, repeats: false)
     }
     
     @objc func performDeferedSearch() {
