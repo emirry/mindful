@@ -17,7 +17,7 @@ def food_journal_entry_list(request):
     if request.method == 'GET':
         print(FoodJournal.objects.filter(date=date.today()))
 
-        entries = FoodJournal.objects.all()
+        entries = FoodJournal.objects.filter(date="2021-02-12")
         serializer = FoodJournalSerializer(entries, many=True)
         return Response(serializer.data)
 
@@ -25,19 +25,20 @@ def food_journal_entry_list(request):
         # check db if date already exists, modify existing entry
         print("HERE", wanted_date)
 
-        if not wanted_date: 
-            print("INSIDE IF")
+        # if not wanted_date: 
+        #     print("INSIDE IF")
             #add food items 
-            serializer = FoodJournalSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = FoodJournalSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         #if it doesn't, it'll be a new entry
-        else:
-            # food_journal_entry_detail(request, pk)
-            serializer = FoodJournalSerializer(data=request.data.update)
-          
+        # else:
+        #     serializer = FoodJournalSerializer(data=request.data.update)
+        #     if serializer.is_valid():
+        #         serializer.save()
+        #     return Response(serializer.data, status=status.HTTP_201_CREATED)          
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def food_journal_entry_detail(request, pk):
