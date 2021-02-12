@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  UserInfoViewController.swift
 //  mindfull-front-end
 //
 //  Created by Emily Nagai on 2/11/21.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class UserInfoViewController: UIViewController {
 
-    @IBOutlet var maleOrFemaleTextField: UITextField!
-    @IBOutlet var weightTextField: UITextField!
-    @IBOutlet var heightTextField: UITextField!
-    @IBOutlet var ageTextField: UITextField!
-
+    @IBOutlet weak var maleOrFemaleTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    
 
     
     override func viewDidLoad() {

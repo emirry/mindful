@@ -119,7 +119,11 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let foodToSave = FoodDetail(name: resultsArr[0].ingredients[0].text, calories: resultsArr[0].calories, fat: resultsArr[0].ingredients[0].parsed[0].nutrients.FAT.quantity, carbs: resultsArr[0].ingredients[0].parsed[0].nutrients.CHOCDF.quantity, protein: resultsArr[0].ingredients[0].parsed[0].nutrients.PROCNT.quantity)
+        let foodToSave = FoodDetail(name: resultsArr[0].ingredients[0].text,
+                                    calories: resultsArr[0].calories,
+                                    fat: resultsArr[0].ingredients[0].parsed[0].nutrients.FAT.quantity,
+                                    carbs: resultsArr[0].ingredients[0].parsed[0].nutrients.CHOCDF.quantity,
+                                    protein: resultsArr[0].ingredients[0].parsed[0].nutrients.PROCNT.quantity)
         let postRequest = ApiRestActions()
         postRequest.saveToDatabase(foodToSave)
         searchResultsTable.reloadData()

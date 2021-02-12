@@ -75,7 +75,6 @@ class FoodListViewController: UIViewController {
                 }
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
-//                    print("ASGJA", result)
                     for item in result {
                         self.name = item.food_entries[0].name
                         self.calories = item.food_entries[0].calories

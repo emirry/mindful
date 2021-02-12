@@ -9,16 +9,7 @@ import Foundation
 
 class ApiRestActions {
     
-//    func date() {
-//        let dateFormatter = DateFormatter()
-//        let date = dateFormatter.defaultDate
-//        return
-//
-//    }
-
-    
     func saveToDatabase(_ foodToSave: FoodDetail) {
-        print("!!!!")
     
         let url = URL(string: "http://127.0.0.1:8000/food/")
         guard let requestUrl = url else {
@@ -32,8 +23,6 @@ class ApiRestActions {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-//        let newFoodData = ResponseModel(name: String(), calories: Int(), fat: Double(), carbs: Double(), protein: Double())
-
         let jsonData = try? JSONEncoder().encode(foodToSave)
 
         request.httpBody = jsonData

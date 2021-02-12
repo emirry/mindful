@@ -5,7 +5,7 @@
 ////  Created by Emily Nagai on 2/3/21.
 ////
 //
-//import UIKit
+import UIKit
 //
 ////NEED TO CHANGE TO JOURNALDETAILVIEWCONTROLLER
 //
