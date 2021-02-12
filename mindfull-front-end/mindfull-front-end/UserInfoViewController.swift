@@ -13,24 +13,59 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var activityTextField: UITextField!
+    @IBOutlet weak var maleOrFemaleValidation: UILabel!
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func setupView() {
+        maleOrFemaleValidation.isHidden = true
     }
-    */
+    
+    @IBAction func submitPressed(_ sender: Any, forEvent event: UIEvent) {
+    }
+    
+    fileprivate func validate(_ textField: UITextField) -> (Bool, String?) {
+        guard let text = textField.text else {
+            return(false, nil)
+        }
+        if textField == maleOrFemaleTextField {
+            if text != "M" || text != "F" {
+                return(text.count <= 2, "Please only type in M or F")
+            }
+        }
+        return(text.count > 0, "This field cannot be empty.")
+    }
+    
+}
 
+extension UserInfoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case maleOrFemaleTextField:
+            let(valid, message) = validate(textField)
+            
+            if valid {
+                weightTextField.becomeFirstResponder()
+            }
+            self.maleOrFemaleValidation.text = message
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                self.maleOrFemaleValidation.isHidden = valid
+            })
+        case weightTextField:
+            heightTextField.becomeFirstResponder()
+        case heightTextField:
+            ageTextField.becomeFirstResponder()
+        default:
+            activityTextField.becomeFirstResponder()
+        }
+        return true
+
+    }
 }
