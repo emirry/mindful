@@ -1,5 +1,5 @@
 ////
-////  JournalDetailViewController.swift
+////  JournalViewController.swift
 ////  mindfull-front-end
 ////
 ////  Created by Emily Nagai on 2/3/21.
@@ -9,7 +9,7 @@ import UIKit
 //
 ////NEED TO CHANGE TO JOURNALDETAILVIEWCONTROLLER
 //
-//class JournalDetailViewController: UIViewController {
+//class JournalViewController: UIViewController {
 //
 //    @IBOutlet weak var firstFoodItem: UILabel!
 //    @IBOutlet weak var secondFoodItem: UILabel!
