@@ -2,7 +2,11 @@ from django.db import models
 from datetime import date
 
 class User(models.Model):
-    user_name = models.CharField(max_length=50, blank=True) 
+    user_name = models.CharField(max_length=50, blank=True)
+    maleOrFemale = models.CharField(max_length=10, blank=False)
+    weight = models.IntegerField(blank=False)
+    height = models.IntegerField(blank=False)
+    age = models.IntegerField(blank=False)
 
 class FoodJournal(models.Model):
     date = models.DateField(auto_now=True, blank=False, null=False)
