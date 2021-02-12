@@ -7,7 +7,6 @@ from datetime import date
 from datetime import datetime
 
 wanted_date = date.today()
-# wanted_date = FoodJournal.objects.filter(date="2021-02-08")
 
 @api_view(['GET', 'POST'])
 def food_journal_entry_list(request):
@@ -54,7 +53,6 @@ def food_journal_entry_detail(request, pk):
         serializer = FoodJournalSerializer(entry)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        # data = JSONParser().parse(request)
         print("HERE")
         serializer = FoodJournalSerializer(entry, data=request.data)
         if serializer.is_valid():
@@ -69,24 +67,17 @@ def food_journal_entry_detail(request, pk):
 def food_log_item_list(request):
     """
     List all journal entries or create a new entry
-    # """
-    # queryset = FoodLogItem.objects.all()
-    # serializer_class = FoodLogItemSerializer
+    """
 
     if request.method == 'GET':
         foods = FoodLogItem.objects.all()
         serializer = FoodLogItemSerializer(foods, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        # today = "2021-02-08"
-        # food_journal_entry = FoodJournal.objects.filter(date=date.today())
-        # working = {**request.data,**{"food_journal_entry": food_journal_entry[0].id}}
-        # serializer = FoodLogItemSerializer(data=working)
         serializer = FoodLogItemSerializer(data=request.data)
         print("HERE!!", serializer)
         if serializer.is_valid():
             serializer.save()
-            # return Response(serializer.data, status=status.HTTP_201_CREATED)
 
             journal_entry = {
                 "date": wanted_date,
@@ -115,7 +106,6 @@ def food_log_item_detail(request, pk):
         serializer = FoodLogItemSerializer(food)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        # data = JSONParser().parse(request)
         serializer = FoodLogItemSerializer(food, data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -136,7 +126,6 @@ def user_list(request):
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        # data = JSONParser().parse(request)
         serializer =  UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -157,7 +146,6 @@ def user_detail(request, pk):
         serializer = UserSerializer(user)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        # data = JSONParser().parse(request)
         serializer = UserSerializer(user, data=request.data)
         if serializer.is_valid():
             serializer.save()
