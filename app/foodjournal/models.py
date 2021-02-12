@@ -8,14 +8,14 @@ class User(models.Model):
     height = models.IntegerField(blank=False)
     age = models.IntegerField(blank=False)
 
-    def bmr_calculations(maleOrFemale, weight, height, age):
+    def bmr_calculations(mOrF, user_weight, user_height, user_age):
         #Basal Metabolic Rate
-        weightInKgs = weight / 2.2
-        heightInCent = height * 2.54
-        if maleOrFemale == "M":
-            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * age) + 5)
-        elif maleOrFemale == "F":
-            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * age) - 161)
+        weightInKgs = user_weight / 2.2
+        heightInCent = user_height * 2.54
+        if mOrF == "M":
+            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * user_age) + 5)
+        elif mOrF == "F":
+            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * user_age) - 161)
         return bmr
 
     def daily_caloric_needs(bmr, activityLevel):
@@ -54,10 +54,11 @@ class User(models.Model):
 
         #based on caloric intake, this calculates caloric intake of P/C/F and grams
 
-    #INFO TO RETURN:
-    bmr = bmr_calculations(maleOrFemale, weight, height, age)
-    dailyCalIntake = daily_caloric_needs(bmr)
-    calculate_macros(dailyCalIntake)
+    # INFO TO RETURN:
+    # print("HERE", type(weight))
+    # bmr = bmr_calculations(maleOrFemale, weight, height, age)
+    # dailyCalIntake = daily_caloric_needs(bmr)
+    # calculate_macros(dailyCalIntake)
 
 
 class FoodJournal(models.Model):
