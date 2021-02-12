@@ -5,8 +5,10 @@ from foodjournal.models import FoodJournal, FoodLogItem, User
 from foodjournal.serializers import FoodJournalSerializer, FoodLogItemSerializer, UserSerializer
 from datetime import date
 from datetime import datetime
+from django.utils.timezone import localdate
 
-wanted_date = date.today()
+wanted_date = localdate()
+print('LOCALDATE', wanted_date)
 
 @api_view(['GET', 'POST'])
 def food_journal_entry_list(request):
@@ -14,9 +16,9 @@ def food_journal_entry_list(request):
     List all journal entries or create a new entry
     """
     if request.method == 'GET':
-        print(FoodJournal.objects.filter(date=date.today()))
+        # print(FoodJournal.objects.filter(date=localdate()))
 
-        entries = FoodJournal.objects.filter(date="2021-02-12")
+        entries = FoodJournal.objects.filter(date=localdate())
         serializer = FoodJournalSerializer(entries, many=True)
         return Response(serializer.data)
 
