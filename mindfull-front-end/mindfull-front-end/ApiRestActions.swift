@@ -81,9 +81,8 @@ class ApiRestActions {
 //                print("Response data:\n \(responseModel)")
 ////                print("responseModel date: \(responseModel.date)")
 //                print("responseModel name: \(responseModel.bmr)")
-//                print("responseModel calories: \(responseModel.calToMaintain)")
-//                print("responseModel carbs: \(responseModel.calToLose)")
-//                print("responseModel fat: \(responseModel.macros)")
+//                print("responseModel calories: \(responseModel.rec_daily_cal)")
+//                print("responseModel carbs: \(responseModel.to_lose_weight)")
                 
                 let responseModel = try JSONDecoder().decode(UserDetail.self, from: data)
                 print("Response data:\n \(responseModel)")

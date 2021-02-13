@@ -122,6 +122,12 @@ def user_list(request):
     """
     List all users or create a new user
     """
+    # INFO TO RETURN:
+    # print("HERE", type(weight))
+    # bmr = calculate_bmr(male_or_female, weight, height, age)
+    # rec_daily_cal = daily_caloric_needs(bmr)
+    # to_lose_weight = lose_weight(rec_daily_cal)
+    # print('USER', User().calculate_bmr)
 
     if request.method == 'GET':
         users = User.objects.all()
@@ -131,6 +137,27 @@ def user_list(request):
         serializer =  UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+
+            user_data = serializer.data
+            #grabbing data
+            m_or_f = user_data['male_or_female']
+            user_weight = user_data['weight']
+            user_height = user_data['height']
+            user_age = user_data['age']
+            user_act_level = user_data['activity_level']
+            # print('USER ACT', user_act_level)
+
+            #calling model function
+            bmr = User().calculate_bmr(m_or_f = m_or_f, user_weight = user_weight, user_height = user_height, user_age = user_age)
+            # print('USER ACT', type(user_act_level))
+            # print('BMR', type(bmr))
+
+            rec_daily_cal = User().daily_caloric_needs(bmr, user_act_level)
+            to_lose_weight = User().lose_weight(rec_daily_cal)
+            print('BMR', bmr)
+            print('REC', rec_daily_cal)            
+            print('LOSE', to_lose_weight)
+
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

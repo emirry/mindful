@@ -6,7 +6,7 @@ from foodjournal.models import FoodJournal, FoodLogItem, User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['user_name', 'male_or_female', 'weight', 'height', 'age', 'activity_level']
+        fields = ['id', 'user_name', 'male_or_female', 'weight', 'height', 'age', 'activity_level']
         # depth = 1
 
 class FoodLogItemSerializer(serializers.ModelSerializer):

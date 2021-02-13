@@ -29,7 +29,6 @@ class UserDetail: Codable {
 class UserResponse: Codable {
     //REVIEW: might have include more variables
     var bmr: Int
-    var calToMaintain: Int
-    var calToLose: Int
-    var macros: Int
+    var rec_daily_cal: Int
+    var to_lose_weight: Int
 }
