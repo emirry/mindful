@@ -51,6 +51,49 @@ class ApiRestActions {
         task.resume()
     }
     
+    //Post request to user
+    func saveToUserDB(_ userToSave: UserDetail) {
+        let url = URL(string: "http://127.0.0.1:8000/user/")
+        guard let requestUrl = url else {
+            print("URL is invalid")
+            return
+        }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonData = try? JSONEncoder().encode(userToSave)
+
+        request.httpBody = jsonData
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            guard let data = data else { return }
+
+            do {
+                let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
+                print("Response data:\n \(responseModel)")
+//                print("responseModel date: \(responseModel.date)")
+                print("responseModel name: \(responseModel.bmr)")
+                print("responseModel calories: \(responseModel.calToMaintain)")
+                print("responseModel carbs: \(responseModel.calToLose)")
+                print("responseModel fat: \(responseModel.macros)")
+            }
+            catch let jsonErr {
+                print(jsonErr)
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
     func deleteItem() {
         
     }
