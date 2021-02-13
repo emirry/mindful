@@ -3,24 +3,24 @@ from datetime import date
 
 class User(models.Model):
     user_name = models.CharField(max_length=50, blank=True)
-    maleOrFemale = models.CharField(max_length=10, blank=False)
+    male_or_female = models.CharField(max_length=10, blank=False)
     weight = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
     age = models.IntegerField(blank=False)
     activity_level = models.IntegerField(blank=False)
 
 
-    def bmr_calculations(mOrF, user_weight, user_height, user_age):
+    def bmr_calculations(m_or_F, user_weight, user_height, user_age):
         #Basal Metabolic Rate
-        weightInKgs = user_weight / 2.2
-        heightInCent = user_height * 2.54
-        if mOrF == "M":
-            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * user_age) + 5)
-        elif mOrF == "F":
-            bmr = int((10 * weightInKgs) + (6.25 * heightInCent) - (5 * user_age) - 161)
+        weight_in_kgs = user_weight / 2.2
+        height_in_cent = user_height * 2.54
+        if m_or_F == "M":
+            bmr = int((10 * weight_in_kgs) + (6.25 * height_in_cent) - (5 * user_age) + 5)
+        elif m_or_F == "F":
+            bmr = int((10 * weight_in_kgs) + (6.25 * height_in_cent) - (5 * user_age) - 161)
         return bmr
 
-    def daily_caloric_needs(bmr, activityLevel):
+    def daily_caloric_needs(bmr, activity_level):
         """
             1 = Sedentary
             2 = Exercise 1 - 3 times a week
@@ -29,15 +29,15 @@ class User(models.Model):
             5 = Intense Exercise 6 times a week
         """
 
-        if activityLevel == 1:
+        if activity_level == 1:
             levelIndex = 1.2
-        elif activityLevel == 2:
+        elif activity_level == 2:
             levelIndex = 1.375
-        elif activityLevel == 3:
+        elif activity_level == 3:
             levelIndex = 1.46
-        elif activityLevel == 4:
+        elif activity_level == 4:
             levelIndex = 1.725
-        elif activityLevel == 5:
+        elif activity_level == 5:
             levelIndex = 1.9
         
         #Recommended caloric intake to maintain weight

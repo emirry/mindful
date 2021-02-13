@@ -9,19 +9,19 @@ import Foundation
 
 class UserDetail: Codable {
     var user_name:String
-    var maleOrFemale: String
+    var male_or_female: String
     var weight: Int
     var height: Int
     var age: Int
-    var activityLevel: Int
+    var activity_level: Int
     
-    init(user_name: String, maleOrFemale: String, weight: Int, height: Int, age: Int, activityLevel: Int) {
+    init(user_name: String, male_or_female: String, weight: Int, height: Int, age: Int, activity_level: Int) {
         self.user_name = user_name
-        self.maleOrFemale = maleOrFemale
+        self.male_or_female = male_or_female
         self.weight = weight
         self.height = height
         self.age = age
-        self.activityLevel = activityLevel
+        self.activity_level = activity_level
     }
     
 }

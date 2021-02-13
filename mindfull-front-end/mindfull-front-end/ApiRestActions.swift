@@ -77,13 +77,21 @@ class ApiRestActions {
             guard let data = data else { return }
 
             do {
-                let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
+//                let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
+//                print("Response data:\n \(responseModel)")
+////                print("responseModel date: \(responseModel.date)")
+//                print("responseModel name: \(responseModel.bmr)")
+//                print("responseModel calories: \(responseModel.calToMaintain)")
+//                print("responseModel carbs: \(responseModel.calToLose)")
+//                print("responseModel fat: \(responseModel.macros)")
+                
+                let responseModel = try JSONDecoder().decode(UserDetail.self, from: data)
                 print("Response data:\n \(responseModel)")
 //                print("responseModel date: \(responseModel.date)")
-                print("responseModel name: \(responseModel.bmr)")
-                print("responseModel calories: \(responseModel.calToMaintain)")
-                print("responseModel carbs: \(responseModel.calToLose)")
-                print("responseModel fat: \(responseModel.macros)")
+                print("responseModel name: \(responseModel.user_name)")
+                print("responseModel calories: \(responseModel.male_or_female)")
+                print("responseModel carbs: \(responseModel.weight)")
+                print("responseModel fat: \(responseModel.height)")
             }
             catch let jsonErr {
                 print(jsonErr)
