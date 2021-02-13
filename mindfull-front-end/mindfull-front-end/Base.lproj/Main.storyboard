@@ -541,7 +541,7 @@
             </objects>
             <point key="canvasLocation" x="2300" y="146"/>
         </scene>
-        <!--Food Search Bar View Controller-->
+        <!--What did you eat today?-->
         <scene sceneID="w1p-JA-mwg">
             <objects>
                 <viewController storyboardIdentifier="Search" id="fqs-H6-zhk" customClass="FoodSearchBarViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
@@ -549,19 +549,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXY-f9-Nqa">
-                                <rect key="frame" x="0.0" y="104" width="414" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="m4c-7e-mk7"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="What did you eat today?" id="t5t-cE-lri"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-nX-2EA">
                                 <rect key="frame" x="0.0" y="154" width="414" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="QiU-2X-UlJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="664" id="9tX-AZ-ck5"/>
+                                </constraints>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="&quot;1 small apple&quot;" id="QiU-2X-UlJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -596,26 +590,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please type in the amount, size, and food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5q-1P-y1n">
+                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fp1-PN-Ovj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="1ao-3g-JaX"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="2EV-1t-bPE"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="top" secondItem="Fp1-PN-Ovj" secondAttribute="top" constant="16" id="7PU-f7-vdX"/>
-                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="tXY-f9-Nqa" secondAttribute="bottom" id="J3i-58-uJ7"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="Vic-ne-mCO"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="bed-tR-8cW"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="trailing" secondItem="z5q-1P-y1n" secondAttribute="trailing" id="XO6-1w-lHf"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="bottom" secondItem="Jlf-nX-2EA" secondAttribute="bottom" constant="44" id="dHv-mz-xfF"/>
                             <constraint firstItem="Fp1-PN-Ovj" firstAttribute="trailing" secondItem="Jlf-nX-2EA" secondAttribute="trailing" id="e1T-qJ-MkV"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="e4O-Ji-NYC"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="erk-ie-DDD"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="lLe-gJ-yZT"/>
-                            <constraint firstItem="tXY-f9-Nqa" firstAttribute="leading" secondItem="Fp1-PN-Ovj" secondAttribute="leading" id="mRF-nr-ZbK"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="leading" secondItem="z5q-1P-y1n" secondAttribute="leading" id="niZ-AM-ANv"/>
                             <constraint firstItem="Jlf-nX-2EA" firstAttribute="trailing" secondItem="Fp1-PN-Ovj" secondAttribute="trailing" id="sZU-xC-5w7"/>
+                            <constraint firstItem="Jlf-nX-2EA" firstAttribute="top" secondItem="z5q-1P-y1n" secondAttribute="bottom" constant="1" id="sab-xe-chu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bzq-f0-9w1"/>
+                    <navigationItem key="navigationItem" title="What did you eat today?" id="Bzq-f0-9w1"/>
                     <connections>
                         <outlet property="searchBar" destination="QiU-2X-UlJ" id="DDn-c8-6VI"/>
                         <outlet property="searchResultsTable" destination="Jlf-nX-2EA" id="HRT-3F-Gjf"/>
@@ -623,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="848"/>
+            <point key="canvasLocation" x="1457.9710144927537" y="847.76785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-Td-TqS">
