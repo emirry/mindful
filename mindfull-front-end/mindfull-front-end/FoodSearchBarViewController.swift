@@ -71,6 +71,9 @@ class FoodSearchBarViewController: UIViewController {
         searchBar.delegate = self
         searchResultsTable.delegate = self
         searchResultsTable.dataSource = self
+        
+        navigationController?.navigationBar.barTintColor = UIColor.orange
+
     }
     
     //review. make sure api call gets canceled when leaving this view
