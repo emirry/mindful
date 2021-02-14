@@ -21,10 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = key.googleID
         GIDSignIn.sharedInstance().delegate = self
         
+        //If user is already signed in, store sign-in state
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+    
+
+        
         return true
     }
     
-    @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
       return GIDSignIn.sharedInstance().handle(url)
     }
@@ -43,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             return
           }
+        // Post notification after user successfully sign in
+        NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
           // Perform any operations on signed in user here.
           let userId = user.userID                  // For client-side use only!
           let idToken = user.authentication.idToken // Safe to send to the server
@@ -50,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           let givenName = user.profile.givenName
           let familyName = user.profile.familyName
           let email = user.profile.email
+        print(fullName)
+        
           // ...
     }
     
@@ -57,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
               withError error: Error!) {
       // Perform any operations when the user disconnects from app here.
       // ...
+        print("User has signed off")
     }
 
     // MARK: UISceneSession Lifecycle
@@ -76,3 +85,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 }
 
+extension Notification.Name {
+    
+    /// Notification when user successfully sign in using Google
+    static var signInGoogleCompleted: Notification.Name {
+        return .init(rawValue: #function)
+    }
+}

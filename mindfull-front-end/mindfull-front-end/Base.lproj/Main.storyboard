@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQa-FO-o5x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HRh-nW-T24">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -120,50 +120,66 @@
             </objects>
             <point key="canvasLocation" x="3222" y="146"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="cB0-QA-XMC">
             <objects>
-                <viewController id="Pf5-W2-not" sceneMemberID="viewController">
+                <viewController id="Pf5-W2-not" customClass="SignInViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Aa-cZ-lgc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhx-QI-0Jd">
-                                <rect key="frame" x="134" y="573" width="147" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-LA-3it">
+                                <rect key="frame" x="29" y="635" width="356" height="76"/>
+                                <color key="backgroundColor" red="0.13745527098687615" green="0.53220300729160663" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-161" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sign in or sign up" image="google.png"/>
                                 <connections>
-                                    <segue destination="FQa-FO-o5x" kind="presentation" modalPresentationStyle="fullScreen" id="loA-v7-GIA"/>
+                                    <action selector="login:" destination="Pf5-W2-not" eventType="touchUpInside" id="1eD-i5-wQL"/>
+                                    <segue destination="FQa-FO-o5x" kind="show" identifier="userInfo" id="PuE-lz-BRE">
+                                        <segue key="commit" inheritsFrom="parent" id="HCT-9g-c3G"/>
+                                        <segue key="preview" inheritsFrom="commit" id="EpG-Bz-cUb"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w2K-yX-Utg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G8b-LA-3it" firstAttribute="top" secondItem="w2K-yX-Utg" secondAttribute="top" constant="591" id="0ef-ad-j3S"/>
+                            <constraint firstItem="G8b-LA-3it" firstAttribute="centerX" secondItem="3Aa-cZ-lgc" secondAttribute="centerX" id="7kr-Ff-3fQ"/>
+                            <constraint firstItem="G8b-LA-3it" firstAttribute="leading" secondItem="w2K-yX-Utg" secondAttribute="leading" constant="29" id="LEZ-CC-7dc"/>
+                            <constraint firstItem="w2K-yX-Utg" firstAttribute="bottom" secondItem="G8b-LA-3it" secondAttribute="bottom" constant="151" id="MiY-X4-VAe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c1v-XJ-UZe"/>
+                    <connections>
+                        <outlet property="signInButton" destination="G8b-LA-3it" id="5Pc-nl-pLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOh-d8-pTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1814" y="144"/>
+            <point key="canvasLocation" x="-1842.0289855072465" y="142.63392857142856"/>
         </scene>
         <!--Welcome to mindfull!-->
         <scene sceneID="aOX-v2-rL0">
             <objects>
-                <viewController id="FQa-FO-o5x" customClass="UserInfoViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FQa-FO-o5x" customClass="UserInfoViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QNl-oL-lh7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please answer the questions to find out your recommended caloric intake." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vc-Bs-U4f">
-                                <rect key="frame" x="20" y="110" width="374" height="75"/>
+                                <rect key="frame" x="20" y="131" width="374" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="U2a-cT-5oz"/>
+                                    <constraint firstAttribute="height" constant="54" id="U2a-cT-5oz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="UH8-9p-X5z">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="UH8-9p-X5z">
                                 <rect key="frame" x="10" y="193" width="394" height="515.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58d-qX-aRf">
@@ -258,13 +274,12 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-HJ-8LZ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-HJ-8LZ">
                                 <rect key="frame" x="183" y="796" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitPressed:" destination="FQa-FO-o5x" eventType="touchUpInside" id="ogw-SN-Cbe"/>
-                                    <segue destination="Qk1-Yq-EqF" kind="show" id="Odn-wF-EwI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -272,11 +287,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0rC-bb-eUn" firstAttribute="trailing" secondItem="UH8-9p-X5z" secondAttribute="trailing" constant="10" id="544-pU-JIg"/>
-                            <constraint firstItem="6vc-Bs-U4f" firstAttribute="top" secondItem="0rC-bb-eUn" secondAttribute="top" constant="22" id="JDG-8r-yPQ"/>
+                            <constraint firstItem="6vc-Bs-U4f" firstAttribute="top" secondItem="0rC-bb-eUn" secondAttribute="top" constant="43" id="JDG-8r-yPQ"/>
                             <constraint firstItem="UH8-9p-X5z" firstAttribute="leading" secondItem="0rC-bb-eUn" secondAttribute="leading" constant="10" id="RIN-jY-Wka"/>
                             <constraint firstItem="0rC-bb-eUn" firstAttribute="trailing" secondItem="6vc-Bs-U4f" secondAttribute="trailing" constant="20" id="eA8-K7-4TT"/>
-                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="56" id="iLl-8f-r80"/>
-                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="56" id="kar-z2-Jx9"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="8" id="iLl-8f-r80"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="8" id="kar-z2-Jx9"/>
                             <constraint firstItem="6vc-Bs-U4f" firstAttribute="leading" secondItem="0rC-bb-eUn" secondAttribute="leading" constant="20" id="w8N-qy-0k5"/>
                         </constraints>
                     </view>
@@ -295,18 +310,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xrm-ra-hQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012" y="143"/>
+            <point key="canvasLocation" x="-1013.0434782608696" y="142.63392857142856"/>
         </scene>
         <!--Rec Cal View Controller-->
         <scene sceneID="gup-jA-DoE">
             <objects>
-                <viewController id="Qk1-Yq-EqF" customClass="RecCalViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="renderRec" id="Qk1-Yq-EqF" customClass="RecCalViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ee0-ll-04N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for providing us some information. Here's our recommendation based on your input:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-Si-IdA">
-                                <rect key="frame" x="20" y="119" width="374" height="41"/>
+                                <rect key="frame" x="20" y="75" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -571,7 +586,7 @@
         <!--What did you eat today?-->
         <scene sceneID="w1p-JA-mwg">
             <objects>
-                <viewController storyboardIdentifier="Search" id="fqs-H6-zhk" customClass="FoodSearchBarViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search" modalPresentationStyle="fullScreen" id="fqs-H6-zhk" customClass="FoodSearchBarViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dT-pb-j47">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

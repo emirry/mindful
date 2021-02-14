@@ -94,11 +94,8 @@ class ApiRestActions {
                 self.rec_cal_lose = responseModel.rec_cal_lose
                 
                 self.responseArr.append(responseModel)
-                
-                DispatchQueue.main.sync {
-                    
-                }
-//
+                completed()
+            
             }
             catch let jsonErr {
                 print(jsonErr)
