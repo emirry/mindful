@@ -26,9 +26,15 @@ class UserDetail: Codable {
     
 }
 
-class UserResponse: Codable {
+class UserResponse: Decodable {
     //REVIEW: might have include more variables
-    var bmr: Int
-    var rec_daily_cal: Int
-    var to_lose_weight: Int
+    var rec_bmr: Int
+    var rec_calories: Int
+    var rec_cal_lose: Int
+    
+    init(rec_bmr: Int, rec_calories: Int, rec_cal_lose: Int) {
+        self.rec_bmr = rec_bmr
+        self.rec_calories = rec_calories
+        self.rec_cal_lose = rec_cal_lose
+    }
 }

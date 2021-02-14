@@ -65,7 +65,7 @@ class UserInfoViewController: UIViewController {
         print("WEIGHT", weight)
         
         let userToSave = UserDetail(user_name: user_name, male_or_female: maleOrFemale, weight: weight, height: height, age: age, activity_level: activityLevel)
-        
+                
         print("USER", userToSave)
         
         let userPostRequest = ApiRestActions()
