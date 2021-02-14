@@ -135,6 +135,7 @@ def user_list(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = UserSerializer(data=request.data)
+        print("USERREQ", request.data)
         if serializer.is_valid():
             serializer.save()
 
@@ -151,16 +152,20 @@ def user_list(request):
             rec_daily_cal = User().daily_caloric_needs(bmr, user_act_level)
             to_lose_weight = User().lose_weight(rec_daily_cal)
 
-            # response = {
-            #     "rec_bmr": bmr,
-            #     "rec_calories": rec_daily_cal,
-            #     "rec_cal_lose": to_lose_weight
-            # }
-            # response_serializer = UserSerializer(data=request.data.update)
-            # if response_serializer.is_valid():
-            #     # UserSerializer(user_data.update)
-            #     response_serializer.save()
-
+            response = {
+                "user_name": request.data['user_name'],
+                "male_or_female": request.data['male_or_female'],
+                'weight': request.data['weight'],
+                'height': request.data['height'],
+                'age': request.data['age'],
+                'activity_level': request.data['activity_level'],
+                "rec_bmr": bmr,
+                "rec_calories": rec_daily_cal,
+                "rec_cal_lose": to_lose_weight
+            }
+            response_serializer = UserSerializer(data=response)
+            if response_serializer.is_valid():
+                response_serializer.save()
             return Response({"rec_bmr" : bmr, "rec_calories" : rec_daily_cal, "rec_cal_lose" : to_lose_weight}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

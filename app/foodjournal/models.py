@@ -85,6 +85,7 @@ class User(models.Model):
     # to_lose_weight = lose_weight(rec_daily_cal)
 
 
+
 class FoodJournal(models.Model):
     date = models.DateField(auto_now=True, blank=False, null=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
