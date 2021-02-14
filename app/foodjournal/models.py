@@ -66,6 +66,17 @@ class User(models.Model):
         cal_from_fat = int(.2 * calories)
         grams_of_fat = int(cal_from_fat / 9)
 
+    # def response(self, user_weight, user_height, user_age, m_or_f, user_activity):
+
+    #     rec_bmr = self.calculate_bmr(user_weight, user_height, user_age, m_or_f)
+    
+    #     rec_daily_cal = self.daily_caloric_needs(rec_bmr, user_activity)
+     
+    #     to_lose_weight = self.lose_weight(rec_daily_cal)
+    
+
+    #     return rec_bmr, rec_daily_cal, to_lose_weight
+
 
     # INFO TO RETURN:
     # print("HERE", type(weight))
