@@ -69,7 +69,9 @@ class UserInfoViewController: UIViewController {
         print("USER", userToSave)
         
         let userPostRequest = ApiRestActions()
-        userPostRequest.saveToUserDB(userToSave)
+        userPostRequest.saveToUserDB(userToSave) {
+        
+        }
         
 
     }

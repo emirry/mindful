@@ -12,6 +12,7 @@
 		8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */; };
 		8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D146625D2621400FA67ED /* FoodPageViewController.swift */; };
 		8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A53AAAE25D73C7400473517 /* UserDetail.swift */; };
+		8AC242C325D8B510001793BB /* RecCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC242C225D8B510001793BB /* RecCalViewController.swift */; };
 		8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C0725D4B69800D52100 /* ApiRestActions.swift */; };
 		8AC89C2825D65F1C00D52100 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */; };
 		8AC89C2F25D6673F00D52100 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C2E25D6673F00D52100 /* SignInViewController.swift */; };
@@ -36,6 +37,7 @@
 		8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchBarViewController.swift; sourceTree = "<group>"; };
 		8A4D146625D2621400FA67ED /* FoodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageViewController.swift; sourceTree = "<group>"; };
 		8A53AAAE25D73C7400473517 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		8AC242C225D8B510001793BB /* RecCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCalViewController.swift; sourceTree = "<group>"; };
 		8AC89C0725D4B69800D52100 /* ApiRestActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestActions.swift; sourceTree = "<group>"; };
 		8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8AC89C2E25D6673F00D52100 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
 				8AC89C2E25D6673F00D52100 /* SignInViewController.swift */,
 				8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */,
+				8AC242C225D8B510001793BB /* RecCalViewController.swift */,
 				8A53AAAE25D73C7400473517 /* UserDetail.swift */,
 				8A4D146625D2621400FA67ED /* FoodPageViewController.swift */,
 				8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */,
@@ -247,6 +250,7 @@
 				8AC89C2825D65F1C00D52100 /* UserInfoViewController.swift in Sources */,
 				8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */,
 				8A281F2F25CDCEFE00F9E74B /* NutritionDetailViewController.swift in Sources */,
+				8AC242C325D8B510001793BB /* RecCalViewController.swift in Sources */,
 				8ACB301025CB5DE800D1E680 /* FoodListViewController.swift in Sources */,
 				8ACB304D25CC886800D1E680 /* NutritionPageViewController.swift in Sources */,
 				8ACB304025CBF18900D1E680 /* FoodDetail.swift in Sources */,

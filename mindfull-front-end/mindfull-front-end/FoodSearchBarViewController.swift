@@ -226,13 +226,6 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         }
         task.resume()
     }
-    
-//    //create a saveToDatabase()
-    //create a variable to store new saved food items
-//    func saveToDataBase() {
-//        let newSavedFoodItem = BackendData(name: <#T##String#>, calories: <#T##Int#>, fat: <#T##Double#>, carbs: <#T##Double#>, protein: <#T##Double#>)
-//
-//    }
 
     
 }

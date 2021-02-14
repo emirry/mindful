@@ -51,8 +51,14 @@ class ApiRestActions {
         task.resume()
     }
     
+    var rec_bmr = 0
+    var rec_calories = 0
+    var rec_cal_lose = 0
+    
+    var responseArr: [UserResponse] = []
     //Post request to user
-    func saveToUserDB(_ userToSave: UserDetail) {
+    func saveToUserDB(_ userToSave: UserDetail, completed: @escaping () -> ()) {
+
         let url = URL(string: "http://127.0.0.1:8000/user/")
         guard let requestUrl = url else {
             print("URL is invalid")
@@ -74,38 +80,35 @@ class ApiRestActions {
                 print("\(error.localizedDescription)")
                 return
             }
-            guard let data = data else { return }
+            guard let data = data else {
+                return
+            }
+            
 
             do {
                 let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
-                var bmrResponse = responseModel.rec_bmr
-                print("BMR", bmrResponse)
-                var maintainResponse = responseModel.rec_calories
-                var toLoseResponse = responseModel.rec_cal_lose
                 
-                print("Response data:\n \(bmrResponse)")
-                print("Response data:\n \(maintainResponse)")
-                print("Response data:\n \(toLoseResponse)")
-//                print("responseModel date: \(responseModel.date)")
-//                print("responseModel name: \(responseModel.bmr)")
-//                print("responseModel calories: \(responseModel.rec_daily_cal)")
-//                print("responseModel carbs: \(responseModel.to_lose_weight)")
+                self.rec_bmr = responseModel.rec_bmr
+                print("WORKING BMR", self.rec_bmr)
+                self.rec_calories = responseModel.rec_calories
+                self.rec_cal_lose = responseModel.rec_cal_lose
                 
-//                let responseModel = try JSONDecoder().decode(UserDetail.self, from: data)
-//                print("Response data:\n \(responseModel)")
-////                print("responseModel date: \(responseModel.date)")
-//                print("responseModel name: \(responseModel.user_name)")
-//                print("responseModel calories: \(responseModel.male_or_female)")
-//                print("responseModel carbs: \(responseModel.weight)")
-//                print("responseModel fat: \(responseModel.height)")
+                self.responseArr.append(responseModel)
+                
+                DispatchQueue.main.sync {
+                    
+                }
+//
             }
             catch let jsonErr {
                 print(jsonErr)
             }
+
         }
         task.resume()
+        print("!!!!", rec_bmr)
+
     }
-    
     
     
     func deleteItem() {
