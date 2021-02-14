@@ -145,20 +145,13 @@ def user_list(request):
             user_height = user_data['height']
             user_age = user_data['age']
             user_act_level = user_data['activity_level']
-            # print('USER ACT', user_act_level)
 
             #calling model function
             bmr = User().calculate_bmr(m_or_f = m_or_f, user_weight = user_weight, user_height = user_height, user_age = user_age)
-            # print('USER ACT', type(user_act_level))
-            # print('BMR', type(bmr))
-
             rec_daily_cal = User().daily_caloric_needs(bmr, user_act_level)
             to_lose_weight = User().lose_weight(rec_daily_cal)
-            print('BMR', bmr)
-            print('REC', rec_daily_cal)            
-            print('LOSE', to_lose_weight)
 
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response({"rec_bmr" : bmr, "rec_calories" : rec_daily_cal, "rec_cal_lose" : to_lose_weight}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])

@@ -77,20 +77,27 @@ class ApiRestActions {
             guard let data = data else { return }
 
             do {
-//                let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
-//                print("Response data:\n \(responseModel)")
-////                print("responseModel date: \(responseModel.date)")
+                let responseModel = try JSONDecoder().decode(UserResponse.self, from: data)
+                var bmrResponse = responseModel.rec_bmr
+                print("BMR", bmrResponse)
+                var maintainResponse = responseModel.rec_calories
+                var toLoseResponse = responseModel.rec_cal_lose
+                
+                print("Response data:\n \(bmrResponse)")
+                print("Response data:\n \(maintainResponse)")
+                print("Response data:\n \(toLoseResponse)")
+//                print("responseModel date: \(responseModel.date)")
 //                print("responseModel name: \(responseModel.bmr)")
 //                print("responseModel calories: \(responseModel.rec_daily_cal)")
 //                print("responseModel carbs: \(responseModel.to_lose_weight)")
                 
-                let responseModel = try JSONDecoder().decode(UserDetail.self, from: data)
-                print("Response data:\n \(responseModel)")
-//                print("responseModel date: \(responseModel.date)")
-                print("responseModel name: \(responseModel.user_name)")
-                print("responseModel calories: \(responseModel.male_or_female)")
-                print("responseModel carbs: \(responseModel.weight)")
-                print("responseModel fat: \(responseModel.height)")
+//                let responseModel = try JSONDecoder().decode(UserDetail.self, from: data)
+//                print("Response data:\n \(responseModel)")
+////                print("responseModel date: \(responseModel.date)")
+//                print("responseModel name: \(responseModel.user_name)")
+//                print("responseModel calories: \(responseModel.male_or_female)")
+//                print("responseModel carbs: \(responseModel.weight)")
+//                print("responseModel fat: \(responseModel.height)")
             }
             catch let jsonErr {
                 print(jsonErr)
