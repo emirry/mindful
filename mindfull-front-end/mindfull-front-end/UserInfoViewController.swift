@@ -18,7 +18,8 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var maleOrFemaleValidation: UILabel!
     
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet var textFields: [UITextField]!
+    
+    var textFields = [UITextField]()
     
     //variables to store user info
     var user_name = ""
@@ -29,21 +30,33 @@ class UserInfoViewController: UIViewController {
     var activityLevel = 0
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameTextField.delegate = self
+        textFields.append(nameTextField)
+        
         maleOrFemaleTextField.delegate = self
+        textFields.append(maleOrFemaleTextField)
+
         weightTextField.delegate = self
+        textFields.append(weightTextField)
+
         heightTextField.delegate = self
+        textFields.append(heightTextField)
+
         ageTextField.delegate = self
+        textFields.append(ageTextField)
+
         activityTextField.delegate = self
+        textFields.append(activityTextField)
+
             
         setupView()
-
         
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,9 +83,21 @@ class UserInfoViewController: UIViewController {
         
         let userPostRequest = ApiRestActions()
         userPostRequest.saveToUserDB(userToSave) {
+            
+            DispatchQueue.main.sync {
+                //manually pushes to next vc
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loadToPage = storyboard.instantiateViewController(identifier: "renderRec") as! RecCalViewController
+                
+                loadToPage.bmr = userPostRequest.rec_bmr
+                loadToPage.calories = userPostRequest.rec_calories
+                loadToPage.calToLose = userPostRequest.rec_cal_lose
+                
+                self.navigationController?.pushViewController(loadToPage, animated: true)
+            }
         
         }
-        
+
 
     }
     
@@ -99,27 +124,32 @@ class UserInfoViewController: UIViewController {
         }
         
         if textField == maleOrFemaleTextField {
-            return(text.count <= 2, "Please type in M or F")
+            return(text.count <= 1, "Please type in M or F")
         }
    
         return(text.count > 0, "This field cannot be empty.")
     }
     
-    
-//   @objc fileprivate func textDidChange(_ notification: Notification) {
-//        var formIsValid = true
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //
-//        for textField in textFields {
-//            //Validate text field
-//            let (valid, _) = validate(textField)
 //
-//            guard valid else {
-//                formIsValid = false
-//                break
-//            }
 //        }
-//        submitButton.isEnabled = formIsValid
-//    }
+    
+    
+   @objc fileprivate func textDidChange(_ notification: Notification) {
+        var formIsValid = true
+
+        for textField in textFields {
+            //Validate text field
+            let (valid, _) = validate(textField)
+
+            guard valid else {
+                formIsValid = false
+                break
+            }
+        }
+        submitButton.isEnabled = formIsValid
+    }
 
 }
 

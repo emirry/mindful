@@ -9,6 +9,9 @@ import UIKit
 
 class RecCalViewController: UIViewController {
 
+    var bmr = 0
+    var calories = 0
+    var calToLose = 0
     
     @IBOutlet weak var bmrLabel: UILabel!
     @IBOutlet weak var maintainLabel: UILabel!
@@ -18,14 +21,16 @@ class RecCalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bmrLabel.text = "\(ApiRestActions().rec_bmr)"
-        self.maintainLabel.text = "\(ApiRestActions().rec_calories)"
-        self.loseLabel.text = "\(ApiRestActions().rec_cal_lose)"
+        self.bmrLabel.text = "\(bmr)"
+        self.maintainLabel.text = "\(calories)"
+        self.loseLabel.text = "\(calToLose)"
 
 
     }
     
     @IBAction func reloadLabels(_ sender: UIBarButtonItem) {
+
+    
     }
 
 
