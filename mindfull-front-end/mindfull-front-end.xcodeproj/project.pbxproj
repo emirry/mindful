@@ -145,6 +145,7 @@
 				8ACB300525CB5DE800D1E680 /* Frameworks */,
 				8ACB300625CB5DE800D1E680 /* Resources */,
 				618084F178458A7C79579773 /* [CP] Embed Pods Frameworks */,
+				92AE91622FA8E323C291A769 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92AE91622FA8E323C291A769 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0DC9D8880ACD210312C910B /* [CP] Check Pods Manifest.lock */ = {
