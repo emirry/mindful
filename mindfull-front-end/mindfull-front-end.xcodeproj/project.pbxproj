@@ -15,7 +15,6 @@
 		8A1D607A25DA3ED900B2FCB6 /* Thasadith-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D607025DA3EB500B2FCB6 /* Thasadith-Regular.ttf */; };
 		8A281F2F25CDCEFE00F9E74B /* NutritionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */; };
 		8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */; };
-		8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D146625D2621400FA67ED /* FoodPageViewController.swift */; };
 		8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A53AAAE25D73C7400473517 /* UserDetail.swift */; };
 		8A9A339625DA0A910006C961 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9A339525DA0A910006C961 /* WelcomeViewController.swift */; };
 		8AC242C325D8B510001793BB /* RecCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC242C225D8B510001793BB /* RecCalViewController.swift */; };
@@ -31,10 +30,7 @@
 		8ACB303C25CBBA6100D1E680 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */; };
 		8ACB304025CBF18900D1E680 /* FoodDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB303F25CBF18900D1E680 /* FoodDetail.swift */; };
 		8ACB304D25CC886800D1E680 /* NutritionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB304C25CC886800D1E680 /* NutritionPageViewController.swift */; };
-		8ACD433925D1E40F00C953B9 /* DatabaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD433825D1E40F00C953B9 /* DatabaseApi.swift */; };
 		8ACD433C25D1E81700C953B9 /* BackendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD433B25D1E81700C953B9 /* BackendData.swift */; };
-		8ACD434525D1E9FA00C953B9 /* BackEndApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD434425D1E9FA00C953B9 /* BackEndApiViewController.swift */; };
-		8AFDE49325DAFB96002E092F /* NutritionMeterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDE49225DAFB96002E092F /* NutritionMeterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +44,6 @@
 		8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailViewController.swift; sourceTree = "<group>"; };
 		8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchBarViewController.swift; sourceTree = "<group>"; };
 		8A2ACB7E25DA363A00F7249F /* mindfull-front-end copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mindfull-front-end copy-Info.plist"; path = "/Users/emilynagai/Desktop/Ada-Capstone/mindfull/mindfull-front-end/mindfull-front-end copy-Info.plist"; sourceTree = "<absolute>"; };
-		8A4D146625D2621400FA67ED /* FoodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageViewController.swift; sourceTree = "<group>"; };
 		8A53AAAE25D73C7400473517 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		8A9A339525DA0A910006C961 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8AC242C225D8B510001793BB /* RecCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCalViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +61,7 @@
 		8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		8ACB303F25CBF18900D1E680 /* FoodDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetail.swift; sourceTree = "<group>"; };
 		8ACB304C25CC886800D1E680 /* NutritionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionPageViewController.swift; sourceTree = "<group>"; };
-		8ACD433825D1E40F00C953B9 /* DatabaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseApi.swift; sourceTree = "<group>"; };
 		8ACD433B25D1E81700C953B9 /* BackendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendData.swift; sourceTree = "<group>"; };
-		8ACD434425D1E9FA00C953B9 /* BackEndApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndApiViewController.swift; sourceTree = "<group>"; };
-		8AFDE49225DAFB96002E092F /* NutritionMeterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionMeterViewController.swift; sourceTree = "<group>"; };
 		D150C0A73FACC8871061AB3F /* Pods-mindfull-front-end.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-front-end.debug.xcconfig"; path = "Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,18 +119,14 @@
 				8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */,
 				8AC242C225D8B510001793BB /* RecCalViewController.swift */,
 				8A53AAAE25D73C7400473517 /* UserDetail.swift */,
-				8A4D146625D2621400FA67ED /* FoodPageViewController.swift */,
-				8AFDE49225DAFB96002E092F /* NutritionMeterViewController.swift */,
-				8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */,
 				8ACD433B25D1E81700C953B9 /* BackendData.swift */,
 				8ACB303F25CBF18900D1E680 /* FoodDetail.swift */,
 				8AC89C0725D4B69800D52100 /* ApiRestActions.swift */,
-				8ACD434425D1E9FA00C953B9 /* BackEndApiViewController.swift */,
 				8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */,
-				8ACD433825D1E40F00C953B9 /* DatabaseApi.swift */,
 				8ACB300F25CB5DE800D1E680 /* FoodListViewController.swift */,
 				8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */,
 				8ACB304C25CC886800D1E680 /* NutritionPageViewController.swift */,
+				8ACB303B25CBBA6100D1E680 /* JournalViewController.swift */,
 				8ACB301425CB5DE900D1E680 /* Assets.xcassets */,
 				8ACB301125CB5DE800D1E680 /* Main.storyboard */,
 				8ACB301625CB5DE900D1E680 /* LaunchScreen.storyboard */,
@@ -304,14 +292,10 @@
 				8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */,
 				8A9A339625DA0A910006C961 /* WelcomeViewController.swift in Sources */,
 				8AC89C2F25D6673F00D52100 /* SignInViewController.swift in Sources */,
-				8AFDE49325DAFB96002E092F /* NutritionMeterViewController.swift in Sources */,
 				8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */,
-				8ACD433925D1E40F00C953B9 /* DatabaseApi.swift in Sources */,
-				8ACD434525D1E9FA00C953B9 /* BackEndApiViewController.swift in Sources */,
 				8ACB300E25CB5DE800D1E680 /* SceneDelegate.swift in Sources */,
 				8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */,
 				8ACD433C25D1E81700C953B9 /* BackendData.swift in Sources */,
-				8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
