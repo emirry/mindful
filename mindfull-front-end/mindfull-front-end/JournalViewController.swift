@@ -1,14 +1,12 @@
-////
-////  JournalViewController.swift
-////  mindfull-front-end
-////
-////  Created by Emily Nagai on 2/3/21.
-////
 //
+//  JournalViewController.swift
+//  mindfull-front-end
+//
+//  Created by Emily Nagai on 2/3/21.
+//
+
 import UIKit
-//
-////NEED TO CHANGE TO JOURNALDETAILVIEWCONTROLLER
-//
+
 class JournalViewController: UIViewController {
 
     @IBOutlet weak var firstFoodItem: UILabel!
@@ -17,7 +15,8 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var fourthFoodItem: UILabel!
     
     let shapeLayer = CAShapeLayer()
-
+    var totalCal = 0
+    var passedInFoods = 0
 
     //variable to hold food data
 //    var foodDetail: FoodDetail!
@@ -27,6 +26,12 @@ class JournalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       getDate()
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
+        
             
         let center = view.center
         //track layer
@@ -47,9 +52,12 @@ class JournalViewController: UIViewController {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = CAShapeLayerLineCap.round
         shapeLayer.strokeEnd = 0
+        
         view.layer.addSublayer(shapeLayer)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        caluculateCal()
     }
     
     @objc private func handleTap() {
@@ -57,19 +65,39 @@ class JournalViewController: UIViewController {
         
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
-        basicAnimation.toValue = 1
+        basicAnimation.toValue = 0.2
+        //This is where I want to add code to stop the progress ring depending on user's calories
+        //create a function to make calculation, and then upload screen.
+
         basicAnimation.duration = 1.5
         basicAnimation.fillMode = CAMediaTimingFillMode.forwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "someString")
     }
+    
+    func getDate() {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .full
+        formatter.timeZone = TimeZone.current
+        self.title = formatter.string(from: Date())
+        
+    }
+    
+    func caluculateCal() {
+        print("TOTALCAL", totalCal)
+        print("CAL", passedInFoods)
+    }
+    
+    @IBAction func toFoodList(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let toFoodList = storyboard.instantiateViewController(identifier: "FoodListViewController") as! FoodListViewController
+        
+        self.navigationController?.pushViewController(toFoodList, animated: true)
+    }
+    
+    
 
-
-    //built in segue function to be able to exit out of *soon to be search page through add button*
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let foodEntryToView = segue.destination as! FoodListViewController
-//        foodEntryToView.journalPages = journalPages
-//    }
 
 //    @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
 //        let source = segue.source as! FoodListViewController

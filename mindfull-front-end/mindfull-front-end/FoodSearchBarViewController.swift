@@ -72,8 +72,8 @@ class FoodSearchBarViewController: UIViewController {
         searchResultsTable.delegate = self
         searchResultsTable.dataSource = self
         
-        navigationController?.navigationBar.barTintColor = UIColor.orange
-
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
     }
     
     //review. make sure api call gets canceled when leaving this view
@@ -111,26 +111,18 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-//    func getDate() {
-//        var date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyy-MM-dd"
-//        let datePrint = formatter.date(from: "\(date)")
-////        print("DATE", date)
-//        return
-//    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let foodToSave = FoodDetail(name: resultsArr[0].ingredients[0].text,
                                     calories: resultsArr[0].calories,
                                     fat: resultsArr[0].ingredients[0].parsed[0].nutrients.FAT.quantity,
                                     carbs: resultsArr[0].ingredients[0].parsed[0].nutrients.CHOCDF.quantity,
                                     protein: resultsArr[0].ingredients[0].parsed[0].nutrients.PROCNT.quantity)
+        
         let postRequest = ApiRestActions()
-        postRequest.saveToDatabase(foodToSave)
-        searchResultsTable.reloadData()
-
+        postRequest.saveToDatabase(foodToSave) {
+            
+            self.searchResultsTable.reloadData()
+        }
     }
     
     

@@ -30,19 +30,9 @@ class FoodListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         self.getSavedData()
-        getDate()
-    }
-    
-    //Move to Journal
-    func getDate() {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateStyle = .full
-        formatter.timeZone = TimeZone.current
-        self.title = formatter.string(from: Date())
         
     }
-
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
@@ -95,6 +85,7 @@ class FoodListViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+
                     }
                 }
                 catch {
@@ -143,12 +134,9 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
             nutritionDetailViewController.backendData = backendData
         }
         else if segue.identifier == "Search" {
-//            let selectedFood = ApiRestActions()
-//            selectedFood.saveToDatabase()
-////            self.performSegue(withIdentifier: "FoodListViewController", sender: nil)
-//            self.tableView.reloadData()
 
         }
+        
 
     }
 

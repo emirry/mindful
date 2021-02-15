@@ -31,12 +31,15 @@ class RecCalViewController: UIViewController {
 
 
     }
-    
-    @IBAction func reloadLabels(_ sender: UIBarButtonItem) {
+    @IBAction func startClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loadToPage = storyboard.instantiateViewController(identifier: "journal") as! JournalViewController
+        
+        loadToPage.totalCal = self.bmr
 
-    
+        
+        self.navigationController?.pushViewController(loadToPage, animated: true)
     }
-
 
 }
 

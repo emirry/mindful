@@ -9,11 +9,6 @@ import Foundation
 
 struct BackendData: Codable {
     var food_entries: [FoodInfo]
-//        var name: String
-//        var calories: Int
-//        var fat: Double
-//        var carbs: Double
-//        var protein: Double
 }
 
 struct FoodInfo: Codable {
@@ -24,24 +19,3 @@ struct FoodInfo: Codable {
         var carbs: Double
 }
 
-
-
-
-//class BackendData {
-//    var name: String
-//    var calories: Int
-//    var fat: Double
-//    var carbs: Double
-//    var protein: Double
-//
-//    init(self, name, calories, fat, carbs, protein) {
-//        self.name = name
-//        self.calories = calories
-//        self.fat = fat
-//        self.carbs = carbs
-//        self.protein = protein
-//    }
-//
-//
-//
-//}

@@ -9,7 +9,7 @@ import Foundation
 
 class ApiRestActions {
     
-    func saveToDatabase(_ foodToSave: FoodDetail) {
+    func saveToDatabase(_ foodToSave: FoodDetail, completed: @escaping () -> ()) {
     
         let url = URL(string: "http://127.0.0.1:8000/food/")
         guard let requestUrl = url else {
@@ -43,6 +43,8 @@ class ApiRestActions {
                 print("responseModel carbs: \(responseModel.carbs)")
                 print("responseModel fat: \(responseModel.fat)")
                 print("responseModel protein: \(responseModel.calories)")
+                
+                completed()
             }
             catch let jsonErr {
                 print(jsonErr)
