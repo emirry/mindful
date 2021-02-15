@@ -21,6 +21,10 @@ class RecCalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
+//        self.navigationItem.backBarButtonItem?.tintColor = .black
+        
         self.bmrLabel.text = "\(bmr)"
         self.maintainLabel.text = "\(calories)"
         self.loseLabel.text = "\(calToLose)"

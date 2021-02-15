@@ -419,7 +419,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
             </objects>
             <point key="canvasLocation" x="-1013.0434782608696" y="142.63392857142856"/>
         </scene>
-        <!--Rec Cal View Controller-->
+        <!--Your caloric intake-->
         <scene sceneID="gup-jA-DoE">
             <objects>
                 <viewController storyboardIdentifier="renderRec" id="Qk1-Yq-EqF" customClass="RecCalViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
@@ -427,39 +427,90 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for providing us some information. Here's our recommendation based on your input:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-Si-IdA">
-                                <rect key="frame" x="20" y="75" width="374" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for providing us some information. Here's our recommendation based on your input:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-Si-IdA">
+                                <rect key="frame" x="20" y="112" width="374" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-gy-iph">
-                                <rect key="frame" x="148" y="684" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Let's get started!"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-gy-iph">
+                                <rect key="frame" x="143" y="690" width="129" height="36"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="18"/>
+                                <state key="normal" title="Let's get started!">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="AZL-nB-pSC" kind="presentation" id="jhV-Do-7gz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzT-4f-Bat">
-                                <rect key="frame" x="167" y="230" width="42" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your BMR (this is what your body requires to function):" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCV-eQ-6gj">
+                                <rect key="frame" x="20" y="203" width="374" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BMR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6O-Ts-rNq">
+                                <rect key="frame" x="143" y="286" width="80" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="25"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is your recommended caloric intake to maintain your weight:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-e4-gzX">
+                                <rect key="frame" x="20" y="355" width="374" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="And this is what we recommend to lose .5 lbs per week:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06f-Si-I3p">
+                                <rect key="frame" x="20" y="510" width="374" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="calToLose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-US-xZ4">
+                                <rect key="frame" x="155" y="587" width="68" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="22"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-qg-Rcf">
+                                <rect key="frame" x="2" y="619" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-US-xZ4">
-                                <rect key="frame" x="87" y="194" width="42" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA9-DE-hZJ">
+                                <rect key="frame" x="231" y="298" width="63" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="25"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6O-Ts-rNq">
-                                <rect key="frame" x="102" y="317" width="44" height="122"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSA-xt-esq">
+                                <rect key="frame" x="231" y="453" width="63" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="25"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUP-Ut-vl1">
+                                <rect key="frame" x="231" y="601" width="63" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="25"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="calToMaintain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzT-4f-Bat">
+                                <rect key="frame" x="155" y="440" width="68" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="22"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -467,11 +518,14 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OGw-Vu-le1" firstAttribute="trailing" secondItem="eYw-Si-IdA" secondAttribute="trailing" constant="20" id="2KD-Z5-Ygm"/>
-                            <constraint firstItem="eYw-Si-IdA" firstAttribute="top" secondItem="OGw-Vu-le1" secondAttribute="top" constant="31" id="VAo-rf-uu0"/>
+                            <constraint firstItem="eYw-Si-IdA" firstAttribute="top" secondItem="OGw-Vu-le1" secondAttribute="top" constant="24" id="VAo-rf-uu0"/>
+                            <constraint firstItem="oYe-gy-iph" firstAttribute="leading" secondItem="OGw-Vu-le1" secondAttribute="leading" constant="145" id="Vck-sn-Jp3"/>
+                            <constraint firstItem="OGw-Vu-le1" firstAttribute="bottom" secondItem="oYe-gy-iph" secondAttribute="bottom" constant="134" id="r6B-OM-lw1"/>
                             <constraint firstItem="eYw-Si-IdA" firstAttribute="leading" secondItem="OGw-Vu-le1" secondAttribute="leading" constant="20" id="vdn-gw-bbF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Fyu-Hu-NLy"/>
+                    <navigationItem key="navigationItem" title="Your caloric intake" id="Fyu-Hu-NLy"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bmrLabel" destination="K6O-Ts-rNq" id="3uD-Yo-IfX"/>
                         <outlet property="loseLabel" destination="uwA-US-xZ4" id="nah-7d-0D9"/>
@@ -829,10 +883,14 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
     <inferredMetricsTieBreakers>
         <segue reference="PMD-9b-7Sv"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="Logo" width="267" height="210"/>
         <image name="google.png" width="18" height="18"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
