@@ -9,8 +9,14 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
 
         // Do any additional setup after loading the view.
     }

@@ -16,15 +16,28 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        signInButton.layer.cornerRadius = 20
+        
+        
         GIDSignIn.sharedInstance()?.delegate = self
           // Automatically sign in the user.
 //          GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
     }
+
     
     @IBAction func login(_ sender: UIButton) {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
+        
+  
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let toWelcomePage = storyboard.instantiateViewController(identifier: "welcome") as! WelcomeViewController
+    
+
+        self.navigationController?.pushViewController(toWelcomePage, animated: true)
+    
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -41,9 +54,6 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
 //        GIDSignIn.sharedInstance()?.signOut()
 //    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-
-        }
     
 }

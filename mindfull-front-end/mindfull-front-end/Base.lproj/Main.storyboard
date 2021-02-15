@@ -192,8 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcr-aQ-OZE">
-                                <rect key="frame" x="36" y="232" width="342" height="260"/>
-                                <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="36" y="183" width="342" height="260"/>
                                 <string key="text">
 Welcome to mindfull! We're committed to you as you are to your health journey. Log in your food and drinks meal-by-meal to acheive your health goals. If that sounds good, let's get started! 
 </string>
@@ -202,7 +201,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmN-cL-ILx">
-                                <rect key="frame" x="156" y="541" width="94" height="40"/>
+                                <rect key="frame" x="156" y="492" width="94" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="21"/>
                                 <state key="normal" title="Next">
@@ -216,8 +215,8 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jeu-NT-fJn"/>
-                        <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GmN-cL-ILx" firstAttribute="leading" secondItem="jeu-NT-fJn" secondAttribute="leading" constant="156" id="0NO-wI-0Na"/>
                             <constraint firstItem="Hcr-aQ-OZE" firstAttribute="leading" secondItem="jeu-NT-fJn" secondAttribute="leading" constant="36" id="10j-Qq-q0B"/>
@@ -227,7 +226,8 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                             <constraint firstItem="jeu-NT-fJn" firstAttribute="bottom" secondItem="GmN-cL-ILx" secondAttribute="bottom" constant="281" id="zKj-tM-LXH"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nextButton" destination="GmN-cL-ILx" id="V5j-bs-pWW"/>
                     </connections>

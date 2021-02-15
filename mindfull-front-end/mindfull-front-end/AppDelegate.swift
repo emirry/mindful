@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         //If user is already signed in, store sign-in state
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-    
 
+            
         
         return true
     }
