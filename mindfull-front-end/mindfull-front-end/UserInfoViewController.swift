@@ -58,7 +58,6 @@ class UserInfoViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
     //Submit button and post request to API
     @IBAction func submitPressed(_ sender: UIButton) {
         
@@ -68,13 +67,9 @@ class UserInfoViewController: UIViewController {
         height = Int(heightTextField.text ?? "") ?? 0
         age = Int(ageTextField.text ?? "") ?? 0
         activityLevel = Int(activityTextField.text ?? "") ?? 0
-        print("NAME", user_name)
-        print("WEIGHT", weight)
         
         let userToSave = UserDetail(user_name: user_name, male_or_female: maleOrFemale, weight: weight, height: height, age: age, activity_level: activityLevel)
                 
-        print("USER", userToSave)
-        
         let userPostRequest = ApiRestActions()
         userPostRequest.saveToUserDB(userToSave) {
             
@@ -89,10 +84,7 @@ class UserInfoViewController: UIViewController {
                 
                 self.navigationController?.pushViewController(loadToPage, animated: true)
             }
-        
         }
-
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -104,9 +96,6 @@ class UserInfoViewController: UIViewController {
   
     
     fileprivate func setupView() {
-        //configure subtmit button
-//        submitButton.isEnabled = false
-        
         //Configure male or female validation label
         maleOrFemaleValidation.isHidden = true
         weightValidation.isHidden = true
@@ -115,7 +104,7 @@ class UserInfoViewController: UIViewController {
         activityValidation.isHidden = true
     }
     
-    //Validating that first text field is M or F
+    //Validating text fields
     fileprivate func validate(_ textField: UITextField) -> (Bool, String?) {
         guard let text = textField.text else {
             return(false, nil)
@@ -123,13 +112,10 @@ class UserInfoViewController: UIViewController {
         
         if textField == maleOrFemaleTextField {
             return(text.count <= 1, "Please type in M or F")
-        } else if textField == weightTextField || textField == heightTextField || textField == ageTextField || textField == activityTextField {
-            return(text.count > 0, "This field cannot be empty.")
         }
+
         return(text.count > 0, "This field cannot be empty.")
-   
     }
-        
     
    @objc fileprivate func textDidChange(_ notification: Notification) {
         var formIsValid = true
@@ -145,7 +131,6 @@ class UserInfoViewController: UIViewController {
         }
         submitButton.isEnabled = formIsValid
     }
-
 }
 
 extension UserInfoViewController: UITextFieldDelegate {
@@ -178,9 +163,26 @@ extension UserInfoViewController: UITextFieldDelegate {
                 self.weightValidation.isHidden = valid
             })
         case heightTextField:
-            ageTextField.becomeFirstResponder()
+            let(valid, message) = validate(textField)
+            if valid {
+                ageTextField.becomeFirstResponder()
+            }
+            self.heightValidation.text = message
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                self.heightValidation.isHidden = valid
+            })
+        
         default:
-            activityTextField.becomeFirstResponder()
+            let(valid, message) = validate(textField)
+            if valid {
+                activityTextField.becomeFirstResponder()
+            }
+            self.activityValidation.text = message
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                self.activityValidation.isHidden = valid
+            })
         }
         return true
 
