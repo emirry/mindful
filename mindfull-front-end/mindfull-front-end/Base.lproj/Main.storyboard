@@ -248,102 +248,102 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please answer the questions to find out your recommended caloric intake." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vc-Bs-U4f">
-                                <rect key="frame" x="20" y="131" width="374" height="54"/>
+                                <rect key="frame" x="20" y="109" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="U2a-cT-5oz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="UH8-9p-X5z">
-                                <rect key="frame" x="10" y="193" width="394" height="515.5"/>
+                                <rect key="frame" x="10" y="171" width="394" height="557"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58d-qX-aRf">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58d-qX-aRf">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First &amp; last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-gQ-enQ">
-                                        <rect key="frame" x="0.0" y="34.5" width="394" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="XKv-9q-mqX"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(M)ale or (F)male?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g65-hh-eBR">
-                                        <rect key="frame" x="0.0" y="82.5" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was your sex assigned at birth?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g65-hh-eBR">
+                                        <rect key="frame" x="0.0" y="84.5" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please type: M or F" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agU-CT-lw3">
-                                        <rect key="frame" x="0.0" y="117" width="394" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="121" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="V4O-pn-kaA"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validatation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYl-jT-HLy">
-                                        <rect key="frame" x="0.0" y="165" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.31366011666656157" blue="0.034148038597786368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYl-jT-HLy">
+                                        <rect key="frame" x="0.0" y="169" width="394" height="50"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
+                                        <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current weight in lbs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-lG-xJg">
-                                        <rect key="frame" x="0.0" y="199.5" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you currently weigh?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-lG-xJg">
+                                        <rect key="frame" x="0.0" y="233" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4f9-pb-XXj">
-                                        <rect key="frame" x="0.0" y="234" width="394" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="In lbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4f9-pb-XXj">
+                                        <rect key="frame" x="0.0" y="269.5" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="FJK-fY-DsT"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-uL-pSt">
-                                        <rect key="frame" x="0.0" y="282" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your height?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-uL-pSt">
+                                        <rect key="frame" x="0.0" y="317.5" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height in inches" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uv-8r-Umb">
-                                        <rect key="frame" x="0.0" y="316.5" width="394" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="In inches" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uv-8r-Umb">
+                                        <rect key="frame" x="0.0" y="354" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="Mj7-Zx-6DE"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i94-bi-mbQ">
-                                        <rect key="frame" x="0.0" y="364.5" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How old are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i94-bi-mbQ">
+                                        <rect key="frame" x="0.0" y="402" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-pI-fz4">
-                                        <rect key="frame" x="0.0" y="399" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="438.5" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="IxP-Ib-cp4"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity level?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6K-5T-oN4">
-                                        <rect key="frame" x="0.0" y="447" width="394" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On a scale 1-5, how active are you per week?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6K-5T-oN4">
+                                        <rect key="frame" x="0.0" y="486.5" width="394" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a number 1 - 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmW-ll-84a">
-                                        <rect key="frame" x="0.0" y="481.5" width="394" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1:walking, 2: 1-3x, 3: 4-5x, 4: intense 3-4x, 5: intense 6x" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmW-ll-84a">
+                                        <rect key="frame" x="0.0" y="523" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="FQa-FO-o5x" id="BlY-Xh-cIH"/>
@@ -351,10 +351,12 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-HJ-8LZ">
-                                <rect key="frame" x="183" y="796" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-HJ-8LZ">
+                                <rect key="frame" x="156" y="735" width="102" height="30"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="21"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="submitPressed:" destination="FQa-FO-o5x" eventType="touchUpInside" id="ogw-SN-Cbe"/>
                                 </connections>
@@ -363,12 +365,13 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         <viewLayoutGuide key="safeArea" id="0rC-bb-eUn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0rC-bb-eUn" firstAttribute="trailing" secondItem="UH8-9p-X5z" secondAttribute="trailing" constant="10" id="544-pU-JIg"/>
-                            <constraint firstItem="6vc-Bs-U4f" firstAttribute="top" secondItem="0rC-bb-eUn" secondAttribute="top" constant="43" id="JDG-8r-yPQ"/>
-                            <constraint firstItem="UH8-9p-X5z" firstAttribute="leading" secondItem="0rC-bb-eUn" secondAttribute="leading" constant="10" id="RIN-jY-Wka"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="centerX" secondItem="6vc-Bs-U4f" secondAttribute="centerX" id="0UJ-Jh-91Q"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="centerX" secondItem="8M2-HJ-8LZ" secondAttribute="centerX" id="78D-jb-chb"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="leading" secondItem="0rC-bb-eUn" secondAttribute="leading" constant="10" id="IZQ-DB-aGN"/>
+                            <constraint firstItem="6vc-Bs-U4f" firstAttribute="top" secondItem="0rC-bb-eUn" secondAttribute="top" constant="21" id="JDG-8r-yPQ"/>
+                            <constraint firstItem="8M2-HJ-8LZ" firstAttribute="top" secondItem="UH8-9p-X5z" secondAttribute="bottom" constant="34.5" id="UNr-42-d6z"/>
                             <constraint firstItem="0rC-bb-eUn" firstAttribute="trailing" secondItem="6vc-Bs-U4f" secondAttribute="trailing" constant="20" id="eA8-K7-4TT"/>
-                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="8" id="iLl-8f-r80"/>
-                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="8" id="kar-z2-Jx9"/>
+                            <constraint firstItem="UH8-9p-X5z" firstAttribute="top" secondItem="6vc-Bs-U4f" secondAttribute="bottom" constant="8" id="w86-sJ-J0N"/>
                             <constraint firstItem="6vc-Bs-U4f" firstAttribute="leading" secondItem="0rC-bb-eUn" secondAttribute="leading" constant="20" id="w8N-qy-0k5"/>
                         </constraints>
                     </view>

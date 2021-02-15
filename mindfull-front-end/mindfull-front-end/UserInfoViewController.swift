@@ -53,9 +53,7 @@ class UserInfoViewController: UIViewController {
         textFields.append(activityTextField)
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
-        self.navigationController?.toolbar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
-        setupView()
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
         
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
     }
@@ -67,7 +65,6 @@ class UserInfoViewController: UIViewController {
     
     //Submit button and post request to API
     @IBAction func submitPressed(_ sender: UIButton) {
-        // call api?
         
         user_name = nameTextField.text ?? ""
         maleOrFemale = "\(maleOrFemaleTextField.text ?? "Please enter M or F")"
