@@ -130,7 +130,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-LA-3it">
                                 <rect key="frame" x="29" y="635" width="356" height="76"/>
-                                <color key="backgroundColor" red="0.13745527098687615" green="0.53220300729160663" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="-161" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -710,7 +710,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1xq-dQ-27q"/>
-        <segue reference="oCc-dl-2KQ"/>
+        <segue reference="PuE-lz-BRE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="267" height="210"/>
