@@ -18,16 +18,16 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
         
         signInButton.layer.cornerRadius = 20
         
-        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
           // Automatically sign in the user.
-//          GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+          GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
     }
 
     
     @IBAction func login(_ sender: UIButton) {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
         
   
@@ -37,8 +37,13 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
 
         self.navigationController?.pushViewController(toWelcomePage, animated: true)
     
-        
     }
+    
+    //Sign out
+    @objc func signOutButtonTapped(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signOut()
+    }
+    
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error != nil {
@@ -47,13 +52,7 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
 
 
     }
-    
-
-    //Sign out
-//    @objc func signOutButtonTapped(_ sender: UIButton) {
-//        GIDSignIn.sharedInstance()?.signOut()
-//    }
-    
 
     
 }
+
