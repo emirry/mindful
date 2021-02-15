@@ -16,7 +16,11 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var maleOrFemaleValidation: UILabel!
-    
+    @IBOutlet weak var weightValidation: UILabel!
+    @IBOutlet weak var heightValidation: UILabel!
+    @IBOutlet weak var ageValidation: UILabel!
+    @IBOutlet weak var activityValidation: UILabel!
+
     @IBOutlet weak var submitButton: UIButton!
     
     var textFields = [UITextField]()
@@ -28,29 +32,21 @@ class UserInfoViewController: UIViewController {
     var height = 0
     var age = 0
     var activityLevel = 0
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.delegate = self
         textFields.append(nameTextField)
-        
-        maleOrFemaleTextField.delegate = self
         textFields.append(maleOrFemaleTextField)
-
-        weightTextField.delegate = self
         textFields.append(weightTextField)
-
-        heightTextField.delegate = self
         textFields.append(heightTextField)
-
-        ageTextField.delegate = self
         textFields.append(ageTextField)
-
-        activityTextField.delegate = self
         textFields.append(activityTextField)
+        
+        for field in textFields {
+            field.delegate = self
+        }
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
@@ -113,6 +109,10 @@ class UserInfoViewController: UIViewController {
         
         //Configure male or female validation label
         maleOrFemaleValidation.isHidden = true
+        weightValidation.isHidden = true
+        heightValidation.isHidden = true
+        ageValidation.isHidden = true
+        activityValidation.isHidden = true
     }
     
     //Validating that first text field is M or F
@@ -123,16 +123,13 @@ class UserInfoViewController: UIViewController {
         
         if textField == maleOrFemaleTextField {
             return(text.count <= 1, "Please type in M or F")
+        } else if textField == weightTextField || textField == heightTextField || textField == ageTextField || textField == activityTextField {
+            return(text.count > 0, "This field cannot be empty.")
         }
-   
         return(text.count > 0, "This field cannot be empty.")
+   
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//
-//        }
-    
+        
     
    @objc fileprivate func textDidChange(_ notification: Notification) {
         var formIsValid = true
@@ -171,7 +168,15 @@ extension UserInfoViewController: UITextFieldDelegate {
                 self.maleOrFemaleValidation.isHidden = valid
             })
         case weightTextField:
-            heightTextField.becomeFirstResponder()
+            let(valid, message) = validate(textField)
+            
+            if valid {
+                heightTextField.becomeFirstResponder()
+            }
+            self.weightValidation.text = message
+            UIView.animate(withDuration: 0.25, animations: {
+                self.weightValidation.isHidden = valid
+            })
         case heightTextField:
             ageTextField.becomeFirstResponder()
         default:
