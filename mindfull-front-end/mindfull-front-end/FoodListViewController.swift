@@ -31,6 +31,9 @@ class FoodListViewController: UIViewController {
         tableView.delegate = self
         self.getSavedData()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
+        
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Rl-h2-zDj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -564,7 +564,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                     <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG">
                                         <connections>
                                             <action selector="toFoodList:" destination="AZL-nB-pSC" id="kYI-c7-hdp"/>
-                                            <segue destination="8Ty-1p-KAa" kind="show" id="spB-dd-mfs"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="nth-ma-5sH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -667,9 +667,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                             <constraint firstItem="xg8-Te-nzK" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="zAh-Qm-gv6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Food Entries" id="bdL-zY-TT7">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="uZU-q3-bki"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Food Entries" id="bdL-zY-TT7"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
@@ -766,11 +764,15 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="8Ty-1p-KAa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lgY-Rz-mvD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQr-aF-27a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqu-hP-v21">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PMD-9b-7Sv"/>
                     </connections>
@@ -818,7 +820,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1xq-dQ-27q"/>
+        <segue reference="nth-ma-5sH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
