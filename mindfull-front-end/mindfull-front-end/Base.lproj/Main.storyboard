@@ -212,6 +212,9 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="HRh-nW-T24" kind="show" id="Otd-oK-ygh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jeu-NT-fJn"/>
@@ -370,7 +373,6 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to mindfull!" id="aFb-Bv-b2s"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="activityTextField" destination="PmW-ll-84a" id="BM8-0G-ciX"/>
                         <outlet property="ageTextField" destination="AWx-pI-fz4" id="jia-Bd-kVJ"/>
@@ -760,6 +762,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="HRh-nW-T24" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Nw5-AI-QwO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCp-1J-Gze">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

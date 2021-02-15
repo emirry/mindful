@@ -51,8 +51,9 @@ class UserInfoViewController: UIViewController {
 
         activityTextField.delegate = self
         textFields.append(activityTextField)
-
-            
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.toolbar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
         setupView()
         
         
