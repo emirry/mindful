@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3A8793385108E884F90082ED /* Pods_mindfull_front_end.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CA94D7593F074EF124E58 /* Pods_mindfull_front_end.framework */; };
+		8A1D607225DA3ECF00B2FCB6 /* Sacramento-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D606C25DA3EAA00B2FCB6 /* Sacramento-Regular.ttf */; };
+		8A1D607425DA3ED200B2FCB6 /* Thasadith-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D606D25DA3EB000B2FCB6 /* Thasadith-Bold.ttf */; };
+		8A1D607625DA3ED400B2FCB6 /* Thasadith-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D606E25DA3EB200B2FCB6 /* Thasadith-Italic.ttf */; };
+		8A1D607825DA3ED700B2FCB6 /* Thasadith-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D606F25DA3EB400B2FCB6 /* Thasadith-BoldItalic.ttf */; };
+		8A1D607A25DA3ED900B2FCB6 /* Thasadith-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D607025DA3EB500B2FCB6 /* Thasadith-Regular.ttf */; };
 		8A281F2F25CDCEFE00F9E74B /* NutritionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */; };
 		8A281F3D25CDF22F00F9E74B /* FoodSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */; };
 		8A4D146725D2621400FA67ED /* FoodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D146625D2621400FA67ED /* FoodPageViewController.swift */; };
 		8A53AAAF25D73C7400473517 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A53AAAE25D73C7400473517 /* UserDetail.swift */; };
+		8A9A339625DA0A910006C961 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9A339525DA0A910006C961 /* WelcomeViewController.swift */; };
 		8AC242C325D8B510001793BB /* RecCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC242C225D8B510001793BB /* RecCalViewController.swift */; };
 		8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C0725D4B69800D52100 /* ApiRestActions.swift */; };
 		8AC89C2825D65F1C00D52100 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */; };
@@ -33,10 +39,17 @@
 /* Begin PBXFileReference section */
 		0022D8765E7D3AC6B1AAF23A /* Pods-mindfull-front-end.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindfull-front-end.release.xcconfig"; path = "Target Support Files/Pods-mindfull-front-end/Pods-mindfull-front-end.release.xcconfig"; sourceTree = "<group>"; };
 		3F9CA94D7593F074EF124E58 /* Pods_mindfull_front_end.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindfull_front_end.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1D606C25DA3EAA00B2FCB6 /* Sacramento-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sacramento-Regular.ttf"; sourceTree = "<group>"; };
+		8A1D606D25DA3EB000B2FCB6 /* Thasadith-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thasadith-Bold.ttf"; sourceTree = "<group>"; };
+		8A1D606E25DA3EB200B2FCB6 /* Thasadith-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thasadith-Italic.ttf"; sourceTree = "<group>"; };
+		8A1D606F25DA3EB400B2FCB6 /* Thasadith-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thasadith-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8A1D607025DA3EB500B2FCB6 /* Thasadith-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thasadith-Regular.ttf"; sourceTree = "<group>"; };
 		8A281F2E25CDCEFE00F9E74B /* NutritionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailViewController.swift; sourceTree = "<group>"; };
 		8A281F3C25CDF22F00F9E74B /* FoodSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchBarViewController.swift; sourceTree = "<group>"; };
+		8A2ACB7E25DA363A00F7249F /* mindfull-front-end copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mindfull-front-end copy-Info.plist"; path = "/Users/emilynagai/Desktop/Ada-Capstone/mindfull/mindfull-front-end/mindfull-front-end copy-Info.plist"; sourceTree = "<absolute>"; };
 		8A4D146625D2621400FA67ED /* FoodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageViewController.swift; sourceTree = "<group>"; };
 		8A53AAAE25D73C7400473517 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		8A9A339525DA0A910006C961 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8AC242C225D8B510001793BB /* RecCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCalViewController.swift; sourceTree = "<group>"; };
 		8AC89C0725D4B69800D52100 /* ApiRestActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestActions.swift; sourceTree = "<group>"; };
 		8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +98,7 @@
 				8ACB300925CB5DE800D1E680 /* Products */,
 				9DBE7463212C580E3870DFF7 /* Pods */,
 				25E4282EEB3A83474B005567 /* Frameworks */,
+				8A2ACB7E25DA363A00F7249F /* mindfull-front-end copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +113,15 @@
 		8ACB300A25CB5DE800D1E680 /* mindfull-front-end */ = {
 			isa = PBXGroup;
 			children = (
+				8A1D606C25DA3EAA00B2FCB6 /* Sacramento-Regular.ttf */,
+				8A1D606D25DA3EB000B2FCB6 /* Thasadith-Bold.ttf */,
+				8A1D606E25DA3EB200B2FCB6 /* Thasadith-Italic.ttf */,
+				8A1D606F25DA3EB400B2FCB6 /* Thasadith-BoldItalic.ttf */,
+				8A1D607025DA3EB500B2FCB6 /* Thasadith-Regular.ttf */,
 				8ACB300B25CB5DE800D1E680 /* AppDelegate.swift */,
 				8ACB300D25CB5DE800D1E680 /* SceneDelegate.swift */,
 				8AC89C2E25D6673F00D52100 /* SignInViewController.swift */,
+				8A9A339525DA0A910006C961 /* WelcomeViewController.swift */,
 				8AC89C2725D65F1C00D52100 /* UserInfoViewController.swift */,
 				8AC242C225D8B510001793BB /* RecCalViewController.swift */,
 				8A53AAAE25D73C7400473517 /* UserDetail.swift */,
@@ -194,8 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACB301825CB5DE900D1E680 /* LaunchScreen.storyboard in Resources */,
+				8A1D607625DA3ED400B2FCB6 /* Thasadith-Italic.ttf in Resources */,
+				8A1D607A25DA3ED900B2FCB6 /* Thasadith-Regular.ttf in Resources */,
+				8A1D607825DA3ED700B2FCB6 /* Thasadith-BoldItalic.ttf in Resources */,
 				8ACB301525CB5DE900D1E680 /* Assets.xcassets in Resources */,
+				8A1D607225DA3ECF00B2FCB6 /* Sacramento-Regular.ttf in Resources */,
 				8ACB301325CB5DE800D1E680 /* Main.storyboard in Resources */,
+				8A1D607425DA3ED200B2FCB6 /* Thasadith-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +299,7 @@
 				8ACB304025CBF18900D1E680 /* FoodDetail.swift in Sources */,
 				8ACB303C25CBBA6100D1E680 /* JournalViewController.swift in Sources */,
 				8ACB300C25CB5DE800D1E680 /* AppDelegate.swift in Sources */,
+				8A9A339625DA0A910006C961 /* WelcomeViewController.swift in Sources */,
 				8AC89C2F25D6673F00D52100 /* SignInViewController.swift in Sources */,
 				8AC89C0825D4B69800D52100 /* ApiRestActions.swift in Sources */,
 				8ACD433925D1E40F00C953B9 /* DatabaseApi.swift in Sources */,
