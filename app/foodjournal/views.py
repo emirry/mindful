@@ -6,9 +6,16 @@ from foodjournal.serializers import FoodJournalSerializer, FoodLogItemSerializer
 from datetime import date
 from datetime import datetime
 from django.utils.timezone import localdate
+from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter
+from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+from rest_auth.registration.views import SocialLoginView
+
 
 wanted_date = localdate()
-print('LOCALDATE', wanted_date)
+
+class GoogleLogin(SocialLoginView):
+    adapter_class = GoogleOAuth2Adapter
+    client_class = OAuth2Client
 
 @api_view(['GET', 'POST'])
 def food_journal_entry_list(request):

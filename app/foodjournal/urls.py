@@ -2,6 +2,8 @@
 # from rest_framework import routers
 from django.urls import path
 from foodjournal import views
+from django.urls import path, include
+
 
 #Routers to provide an easy way of automatically determinging URL conf
 # router = routers.SimpleRouter()
@@ -16,4 +18,5 @@ urlpatterns = [
     path('food/<int:pk>', views.food_log_item_detail),
     path('user/', views.user_list),
     path('user/<int:pk>', views.user_detail),
+
 ]

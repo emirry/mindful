@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pf5-W2-not">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Rl-h2-zDj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Thasadith-Bold.ttf">
+            <string>Thasadith-Bold</string>
+        </array>
+        <array key="Thasadith-Regular.ttf">
+            <string>Thasadith-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Nutrition Page View Controller-->
         <scene sceneID="mqt-Je-hSJ">
@@ -14,7 +22,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="d9l-1o-nBQ" customClass="NutritionPageViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ku-pJ-Ta3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3222" y="-523"/>
+            <point key="canvasLocation" x="4131.884057971015" y="-523.66071428571422"/>
         </scene>
         <!--Nutrition Detail View Controller-->
         <scene sceneID="hrk-2x-4dH">
@@ -123,25 +131,32 @@
         <!--Sign In View Controller-->
         <scene sceneID="cB0-QA-XMC">
             <objects>
-                <viewController id="Pf5-W2-not" customClass="SignInViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Pf5-W2-not" customClass="SignInViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Aa-cZ-lgc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-LA-3it">
-                                <rect key="frame" x="29" y="635" width="356" height="76"/>
+                                <rect key="frame" x="29" y="657" width="356" height="54"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="25"/>
                                 <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="-161" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-109" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Sign in or sign up" image="google.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="login:" destination="Pf5-W2-not" eventType="touchUpInside" id="1eD-i5-wQL"/>
-                                    <segue destination="FQa-FO-o5x" kind="show" identifier="userInfo" id="PuE-lz-BRE"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Hx-wg-i9c">
-                                <rect key="frame" x="70" y="193" width="276" height="270"/>
+                                <rect key="frame" x="70" y="237" width="276" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="bIk-9D-LGj"/>
                                 </constraints>
@@ -150,7 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="w2K-yX-Utg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G8b-LA-3it" firstAttribute="top" secondItem="w2K-yX-Utg" secondAttribute="top" constant="591" id="0ef-ad-j3S"/>
+                            <constraint firstItem="G8b-LA-3it" firstAttribute="top" secondItem="w2K-yX-Utg" secondAttribute="top" constant="569" id="0ef-ad-j3S"/>
                             <constraint firstItem="G8b-LA-3it" firstAttribute="centerX" secondItem="3Aa-cZ-lgc" secondAttribute="centerX" id="7kr-Ff-3fQ"/>
                             <constraint firstItem="G8b-LA-3it" firstAttribute="leading" secondItem="w2K-yX-Utg" secondAttribute="leading" constant="29" id="LEZ-CC-7dc"/>
                             <constraint firstItem="w2K-yX-Utg" firstAttribute="bottom" secondItem="G8b-LA-3it" secondAttribute="bottom" constant="151" id="MiY-X4-VAe"/>
@@ -166,7 +181,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOh-d8-pTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1852.1739130434785" y="-445.3125"/>
+            <point key="canvasLocation" x="-1878.2608695652175" y="-529.01785714285711"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="Heb-yI-RJj">
+            <objects>
+                <viewController storyboardIdentifier="welcome" id="JwJ-rZ-7WF" customClass="WelcomeViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S4J-72-T3j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcr-aQ-OZE">
+                                <rect key="frame" x="36" y="232" width="342" height="260"/>
+                                <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">
+Welcome to mindfull! We're committed to you as you are to your health journey. Log in your food and drinks meal-by-meal to acheive your health goals. If that sounds good, let's get started! 
+</string>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmN-cL-ILx">
+                                <rect key="frame" x="156" y="541" width="94" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="21"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jeu-NT-fJn"/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GmN-cL-ILx" firstAttribute="leading" secondItem="jeu-NT-fJn" secondAttribute="leading" constant="156" id="0NO-wI-0Na"/>
+                            <constraint firstItem="Hcr-aQ-OZE" firstAttribute="leading" secondItem="jeu-NT-fJn" secondAttribute="leading" constant="36" id="10j-Qq-q0B"/>
+                            <constraint firstItem="jeu-NT-fJn" firstAttribute="bottom" secondItem="Hcr-aQ-OZE" secondAttribute="bottom" constant="370" id="J9A-yK-WWy"/>
+                            <constraint firstItem="jeu-NT-fJn" firstAttribute="trailing" secondItem="Hcr-aQ-OZE" secondAttribute="trailing" constant="36" id="jIs-IF-BJd"/>
+                            <constraint firstItem="jeu-NT-fJn" firstAttribute="trailing" secondItem="GmN-cL-ILx" secondAttribute="trailing" constant="164" id="wSK-7P-n4B"/>
+                            <constraint firstItem="jeu-NT-fJn" firstAttribute="bottom" secondItem="GmN-cL-ILx" secondAttribute="bottom" constant="281" id="zKj-tM-LXH"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="nextButton" destination="GmN-cL-ILx" id="V5j-bs-pWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SB-j0-AY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1013.0434782608696" y="-529.01785714285711"/>
         </scene>
         <!--Welcome to mindfull!-->
         <scene sceneID="aOX-v2-rL0">
@@ -384,7 +452,7 @@
         <!--Journal Detail View Controller-->
         <scene sceneID="tEf-YN-zcX">
             <objects>
-                <viewController storyboardIdentifier="JournalDetailViewController" modalPresentationStyle="fullScreen" id="AZL-nB-pSC" customClass="JournalDetailViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="journal" modalPresentationStyle="fullScreen" id="AZL-nB-pSC" customClass="JournalDetailViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7p-PY-ZRH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,13 +758,11 @@
         <!--Navigation Controller-->
         <scene sceneID="TYx-HA-UD9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HRh-nW-T24" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="HRh-nW-T24" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCp-1J-Gze">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="0.60238416658223648" blue="0.2456571243518284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="systemOrangeColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -705,12 +771,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McB-S8-tqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2725" y="144"/>
+            <point key="canvasLocation" x="-1842" y="146"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a8Y-RS-3bt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Rl-h2-zDj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aJn-2Y-Oiq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pf5-W2-not" kind="relationship" relationship="rootViewController" id="g64-kn-nzh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDq-Je-CcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2788" y="-529"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1xq-dQ-27q"/>
-        <segue reference="PuE-lz-BRE"/>
+        <segue reference="PMD-9b-7Sv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="267" height="210"/>
@@ -718,9 +801,6 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

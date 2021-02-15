@@ -30,8 +30,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 
-# DATABASES = os.getenv("DATABASES")
-# AUTH_PASSWORD_VALIDATORS = os.getenv("AUTH_PASSWORD_VALIDATORS")
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,13 +47,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
 
     #third party
     'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'rest_auth',
+    # 'rest_auth.registration',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'rest_auth.registration',
+    'allauth.socialaccount.providers.google',
+
 
     #own
     'foodjournal',
 ]
+SITE_ID = 1
+# REST_USE_JWT = True 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

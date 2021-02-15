@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers, serializers, viewsets
 
-#Routers to provide an easy way of automatically determinging URL conf
-# router = routers.DefaultRouter()
-# router.register('users', UserViewSet)
-
 #Wire API by using automatic URL routing
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', include('foodjournal.urls')),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('accounts/', include('allauth.urls')),
+    # path('auth/google', GoogleLogin.as_view(), name='google_login'),
+
 
 ]
