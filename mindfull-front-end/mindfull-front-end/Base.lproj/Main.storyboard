@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HRh-nW-T24">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pf5-W2-not">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -140,6 +140,12 @@
                                     <segue destination="FQa-FO-o5x" kind="show" identifier="userInfo" id="PuE-lz-BRE"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Hx-wg-i9c">
+                                <rect key="frame" x="70" y="193" width="276" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="bIk-9D-LGj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w2K-yX-Utg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,6 +154,9 @@
                             <constraint firstItem="G8b-LA-3it" firstAttribute="centerX" secondItem="3Aa-cZ-lgc" secondAttribute="centerX" id="7kr-Ff-3fQ"/>
                             <constraint firstItem="G8b-LA-3it" firstAttribute="leading" secondItem="w2K-yX-Utg" secondAttribute="leading" constant="29" id="LEZ-CC-7dc"/>
                             <constraint firstItem="w2K-yX-Utg" firstAttribute="bottom" secondItem="G8b-LA-3it" secondAttribute="bottom" constant="151" id="MiY-X4-VAe"/>
+                            <constraint firstItem="w2K-yX-Utg" firstAttribute="trailing" secondItem="0Hx-wg-i9c" secondAttribute="trailing" constant="68" id="O60-Yg-QSA"/>
+                            <constraint firstItem="0Hx-wg-i9c" firstAttribute="leading" secondItem="w2K-yX-Utg" secondAttribute="leading" constant="70" id="pKk-u6-naT"/>
+                            <constraint firstItem="0Hx-wg-i9c" firstAttribute="top" secondItem="w2K-yX-Utg" secondAttribute="top" constant="149" id="tWy-2z-Puo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c1v-XJ-UZe"/>
@@ -157,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOh-d8-pTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1851" y="-445"/>
+            <point key="canvasLocation" x="-1852.1739130434785" y="-445.3125"/>
         </scene>
         <!--Welcome to mindfull!-->
         <scene sceneID="aOX-v2-rL0">
@@ -704,6 +713,7 @@
         <segue reference="oCc-dl-2KQ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Logo" width="267" height="210"/>
         <image name="google.png" width="18" height="18"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
