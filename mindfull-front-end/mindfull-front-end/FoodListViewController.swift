@@ -70,7 +70,7 @@ class FoodListViewController: UIViewController {
     
     func getSavedData() {
         //Hit the backend api URL
-        let apiURL = "http://127.0.0.1:8000/foodjournal/"
+        let apiURL = "https://mindfull-em.herokuapp.com/foodjournal/"
         print(apiURL)
         //download json data
         guard let url = URL(string: apiURL) else {

@@ -11,7 +11,7 @@ class ApiRestActions {
     
     func saveToDatabase(_ foodToSave: FoodDetail, completed: @escaping () -> ()) {
     
-        let url = URL(string: "http://127.0.0.1:8000/food/")
+        let url = URL(string: "https://mindfull-em.herokuapp.com/food/")
         guard let requestUrl = url else {
             print("URL is invalid")
             return
@@ -61,7 +61,7 @@ class ApiRestActions {
     //Post request to user
     func saveToUserDB(_ userToSave: UserDetail, completed: @escaping () -> ()) {
 
-        let url = URL(string: "http://127.0.0.1:8000/user/")
+        let url = URL(string: "https://mindfull-em.herokuapp.com/user/")
         guard let requestUrl = url else {
             print("URL is invalid")
             return
