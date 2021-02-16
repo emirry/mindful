@@ -92,13 +92,7 @@ class FoodSearchBarViewController: UIViewController {
 
 extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    //TableViewDataSource
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("HERE!!!", resultsArr)
         return resultsArr.count
     }
     
@@ -166,8 +160,8 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         self.getData("\(URLComponents())", parameters: ["app_id" : "\(key.edamamAppId)", "app_key" : "\(key.edamamApplicationKey)", "ingr" : self.searchBar.text!]) {
         }
     }
-
     
+
     //API CALL
      func getData(_ url: String, parameters: [String: String], completed: @escaping () -> ()) {
 

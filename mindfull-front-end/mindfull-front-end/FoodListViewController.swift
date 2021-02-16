@@ -52,6 +52,10 @@ class FoodListViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let indexPath = IndexPath(item: 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let toSearch = storyboard.instantiateViewController(identifier: "Search") as! FoodSearchBarViewController
+        
+        self.navigationController?.pushViewController(toSearch, animated: true)
     }
     
 
@@ -111,6 +115,7 @@ class FoodListViewController: UIViewController {
             }
             task.resume()
         }
+    
 }
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -150,12 +155,27 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
             let backendData = savedFoodsArray[selectedSavedFoodIndex]
             nutritionDetailViewController.backendData = backendData
         }
-        else if segue.identifier == "Search" {
-
-        }
+//        else if segue.identifier == "Search" {
+//            //i don't think is doing anything
+//            print("SEARCHING")
+//        }
+//        else if segue.identifier == "journal" {
+//            //i don't think is doing anything
+//
+//        }
         
-
     }
+    
+        @IBAction func unwindFromJournalViewController(segue: UIStoryboardSegue) {
+//            let source = segue.source as! JournalViewController
+            foodSearch = FoodDetail.init(name: name, calories: calories, fat: fat, carbs: carbs, protein: protein)
+            print("ANYTHING??")
+            
+             let journalViewController = UIApplication.shared.windows.first!.rootViewController as!  JournalViewController
+        }
+    
+    
+
 
 }
 

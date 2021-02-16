@@ -140,7 +140,7 @@
                             <constraint firstItem="kuj-Au-XfJ" firstAttribute="top" secondItem="XBa-lJ-fFH" secondAttribute="bottom" constant="14" id="I0G-uC-4e4"/>
                             <constraint firstItem="Llu-So-THv" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="282" id="KEm-Hv-pbs"/>
                             <constraint firstItem="c0L-zN-guV" firstAttribute="top" secondItem="Llu-So-THv" secondAttribute="bottom" constant="-18" id="SFl-k2-L98"/>
-                            <constraint firstItem="Aeg-4f-kwH" firstAttribute="top" secondItem="sWN-IX-NT8" secondAttribute="bottom" constant="8" id="SIZ-hk-nwN"/>
+                            <constraint firstItem="Aeg-4f-kwH" firstAttribute="top" secondItem="sWN-IX-NT8" secondAttribute="bottom" constant="26" id="SIZ-hk-nwN"/>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="Soo-Ad-04e" secondAttribute="trailing" constant="31" id="Sng-sd-Vnt"/>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="bottom" secondItem="3s3-ue-37y" secondAttribute="bottom" constant="428" id="Tkl-Bz-VcP"/>
                             <constraint firstItem="c0L-zN-guV" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="288" id="UOy-1R-eGq"/>
@@ -772,7 +772,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="DYQ-iy-Csw"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="3Lw-ZN-1ql"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -805,7 +805,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="859"/>
+            <point key="canvasLocation" x="826" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-Td-TqS">
