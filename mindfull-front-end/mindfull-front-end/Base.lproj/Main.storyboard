@@ -22,7 +22,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="d9l-1o-nBQ" customClass="NutritionPageViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ku-pJ-Ta3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4131.884057971015" y="-523.66071428571422"/>
+            <point key="canvasLocation" x="2500" y="-579"/>
         </scene>
         <!--Nutrition Detail View Controller-->
         <scene sceneID="hrk-2x-4dH">
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3222" y="146"/>
+            <point key="canvasLocation" x="2501" y="146"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="cB0-QA-XMC">
@@ -677,7 +677,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="146"/>
+            <point key="canvasLocation" x="1574" y="143"/>
         </scene>
         <!--What did you eat today?-->
         <scene sceneID="w1p-JA-mwg">
@@ -756,7 +756,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.9710144927537" y="847.76785714285711"/>
+            <point key="canvasLocation" x="806" y="884"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-Td-TqS">
@@ -779,7 +779,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb6-K9-PUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="-171"/>
+            <point key="canvasLocation" x="1574" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TYx-HA-UD9">
@@ -820,7 +820,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nth-ma-5sH"/>
+        <segue reference="1xq-dQ-27q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>

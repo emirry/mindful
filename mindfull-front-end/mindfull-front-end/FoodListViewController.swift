@@ -7,9 +7,15 @@
 
 import UIKit
 
-class FoodListViewController: UIViewController {
+protocol FoodDelegate {
+    func foodToPass(_ food: FoodListViewController)
+}
 
+class FoodListViewController: UIViewController {
+    
+    var delegate: FoodDelegate?
     var foodSearch: FoodSearchBarViewController?
+    var toJournal: JournalViewController?
 //    var apiRestActions = ApiRestActions()
     var savedFoodsArray = [BackendData]()
     var selectedSavedFoodIndex = 0
@@ -23,7 +29,7 @@ class FoodListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEditButton: UIToolbar!
     @IBOutlet weak var addBarbutton: UIBarButtonItem!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +39,13 @@ class FoodListViewController: UIViewController {
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
+        
+    }
+    
+    @objc func saveFoodItems() {
+        
+//        delegate?.foodToPass()
+        
         
     }
     
@@ -53,6 +66,7 @@ class FoodListViewController: UIViewController {
             addBarbutton.isEnabled = false
         }
     }
+
     
     func getSavedData() {
         //Hit the backend api URL
@@ -101,7 +115,7 @@ class FoodListViewController: UIViewController {
 
 extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(savedFoodsArray)
+        print("SAVED FOODS", savedFoodsArray)
         return savedFoodsArray.count
     }
     

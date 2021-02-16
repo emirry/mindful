@@ -7,8 +7,11 @@
 
 import UIKit
 
-class JournalViewController: UIViewController {
-
+class JournalViewController: UIViewController, FoodDelegate {
+    
+    
+//    let vc = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
+    
     @IBOutlet weak var firstFoodItem: UILabel!
     @IBOutlet weak var secondFoodItem: UILabel!
     @IBOutlet weak var thirdFoodItem: UILabel!
@@ -18,15 +21,11 @@ class JournalViewController: UIViewController {
     var totalCal = 0
     var passedInFoods = 0
 
-    //variable to hold food data
-//    var foodDetail: FoodDetail!
-//    var journalPages = JournalPages!
-    //journal entries
-//    var journalIndex = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        vc.delegate = self
+
        getDate()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
@@ -84,6 +83,10 @@ class JournalViewController: UIViewController {
         
     }
     
+    func foodToPass(_: FoodListViewController) {
+
+    }
+
     func caluculateCal() {
         print("TOTALCAL", totalCal)
         print("CAL", passedInFoods)

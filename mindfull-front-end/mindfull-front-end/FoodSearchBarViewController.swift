@@ -120,7 +120,6 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
         
         let postRequest = ApiRestActions()
         postRequest.saveToDatabase(foodToSave) {
-            
             self.searchResultsTable.reloadData()
         }
     }
