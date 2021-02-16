@@ -9,7 +9,7 @@ import Foundation
 
 class ApiRestActions {
     
-    func saveToDatabase(_ foodToSave: FoodDetail, completed: @escaping () -> ()) {
+    func saveToDatabase(_ foodToSave: FoodDetail) {
     
         let url = URL(string: "https://mindfull-em.herokuapp.com/food/")
         guard let requestUrl = url else {
@@ -37,14 +37,14 @@ class ApiRestActions {
             do {
                 let responseModel = try JSONDecoder().decode(FoodDetail.self, from: data)
                 print("Response data:\n \(responseModel)")
-//                print("responseModel date: \(responseModel.date)")
-                print("responseModel name: \(responseModel.name)")
-                print("responseModel calories: \(responseModel.calories)")
-                print("responseModel carbs: \(responseModel.carbs)")
-                print("responseModel fat: \(responseModel.fat)")
-                print("responseModel protein: \(responseModel.calories)")
+////                print("responseModel date: \(responseModel.date)")
+//                print("responseModel name: \(responseModel.name)")
+//                print("responseModel calories: \(responseModel.calories)")
+//                print("responseModel carbs: \(responseModel.carbs)")
+//                print("responseModel fat: \(responseModel.fat)")
+//                print("responseModel protein: \(responseModel.calories)")
                 
-                completed()
+//                completed()
             }
             catch let jsonErr {
                 print(jsonErr)
