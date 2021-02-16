@@ -33,8 +33,6 @@ class User(models.Model):
             4 = Daily Exercise or intense exercise 3-4 times a week
             5 = Intense Exercise 6 times a week
         """
-        print(";ASLEJGAJ", user_activity)
-
         if user_activity == 1:
             level_index = 1.2
         elif user_activity == 2:
@@ -65,26 +63,6 @@ class User(models.Model):
         grams_of_carbs = int(cal_from_protein / 4)
         cal_from_fat = int(.2 * calories)
         grams_of_fat = int(cal_from_fat / 9)
-
-    # def response(self, user_weight, user_height, user_age, m_or_f, user_activity):
-
-    #     rec_bmr = self.calculate_bmr(user_weight, user_height, user_age, m_or_f)
-    
-    #     rec_daily_cal = self.daily_caloric_needs(rec_bmr, user_activity)
-     
-    #     to_lose_weight = self.lose_weight(rec_daily_cal)
-    
-
-    #     return rec_bmr, rec_daily_cal, to_lose_weight
-
-
-    # INFO TO RETURN:
-    # print("HERE", type(weight))
-    # bmr = calculate_bmr(male_or_female, weight, height, age)
-    # rec_daily_cal = daily_caloric_needs(bmr)
-    # to_lose_weight = lose_weight(rec_daily_cal)
-
-
 
 class FoodJournal(models.Model):
     date = models.DateField(auto_now=True, blank=False, null=False)

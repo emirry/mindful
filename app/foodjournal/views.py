@@ -23,8 +23,6 @@ def food_journal_entry_list(request):
     List all journal entries or create a new entry
     """
     if request.method == 'GET':
-        # print(FoodJournal.objects.filter(date=localdate()))
-
         entries = FoodJournal.objects.filter(date=localdate())
         serializer = FoodJournalSerializer(entries, many=True)
         return Response(serializer.data)
@@ -33,20 +31,11 @@ def food_journal_entry_list(request):
         # check db if date already exists, modify existing entry
         print("HERE", wanted_date)
 
-        # if not wanted_date: 
-        #     print("INSIDE IF")
-            #add food items 
         serializer = FoodJournalSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        #if it doesn't, it'll be a new entry
-        # else:
-        #     serializer = FoodJournalSerializer(data=request.data.update)
-        #     if serializer.is_valid():
-        #         serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)          
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)         
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def food_journal_entry_detail(request, pk):
@@ -129,13 +118,6 @@ def user_list(request):
     """
     List all users or create a new user
     """
-    # INFO TO RETURN:
-    # print("HERE", type(weight))
-    # bmr = calculate_bmr(male_or_female, weight, height, age)
-    # rec_daily_cal = daily_caloric_needs(bmr)
-    # to_lose_weight = lose_weight(rec_daily_cal)
-    # print('USER', User().calculate_bmr)
-
     if request.method == 'GET':
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
