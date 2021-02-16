@@ -717,7 +717,13 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                             <constraint firstItem="xg8-Te-nzK" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="zAh-Qm-gv6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Food Entries" id="bdL-zY-TT7"/>
+                    <navigationItem key="navigationItem" title="Food Entries" id="bdL-zY-TT7">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ddh-8p-3dJ">
+                            <connections>
+                                <segue destination="Yts-Bc-yoz" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="ndA-S0-ImJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
@@ -725,6 +731,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Yts-Bc-yoz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1574" y="143"/>
         </scene>

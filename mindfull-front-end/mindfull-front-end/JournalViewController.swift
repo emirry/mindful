@@ -82,32 +82,39 @@ class JournalViewController: UIViewController, FoodDelegate {
         self.title = formatter.string(from: Date())
         
     }
-    
-    func foodToPass(_: FoodListViewController) {
-
-    }
 
     func caluculateCal() {
+        //foodSearch/totalCal
         print("TOTALCAL", totalCal)
-        print("CAL", passedInFoods)
+        print("WHAT IS THIS?", caloriesFromList)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
     @IBAction func toFoodList(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let toFoodList = storyboard.instantiateViewController(identifier: "FoodListViewController") as! FoodListViewController
-        
+
         self.navigationController?.pushViewController(toFoodList, animated: true)
     }
     
-    
-
-
-//    @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
-//        let source = segue.source as! FoodListViewController
-//        foodProps = source.foodProps
-//        foodProp = foodProps[source.selectedFoodIndex]
-//        updateUserInterface()
+//    var grabData = 0
+//    func getFood(_ food: BackendData) {
+//        self.grabData = food.food_entries[0].calories
+//        print("CAL", grabData)
+//
 //    }
 
 
+    @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
+        if let foodListViewController = segue.source as? FoodListViewController {
+            foodSearch = foodListViewController.foodSearch
+
+        }
+    }
+
+
 }
+
