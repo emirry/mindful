@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="2500" y="-579"/>
         </scene>
-        <!--Nutrition Detail View Controller-->
+        <!--Nutrition-->
         <scene sceneID="hrk-2x-4dH">
             <objects>
                 <viewController storyboardIdentifier="NutritionDetailViewController" modalPresentationStyle="fullScreen" id="X2w-AS-oZa" customClass="NutritionDetailViewController" customModule="mindfull_front_end" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,57 +33,93 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-eV-dt7">
-                                <rect key="frame" x="82" y="145" width="250" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <rect key="frame" x="41" y="120" width="329" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="6W9-qr-7WR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Small Apple" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-4d-602">
-                                <rect key="frame" x="114" y="201" width="173" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="114" y="198" width="173" height="26"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="20"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3s3-ue-37y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="3s3-ue-37y">
                                 <rect key="frame" x="80" y="255" width="252" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="179" id="m6n-Tp-5US"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B56-2O-l9x">
-                                <rect key="frame" x="29" y="500" width="354" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B56-2O-l9x">
+                                <rect key="frame" x="268" y="500" width="115" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="8hB-J9-x92"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="20"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llu-So-THv">
-                                <rect key="frame" x="29" y="566" width="354" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llu-So-THv">
+                                <rect key="frame" x="282" y="558" width="87" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="wNn-kQ-eLw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="20"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0L-zN-guV">
-                                <rect key="frame" x="29" y="647" width="354" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Calories:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBa-lJ-fFH">
+                                <rect key="frame" x="20" y="502" width="126" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="RgG-nT-AOL"/>
-                                    <constraint firstAttribute="height" constant="81" id="SA8-p8-dbh"/>
+                                    <constraint firstAttribute="width" constant="126" id="GkY-ST-X5m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-Ad-04e">
-                                <rect key="frame" x="30" y="736" width="354" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Protein (g):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuj-Au-XfJ">
+                                <rect key="frame" x="20" y="571" width="126" height="55"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs (g):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWN-IX-NT8">
+                                <rect key="frame" x="20" y="634" width="126" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Yye-Tf-C9H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fat (g):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-4f-kwH">
+                                <rect key="frame" x="20" y="715" width="126" height="57"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-Ad-04e">
+                                <rect key="frame" x="284" y="703" width="99" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="Nfs-xE-NrY"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="81" id="Qzg-Jg-6XU"/>
                                     <constraint firstAttribute="height" constant="81" id="a1B-Uc-9kR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="20"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0L-zN-guV">
+                                <rect key="frame" x="288" y="621" width="90" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="RgG-nT-AOL"/>
+                                    <constraint firstAttribute="height" constant="81" id="SA8-p8-dbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thasadith-Bold" family="Thasadith" pointSize="20"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -92,30 +128,44 @@
                         <constraints>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="B56-2O-l9x" secondAttribute="trailing" constant="31" id="3OW-3j-fVP"/>
                             <constraint firstItem="B56-2O-l9x" firstAttribute="top" secondItem="3s3-ue-37y" secondAttribute="bottom" constant="66" id="3aH-pl-qvX"/>
-                            <constraint firstItem="B56-2O-l9x" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="29" id="3e6-uc-aZC"/>
-                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="c0L-zN-guV" secondAttribute="trailing" constant="31" id="8bq-cG-iGl"/>
+                            <constraint firstItem="B56-2O-l9x" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="268" id="3e6-uc-aZC"/>
+                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="c0L-zN-guV" secondAttribute="trailing" constant="36" id="8bq-cG-iGl"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="top" secondItem="3s3-ue-37y" secondAttribute="bottom" constant="68" id="Anw-Ur-7xl"/>
+                            <constraint firstItem="Aeg-4f-kwH" firstAttribute="leading" secondItem="sWN-IX-NT8" secondAttribute="leading" id="BFa-Pu-1Z9"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="centerY" secondItem="B56-2O-l9x" secondAttribute="centerY" id="C9w-7c-J5R"/>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="nNZ-4d-602" secondAttribute="trailing" constant="127" id="CtM-Ef-Hbl"/>
-                            <constraint firstItem="Llu-So-THv" firstAttribute="top" secondItem="B56-2O-l9x" secondAttribute="bottom" constant="8" id="FV4-aK-ZKI"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="trailing" secondItem="kuj-Au-XfJ" secondAttribute="trailing" id="EJD-4Z-HB3"/>
+                            <constraint firstItem="Llu-So-THv" firstAttribute="top" secondItem="B56-2O-l9x" secondAttribute="bottom" id="FV4-aK-ZKI"/>
                             <constraint firstItem="3s3-ue-37y" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="80" id="HeM-0V-Zmg"/>
-                            <constraint firstItem="Llu-So-THv" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="29" id="KEm-Hv-pbs"/>
-                            <constraint firstItem="c0L-zN-guV" firstAttribute="top" secondItem="Llu-So-THv" secondAttribute="bottom" id="SFl-k2-L98"/>
-                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="Soo-Ad-04e" secondAttribute="trailing" constant="30" id="Sng-sd-Vnt"/>
+                            <constraint firstItem="kuj-Au-XfJ" firstAttribute="top" secondItem="XBa-lJ-fFH" secondAttribute="bottom" constant="14" id="I0G-uC-4e4"/>
+                            <constraint firstItem="Llu-So-THv" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="282" id="KEm-Hv-pbs"/>
+                            <constraint firstItem="c0L-zN-guV" firstAttribute="top" secondItem="Llu-So-THv" secondAttribute="bottom" constant="-18" id="SFl-k2-L98"/>
+                            <constraint firstItem="Aeg-4f-kwH" firstAttribute="top" secondItem="sWN-IX-NT8" secondAttribute="bottom" constant="8" id="SIZ-hk-nwN"/>
+                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="Soo-Ad-04e" secondAttribute="trailing" constant="31" id="Sng-sd-Vnt"/>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="bottom" secondItem="3s3-ue-37y" secondAttribute="bottom" constant="428" id="Tkl-Bz-VcP"/>
-                            <constraint firstItem="c0L-zN-guV" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="29" id="UOy-1R-eGq"/>
-                            <constraint firstItem="wAd-eV-dt7" firstAttribute="top" secondItem="FvN-Ye-epg" secondAttribute="top" constant="57" id="acx-Rx-Dd9"/>
-                            <constraint firstItem="Soo-Ad-04e" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="30" id="c9t-hR-wq5"/>
+                            <constraint firstItem="c0L-zN-guV" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="288" id="UOy-1R-eGq"/>
+                            <constraint firstItem="wAd-eV-dt7" firstAttribute="top" secondItem="FvN-Ye-epg" secondAttribute="top" constant="32" id="acx-Rx-Dd9"/>
+                            <constraint firstItem="Soo-Ad-04e" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="284" id="c9t-hR-wq5"/>
                             <constraint firstItem="nNZ-4d-602" firstAttribute="leading" secondItem="FvN-Ye-epg" secondAttribute="leading" constant="114" id="cG6-L3-EIU"/>
                             <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="3s3-ue-37y" secondAttribute="trailing" constant="82" id="eSD-rB-JOD"/>
-                            <constraint firstItem="nNZ-4d-602" firstAttribute="top" secondItem="wAd-eV-dt7" secondAttribute="bottom" constant="19" id="gAh-vm-Ua7"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="leading" secondItem="sWN-IX-NT8" secondAttribute="leading" id="eSZ-Rd-xUm"/>
+                            <constraint firstItem="nNZ-4d-602" firstAttribute="top" secondItem="wAd-eV-dt7" secondAttribute="bottom" constant="16" id="gAh-vm-Ua7"/>
                             <constraint firstItem="3s3-ue-37y" firstAttribute="top" secondItem="nNZ-4d-602" secondAttribute="bottom" constant="31" id="gY6-OR-kx5"/>
-                            <constraint firstItem="wAd-eV-dt7" firstAttribute="centerX" secondItem="nAU-EM-q74" secondAttribute="centerX" id="oNs-N1-c0M"/>
-                            <constraint firstItem="Soo-Ad-04e" firstAttribute="top" secondItem="c0L-zN-guV" secondAttribute="bottom" constant="8" id="qSe-kE-hX2"/>
-                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="Llu-So-THv" secondAttribute="trailing" constant="31" id="qwq-vi-VTe"/>
-                            <constraint firstItem="Soo-Ad-04e" firstAttribute="top" secondItem="c0L-zN-guV" secondAttribute="bottom" constant="8" id="vpP-t6-DZ8"/>
-                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="wAd-eV-dt7" secondAttribute="trailing" constant="82" id="wyH-uD-G6E"/>
+                            <constraint firstItem="sWN-IX-NT8" firstAttribute="top" secondItem="kuj-Au-XfJ" secondAttribute="bottom" constant="8" id="iSi-QU-jOf"/>
+                            <constraint firstItem="Aeg-4f-kwH" firstAttribute="trailing" secondItem="sWN-IX-NT8" secondAttribute="trailing" id="jhH-co-PVI"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="leading" secondItem="nAU-EM-q74" secondAttribute="leadingMargin" id="jmd-14-ZV8"/>
+                            <constraint firstItem="sWN-IX-NT8" firstAttribute="centerY" secondItem="c0L-zN-guV" secondAttribute="centerY" id="nCv-0d-azF"/>
+                            <constraint firstItem="wAd-eV-dt7" firstAttribute="centerX" secondItem="nAU-EM-q74" secondAttribute="centerX" constant="-1.5" id="oNs-N1-c0M"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="trailing" secondItem="sWN-IX-NT8" secondAttribute="trailing" id="pyH-1H-WON"/>
+                            <constraint firstItem="Soo-Ad-04e" firstAttribute="top" secondItem="c0L-zN-guV" secondAttribute="bottom" constant="1" id="qSe-kE-hX2"/>
+                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="Llu-So-THv" secondAttribute="trailing" constant="45" id="qwq-vi-VTe"/>
+                            <constraint firstItem="Soo-Ad-04e" firstAttribute="top" secondItem="c0L-zN-guV" secondAttribute="bottom" constant="1" id="vpP-t6-DZ8"/>
+                            <constraint firstItem="XBa-lJ-fFH" firstAttribute="leading" secondItem="kuj-Au-XfJ" secondAttribute="leading" id="wrb-ZY-rYD"/>
+                            <constraint firstItem="FvN-Ye-epg" firstAttribute="trailing" secondItem="wAd-eV-dt7" secondAttribute="trailing" constant="44" id="wyH-uD-G6E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ipa-DZ-ksb"/>
+                    <navigationItem key="navigationItem" title="Nutrition" id="Ipa-DZ-ksb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="caloriesLabel" destination="B56-2O-l9x" id="Bik-AB-aMl"/>
                         <outlet property="carbsLabel" destination="c0L-zN-guV" id="wK6-DF-hnH"/>
@@ -126,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hL-7x-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501" y="146"/>
+            <point key="canvasLocation" x="2498.5507246376815" y="145.98214285714286"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="cB0-QA-XMC">
@@ -555,7 +605,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L59-UD-khI">
-                                <rect key="frame" x="10" y="818" width="394" height="44"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="nfH-be-SAG"/>
                                 </constraints>
@@ -564,10 +614,10 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                     <barButtonItem image="list.bullet" catalog="system" style="plain" id="JyS-61-fnG">
                                         <connections>
                                             <action selector="toFoodList:" destination="AZL-nB-pSC" id="kYI-c7-hdp"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="nth-ma-5sH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5VB-Pc-stJ"/>
@@ -576,7 +626,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                             <constraint firstItem="OU0-jZ-OYQ" firstAttribute="top" secondItem="5VB-Pc-stJ" secondAttribute="top" constant="31" id="0J4-om-XHg"/>
                             <constraint firstItem="5VB-Pc-stJ" firstAttribute="trailing" secondItem="OU0-jZ-OYQ" secondAttribute="trailing" constant="20" id="3J0-O4-BA5"/>
                             <constraint firstItem="L59-UD-khI" firstAttribute="centerX" secondItem="OU0-jZ-OYQ" secondAttribute="centerX" id="6Fn-gv-vFk"/>
-                            <constraint firstItem="L59-UD-khI" firstAttribute="leading" secondItem="5VB-Pc-stJ" secondAttribute="leading" constant="10" id="XwZ-Yz-UoH"/>
+                            <constraint firstItem="L59-UD-khI" firstAttribute="leading" secondItem="5VB-Pc-stJ" secondAttribute="leading" id="XwZ-Yz-UoH"/>
                             <constraint firstItem="L59-UD-khI" firstAttribute="bottom" secondItem="5VB-Pc-stJ" secondAttribute="bottom" id="pkc-zr-hlx"/>
                         </constraints>
                     </view>
@@ -600,23 +650,23 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Eig-F0-tkd" detailTextLabel="2ol-xE-Ejl" style="IBUITableViewCellStyleSubtitle" id="uuD-V4-lIC">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="67.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uuD-V4-lIC" id="9th-0x-PZR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eig-F0-tkd">
-                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <rect key="frame" x="20" y="9" width="29" height="22.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ol-xE-Ejl">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="20" y="34.5" width="51.5" height="22.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -643,11 +693,11 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="h8n-fX-XNd"/>
                                     <barButtonItem title="Add Food" id="vkV-Fs-pbX">
                                         <connections>
-                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="GaD-Pr-5DD"/>
-                                            <segue destination="fqs-H6-zhk" kind="show" identifier="Search" id="EuO-Yp-hGw"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="FVm-Na-Dq2"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -671,7 +721,6 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addBarbutton" destination="vkV-Fs-pbX" id="uau-d9-FrK"/>
-                        <outlet property="addEditButton" destination="xg8-Te-nzK" id="ldI-bT-Rbs"/>
                         <outlet property="tableView" destination="XVQ-i9-sG2" id="QSB-lW-UzD"/>
                     </connections>
                 </viewController>
@@ -700,30 +749,30 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultsCell" textLabel="aYG-zN-tDC" detailTextLabel="tKB-jM-Ipf" style="IBUITableViewCellStyleSubtitle" id="rz2-6L-Na5">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="67.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rz2-6L-Na5" id="Kpz-n6-XVo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aYG-zN-tDC">
-                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <rect key="frame" x="20" y="9" width="29" height="22.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tKB-jM-Ipf">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="20" y="34.5" width="51.5" height="22.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Thasadith-Regular" family="Thasadith" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="1xq-dQ-27q"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="DYQ-iy-Csw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -756,7 +805,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-cd-axt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="884"/>
+            <point key="canvasLocation" x="886" y="859"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-Td-TqS">
@@ -773,9 +822,6 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqu-hP-v21">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PMD-9b-7Sv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb6-K9-PUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -819,11 +865,9 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
             <point key="canvasLocation" x="-2788" y="-529"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1xq-dQ-27q"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
+        <image name="Food" width="275" height="183"/>
         <image name="Logo" width="267" height="210"/>
         <image name="google.png" width="18" height="18"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>

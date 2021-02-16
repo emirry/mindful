@@ -31,6 +31,9 @@ class NutritionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 246/225.0, green: 141/225.0, blue: 95/225.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Thasadith-Regular", size: 20)!]
+        
         updateUserInterface()
         
     }
@@ -46,9 +49,9 @@ class NutritionDetailViewController: UIViewController {
             self.nutritionLabel.text = foodData.food_entries[0].name
             self.caloriesLabel.text = "\(foodData.food_entries[0].calories)"
             print("HERE: \(foodData.food_entries[0].name)")
-            self.fatLabel.text = "\(foodData.food_entries[0].fat)"
-            self.carbsLabel.text = "\(foodData.food_entries[0].carbs)"
-            self.proteinLabel.text = "\(foodData.food_entries[0].protein)"
+            self.fatLabel.text = "\(foodData.food_entries[0].fat.rounded())"
+            self.carbsLabel.text = "\(foodData.food_entries[0].carbs.rounded())"
+            self.proteinLabel.text = "\(foodData.food_entries[0].protein.rounded())"
         }
        }
    
