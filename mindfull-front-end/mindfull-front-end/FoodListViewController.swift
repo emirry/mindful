@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol FoodDelegate {
-    func foodToPass(_ food: FoodListViewController)
-}
+//protocol FoodDelegate {
+//    func foodToPass(_ food: FoodListViewController)
+//}
 
 class FoodListViewController: UIViewController {
     
-    var delegate: FoodDelegate?
+//    var delegate: FoodDelegate?
     var foodSearch: FoodSearchBarViewController?
     var toJournal: JournalViewController?
 //    var apiRestActions = ApiRestActions()
@@ -50,11 +50,11 @@ class FoodListViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        let indexPath = IndexPath(item: 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+//        let indexPath = IndexPath(item: 1, section: 0)
+//        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let toSearch = storyboard.instantiateViewController(identifier: "Search") as! FoodSearchBarViewController
-        
+
         self.navigationController?.pushViewController(toSearch, animated: true)
     }
     
@@ -96,6 +96,7 @@ class FoodListViewController: UIViewController {
                 }
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
+                    print("RESULT", result)
                     for item in result {
                         self.name = item.food_entries[0].name
                         self.calories = item.food_entries[0].calories
@@ -166,13 +167,13 @@ extension FoodListViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
-        @IBAction func unwindFromJournalViewController(segue: UIStoryboardSegue) {
-//            let source = segue.source as! JournalViewController
-            foodSearch = FoodDetail.init(name: name, calories: calories, fat: fat, carbs: carbs, protein: protein)
-            print("ANYTHING??")
-            
-             let journalViewController = UIApplication.shared.windows.first!.rootViewController as!  JournalViewController
-        }
+//        @IBAction func unwindFromJournalViewController(segue: UIStoryboardSegue) {
+////            let source = segue.source as! JournalViewController
+//            foodSearch = FoodDetail.init(name: name, calories: calories, fat: fat, carbs: carbs, protein: protein)
+//            print("ANYTHING??")
+//
+//             let journalViewController = UIApplication.shared.windows.first!.rootViewController as!  JournalViewController
+//        }
     
     
 

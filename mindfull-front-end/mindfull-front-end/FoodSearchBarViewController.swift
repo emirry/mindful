@@ -113,9 +113,9 @@ extension FoodSearchBarViewController: UITableViewDelegate, UITableViewDataSourc
                                     protein: resultsArr[0].ingredients[0].parsed[0].nutrients.PROCNT.quantity)
         
         let postRequest = ApiRestActions()
-        postRequest.saveToDatabase(foodToSave) {
+        postRequest.saveToDatabase(foodToSave)
             self.searchResultsTable.reloadData()
-        }
+        
     }
     
     

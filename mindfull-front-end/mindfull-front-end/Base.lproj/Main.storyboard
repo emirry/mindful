@@ -645,8 +645,28 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="63y-ia-0ob"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Edit" style="plain" id="GHl-nH-efN">
+                                        <connections>
+                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="zPQ-PF-cN7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h8n-fX-XNd"/>
+                                    <barButtonItem title="Add Food" id="vkV-Fs-pbX">
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="FVm-Na-Dq2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-i9-sG2">
-                                <rect key="frame" x="0.0" y="130" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Eig-F0-tkd" detailTextLabel="2ol-xE-Ejl" style="IBUITableViewCellStyleSubtitle" id="uuD-V4-lIC">
@@ -678,49 +698,23 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Te-nzK">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="lEF-Tl-Rwe"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="nGK-JO-YDz"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Edit" style="plain" id="GHl-nH-efN">
-                                        <connections>
-                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="zPQ-PF-cN7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h8n-fX-XNd"/>
-                                    <barButtonItem title="Add Food" id="vkV-Fs-pbX">
-                                        <connections>
-                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="FVm-Na-Dq2"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xg8-Te-nzK" firstAttribute="leading" secondItem="XVQ-i9-sG2" secondAttribute="leading" id="5Lv-W3-JRi"/>
-                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Gd-wS-Uxs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg8-Te-nzK" secondAttribute="bottom" id="6Pg-UM-Lee"/>
-                            <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="8UF-dL-MQo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="GPe-Ak-hKA"/>
-                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PDz-Rh-ZAU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg8-Te-nzK" secondAttribute="bottom" id="dj3-9a-b2W"/>
-                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fdh-lg-aUE"/>
-                            <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="h9T-rs-7WB"/>
-                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="jHL-kb-cTO"/>
-                            <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="pK5-1d-oFd"/>
-                            <constraint firstItem="xg8-Te-nzK" firstAttribute="trailing" secondItem="XVQ-i9-sG2" secondAttribute="trailing" id="zAh-Qm-gv6"/>
+                            <constraint firstItem="xg8-Te-nzK" firstAttribute="top" secondItem="XVQ-i9-sG2" secondAttribute="bottom" id="FA1-jz-hJL"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LF3-MA-cao"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="leading" secondItem="xg8-Te-nzK" secondAttribute="leading" id="ONz-LZ-ZV1"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="trailing" secondItem="xg8-Te-nzK" secondAttribute="trailing" id="RRZ-el-c6d"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="dfV-al-WuS"/>
+                            <constraint firstItem="xg8-Te-nzK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iVL-id-PRn"/>
+                            <constraint firstItem="XVQ-i9-sG2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lnJ-jF-2mw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food Entries" id="bdL-zY-TT7">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ddh-8p-3dJ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="B8X-1a-KxS">
                             <connections>
-                                <segue destination="Yts-Bc-yoz" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="ndA-S0-ImJ"/>
+                                <segue destination="Yts-Bc-yoz" kind="unwind" unwindAction="unwindFromFoodDetailViewControllerWithSegue:" id="a8M-XD-C5k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -733,7 +727,7 @@ Welcome to mindfull! We're committed to you as you are to your health journey. L
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Yts-Bc-yoz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="143"/>
+            <point key="canvasLocation" x="1573.913043478261" y="142.63392857142856"/>
         </scene>
         <!--What did you eat today?-->
         <scene sceneID="w1p-JA-mwg">

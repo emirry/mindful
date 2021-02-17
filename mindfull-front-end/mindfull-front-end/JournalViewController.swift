@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JournalViewController: UIViewController, FoodDelegate {
+class JournalViewController: UIViewController {
     
     
 //    let vc = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
@@ -86,7 +86,7 @@ class JournalViewController: UIViewController, FoodDelegate {
     func caluculateCal() {
         //foodSearch/totalCal
         print("TOTALCAL", totalCal)
-        print("WHAT IS THIS?", caloriesFromList)
+//        print("WHAT IS THIS?", caloriesFromList)
 
     }
     
@@ -107,12 +107,12 @@ class JournalViewController: UIViewController, FoodDelegate {
 //
 //    }
 
-
+//
     @IBAction func unwindFromFoodDetailViewController(segue: UIStoryboardSegue) {
-        if let foodListViewController = segue.source as? FoodListViewController {
-            foodSearch = foodListViewController.foodSearch
-
-        }
+//        if let foodListViewController = segue.source as? FoodListViewController {
+//            foodSearch = foodListViewController.foodSearch
+//
+//        }
     }
 
 
