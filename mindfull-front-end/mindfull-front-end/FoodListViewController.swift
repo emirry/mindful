@@ -97,8 +97,15 @@ class FoodListViewController: UIViewController {
                 do {
                     let result = try jsonDecoder.decode([BackendData].self, from: data)
                     print("RESULT", result)
-                    for item in result {
+                    for var item in result {
+                        if item.food_entries.count == 0 {
+                            var defaultFoodItem = mindfull_front_end.FoodInfo(name: "No food", calories: 0, fat: 0, protein: 0, carbs: 0)
+                            item.food_entries.append(defaultFoodItem)
+                        }
+                        //save a default obj to array
+                      
                         self.name = item.food_entries[0].name
+                        
                         self.calories = item.food_entries[0].calories
                         print(self.name)
                         print(self.calories)
