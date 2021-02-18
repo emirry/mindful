@@ -14,9 +14,11 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 
 1. [Planning Process](#-planning-process)
 2. [Features](#-features)
-3. [Installation Guide](#-installation-guide)
+3. [Installation](#-installation)
 4. [Dependencies](#-dependencies)
-5. [Credits/Tutorials](#-credits-/-tutorials)
+5. [Resources](#-resources)
+6. [Design](#-design)
+7. [Screenshots-(#-screenshots)
 
 ## 🍎 Planning Process
 [Google Diagrams](https://app.diagrams.net/) was used as part of the planning. Along with documenting the whole process of this project, creating these diagrams helped me to understand the relationships and the steps that were neccessary to build mindfull. 
@@ -37,7 +39,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - I want to search for food items I've eaten so that I can log it into my journal
 - I want to see the nutrition facts for what I've eaten so that I can monitor my daily intake
 
-## 🍎 Installation Guide
+## 🍎 Installation
 >Here is a list of installations that were necessary to build this app:
 
 - [Swift/XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
@@ -47,6 +49,10 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [pgAdmin4](https://www.pgadmin.org/download/)
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 - [VS Code](https://code.visualstudio.com/download)
+
+>External Api
+
+-[Edamam](https://developer.edamam.com/)
 
 ## 🍎 Dependencies
 >Swift
@@ -70,10 +76,33 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - [dj-database-url](https://pypi.org/project/dj-database-url/)
 
-## 🍎 Credits/Tutorials
+## 🍎 Resources
+>I could not have done this project without these documentations and tutorials! Highly recommend if you want to build an iOS app!
 
-## 🍎 Trello Link
+- [Swift](https://swift.org/)
+- [Django](https://docs.djangoproject.com/en/3.1/)
+- [Python](https://docs.python.org/3/)
+- [John Gallaugher](https://www.youtube.com/user/profgallaugher)
+- [CodeWithChris](https://www.youtube.com/user/CodeWithChris)
+- [Lets Build That App](https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
+
+## 🍎 Design
 - [mindfull trello link](https://trello.com/b/D9sopo2g/ada-capstone)
-
-## 🍎 mindfull Prototype
 - [mindfull prototype figma link](https://www.figma.com/file/FbbCYgI5i6OamxKbUkkZjE/mindfull?node-id=0%3A1)
+
+## 🍎 Screenshots
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%201.44.57%20PM.png" alt="Login Screen">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.41.50%20PM.png" alt="Google Signin">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.07%20PM.png" alt="Welcome">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.19%20PM.png" alt="Form">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.53%20PM.png" alt="Caloric Intake">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.06%20PM.png" alt="Journal">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.22%20PM.png" alt="Food Entries">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.37%20PM.png" alt="Food Search">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.56%20PM.png" alt="Food Entry">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.05%20PM.png" alt="Nutrition Facts">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.18%20PM.png" alt="Delete">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring">
+>Note: The image above is not complete. Just the beginning of developing this 🙂
+
+
