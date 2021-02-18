@@ -7,6 +7,7 @@
 Fitness is important for many people, but sometimes calorie tracking can feel like a chore. mindfull is a calorie tracking app built to encourage people to stay on track with their health goals. It's simple and user-friendly. Great for anyone who wants to maintain or lose weight!
 
 >Tech Stack: Swift and Django
+>
 >Deployment: Heroku (for back-end)
 
 ## 🍎 Contents
