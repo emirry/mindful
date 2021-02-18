@@ -16,7 +16,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 2. [Features](#-features)
 3. [Installation Guide](#-installation-guide)
 4. [Dependencies](#-dependencies)
-5. [Credits/Tutorials](#-credits/-tutorials)
+5. [Credits/Tutorials](#-credits-/-tutorials)
 
 ## 🍎 Planning Process
 [Google Diagrams](https://app.diagrams.net/) was used as part of the planning. Along with documenting the whole process of this project, creating these diagrams helped me to understand the relationships and the steps that were neccessary to build mindfull. 
