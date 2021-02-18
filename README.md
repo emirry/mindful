@@ -1,13 +1,24 @@
-# 🍎 mindful
+# 🍎 mindfull
 <p align="center">
   <img src="https://github.com/emirry/mindfull/blob/main/images/Logo.png" alt="mindfull Logo" width=400>
  </p>
 
+
 Fitness is important for many people, but sometimes calorie tracking can feel like a chore. mindfull is a calorie tracking app built to encourage people to stay on track with their health goals. It's simple and user-friendly. Great for anyone who wants to maintain or lose weight!
+
+>Tech Stack: Swift and Django
 
 ## 🍎 Contents
 
+1. [Planning Process](#-planning-process)
+2. [Features](#-features)
+3. [Installation Guide](#-installation-guide)
+
+## 🍎 Planning Process
+[Google Diagrams](https://app.diagrams.net/) was used part of my planning process. Along with documenting the whole process of this project, creating diagrams helped me to understand the relationships and the steps that were neccessary to build this project. 
+
 ## 🍎 Features
+
 
 ## 🍎 Installation Guide
 
