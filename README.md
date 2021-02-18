@@ -17,6 +17,14 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 ## 🍎 Planning Process
 [Google Diagrams](https://app.diagrams.net/) was used part of my planning process. Along with documenting the whole process of this project, creating diagrams helped me to understand the relationships and the steps that were neccessary to build this project. 
 
+
+<p>
+  <img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%207.06.21%20PM.png" alt="Planning Diagram" width=200>
+</p>
+<p>
+  <img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%207.06.21%20PM.png" alt="Planning Diagram" width=200>
+</p>
+
 ## 🍎 Features
 
 
