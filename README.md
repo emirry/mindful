@@ -7,6 +7,7 @@
 Fitness is important for many people, but sometimes calorie tracking can feel like a chore. mindfull is a calorie tracking app built to encourage people to stay on track with their health goals. It's simple and user-friendly. Great for anyone who wants to maintain or lose weight!
 
 >Tech Stack: Swift and Django
+>Deployment: Heroku (for back-end)
 
 ## 🍎 Contents
 
@@ -26,7 +27,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 </p>
 
 ## 🍎 Features
-MVP: 
+>MVP: 
 
 ##### As a user...
 - I want to create a new account so that I can start my fitness journey
@@ -35,6 +36,13 @@ MVP:
 - I want to see the nutrition facts for what I've eaten so that I can monitor my daily intake
 
 ## 🍎 Installation Guide
+>Here is a list of installations that were necessary to build this app:
+
+- [Swift/XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+- [Django](https://www.djangoproject.com/download/)
+- [Python](https://docs.brew.sh/Homebrew-and-Python)
+- [PostgreSQL](https://formulae.brew.sh/formula/postgresql)
+- [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## 🍎 Dependencies
 
