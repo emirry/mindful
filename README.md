@@ -1,6 +1,6 @@
 # 🍎 mindful
 <p align="center">
-  <img src="https://github.com/emirry/mindfull/main/images/logo.png" alt="mindfull Logo" width=400>
+  <img src="https://github.com/emirry/mindfull/blob/main/images/Logo.png" alt="mindfull Logo" width=400>
  </p>
 
 Fitness is important for many people, but sometimes calorie tracking can feel like a chore. mindfull is a calorie tracking app built to encourage people to stay on track with their health goals. It's simple and user-friendly. Great for anyone who wants to maintain or lose weight!
