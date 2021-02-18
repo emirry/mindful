@@ -7,7 +7,6 @@
 Fitness is important for many people, but sometimes calorie tracking can feel like a chore. mindfull is a calorie tracking app built to encourage people to stay on track with their health goals. It's simple and user-friendly. Great for anyone who wants to maintain or lose weight!
 
 >Tech Stack: Swift and Django
-
 >Deployment: Heroku (for back-end)
 
 ## 🍎 Contents
@@ -18,7 +17,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 4. [Dependencies](#-dependencies)
 5. [Resources](#-resources)
 6. [Design](#-design)
-7. [Screenshots-(#-screenshots)
+7. [Screenshots](#-screenshots)
 
 ## 🍎 Planning Process
 [Google Diagrams](https://app.diagrams.net/) was used as part of the planning. Along with documenting the whole process of this project, creating these diagrams helped me to understand the relationships and the steps that were neccessary to build mindfull. 
@@ -32,7 +31,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 </p>
 
 ## 🍎 Features
->MVP
+### MVP
 ##### As a user...
 - I want to create a new account so that I can start my fitness journey
 - I want to share some personal information such as my current weight, height, and activity level so that I can receive a recommended caloric intake
@@ -40,7 +39,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - I want to see the nutrition facts for what I've eaten so that I can monitor my daily intake
 
 ## 🍎 Installation
->Here is a list of installations that were necessary to build this app:
+### Here is a list of installations that were necessary to build this app:
 
 - [Swift/XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 - [Django](https://www.djangoproject.com/download/)
@@ -50,24 +49,24 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 - [VS Code](https://code.visualstudio.com/download)
 
->External Api
+### External Api
 
 -[Edamam](https://developer.edamam.com/)
 
 ## 🍎 Dependencies
->Swift
+### Swift
 
 - [Google sign in](https://developers.google.com/identity/sign-in/ios)
 - [Cocoapods](https://cocoapods.org/)
 - [Cocoapods Keys](https://github.com/orta/cocoapods-keys)
 
->Python/Django
+### Python/Django
 
 - [Django Rest Framework](https://www.django-rest-framework.org/#installation)
 - [psycopg2](https://pypi.org/project/psycopg2/)
 - [Venv](https://docs.python.org/3/library/venv.html)
 
->Heroku
+### Heroku
 
 >Note:
 >I had to create a separate repo for my [back-end](https://github.com/emirry/mindfull-backend/tree/master). I learned that Heroku needs to see requirements.txt/Pipfile/setup.py in the root file.
@@ -77,7 +76,7 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [dj-database-url](https://pypi.org/project/dj-database-url/)
 
 ## 🍎 Resources
->I could not have done this project without these documentations and tutorials! Highly recommend if you want to build an iOS app!
+### I could not have done this project without these documentations and tutorials! Highly recommend if you want to build an iOS app!
 
 - [Swift](https://swift.org/)
 - [Django](https://docs.djangoproject.com/en/3.1/)
@@ -91,18 +90,19 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [mindfull prototype figma link](https://www.figma.com/file/FbbCYgI5i6OamxKbUkkZjE/mindfull?node-id=0%3A1)
 
 ## 🍎 Screenshots
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%201.44.57%20PM.png" alt="Login Screen">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.41.50%20PM.png" alt="Google Signin">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.07%20PM.png" alt="Welcome">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.19%20PM.png" alt="Form">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.53%20PM.png" alt="Caloric Intake">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.06%20PM.png" alt="Journal">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.22%20PM.png" alt="Food Entries">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.37%20PM.png" alt="Food Search">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.56%20PM.png" alt="Food Entry">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.05%20PM.png" alt="Nutrition Facts">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.18%20PM.png" alt="Delete">
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring">
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%201.44.57%20PM.png" alt="Login Screen" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.41.50%20PM.png" alt="Google Signin" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.07%20PM.png" alt="Welcome" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.19%20PM.png" alt="Form" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.53%20PM.png" alt="Caloric Intake" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.06%20PM.png" alt="Journal" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.22%20PM.png" alt="Food Entries" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.37%20PM.png" alt="Food Search" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.56%20PM.png" alt="Food Entry" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.05%20PM.png" alt="Nutrition Facts" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.18%20PM.png" alt="Delete" width=300>
+<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring" width=300>
+
 >Note: The image above is not complete. Just the beginning of developing this 🙂
 
 
