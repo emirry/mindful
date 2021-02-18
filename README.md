@@ -90,18 +90,19 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 - [mindfull prototype figma link](https://www.figma.com/file/FbbCYgI5i6OamxKbUkkZjE/mindfull?node-id=0%3A1)
 
 ## 🍎 Screenshots
-| [!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%201.44.57%20PM.png" alt="Login Screen" width=150>)] |
-[!<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.41.50%20PM.png" alt="Google Signin" width=150>] |
-[!<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.07%20PM.png" alt="Welcome" width=150>] |
-[!<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.19%20PM.png" alt="Form" width=150>] |
-[!<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.53%20PM.png" alt="Caloric Intake" width=150>
-[!<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.06%20PM.png" alt="Journal" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.22%20PM.png" alt="Food Entries" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.37%20PM.png" alt="Food Search" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.56%20PM.png" alt="Food Entry" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.05%20PM.png" alt="Nutrition Facts" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.18%20PM.png" alt="Delete" width=150>
-<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring" width=150>
+| !(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%201.44.57%20PM.png" alt="Login Screen" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.41.50%20PM.png" alt="Google Signin" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.07%20PM.png" alt="Welcome" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.19%20PM.png" alt="Form" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.42.53%20PM.png" alt="Caloric Intake" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.06%20PM.png" alt="Journal" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.22%20PM.png" alt="Food Entries" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.37%20PM.png" alt="Food Search" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.43.56%20PM.png" alt="Food Entry" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.05%20PM.png" alt="Nutrition Facts" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.18%20PM.png" alt="Delete" width=150>) |
+!(<img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring" width=150>) |
+|:---:|:---:|:---:|
 
 >Note: The nutrition ring in the image above is not complete. Just the start 🙂
 
