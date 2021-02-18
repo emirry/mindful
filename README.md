@@ -26,7 +26,13 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
 </p>
 
 ## 🍎 Features
+MVP: 
 
+##### As a user...
+- I want to create a new account so that I can start my fitness journey
+- I want to share some personal information such as my current weight, height, and activity level so that I can receive a recommended caloric intake
+- I want to search for food items I've eaten so that I can log it into my journal
+- I want to see the nutrition facts for what I've eaten so that I can monitor my daily intake
 
 ## 🍎 Installation Guide
 
