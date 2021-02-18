@@ -105,6 +105,6 @@ Fitness is important for many people, but sometimes calorie tracking can feel li
   <img src="https://github.com/emirry/mindfull/blob/main/images/Screen%20Shot%202021-02-17%20at%206.44.39%20PM.png" alt="Nutriton Ring" width=150>
 </p>
 
->Note: The nutrition ring in the image above is not complete. Just the start 🙂
+>Note: The nutrition ring in the last image is not complete. Just the start 🙂
 
 
